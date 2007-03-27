@@ -618,7 +618,117 @@ function flashCells()
 var flashcolor = "red";
 setInterval("flashCells()",1000);
 
+
 function fnOpenPredictTeam()
 {
-    alert("Predict your choice of teams for Semifinals,Finals and Winner.Opens from 28th March, 2006.");
+    var obj_user_team = getObj("objUserTeam.user_team_id");
+    var user_team_id = obj_user_team.options[obj_user_team.selectedIndex].value; 
+    var url ="/LuvCricket/userteamcountries.do?appEvent=initPredictCountries&&user_team_id="+user_team_id;
+    window.open(url,"predictteam","height=520,width=800,status=yes,toolbar=no,menubar=no,location=no");
+    //alert("Predict your choice of teams for Semifinals,Finals and Winner.Opens from 28th March, 2006.");
+}    
+
+function onLoadPredictTeam()
+{
+    window.focus();
+    if(document.status_message_code == "record.updated")
+    {
+        window.close();
+    }    
+}    
+
+function onChangeUserTeamPredictTeam()
+{
+    var obj_user_team = getObj("user_team_id");
+    var user_team_id = obj_user_team.options[obj_user_team.selectedIndex].value; 
+    var url ="/LuvCricket/userteamcountries.do?appEvent=initPredictCountries&&user_team_id="+user_team_id;
+    document.forms[0].action = url;
+    document.forms[0].submit();
+}    
+
+function savePredictTeam()
+{
+    var obj_sf1 = getObj("sf_team_1");
+    var sf1_value = obj_sf1.options[obj_sf1.selectedIndex].value;
+    
+    var obj_sf2 = getObj("sf_team_2");
+    var sf2_value = obj_sf1.options[obj_sf2.selectedIndex].value;
+    
+    var obj_sf3 = getObj("sf_team_3");
+    var sf3_value = obj_sf1.options[obj_sf3.selectedIndex].value;
+    
+    var obj_sf4 = getObj("sf_team_4");
+    var sf4_value = obj_sf1.options[obj_sf4.selectedIndex].value;
+    
+    if(isEmptyOrNull(sf1_value) || isEmptyOrNull(sf2_value) || isEmptyOrNull(sf3_value) || isEmptyOrNull(sf4_value))
+    {
+        fnShowMessage("complete_team"," Semi finals");
+        return;
+    }    
+    
+    var arySfTeam = new Array();
+    arySfTeam[1] = sf1_value;
+    arySfTeam[2] = sf2_value;
+    arySfTeam[3] = sf3_value;
+    arySfTeam[4] = sf4_value;
+    
+    //validate if equal team selected.
+    for(var i=1; i<5; i++)
+    {
+        for(var j=i+1; j<5;j++)
+        {
+            if(arySfTeam[i]==arySfTeam[j])
+            {
+                fnShowMessage("same_team"," Semi finals");
+                return;
+            }    
+            for(var k=j+1; k<5; k++)
+            {
+                if(arySfTeam[j]==arySfTeam[k])
+                {
+                    fnShowMessage("same_team"," Semi finals");
+                    return;
+                }    
+                for(var l=k+1; l<5; l++)
+                {
+                    if(arySfTeam[k]==arySfTeam[l])
+                    {
+                        fnShowMessage("same_team"," Semi finals");
+                        return;
+                    }    
+                }    
+            }    
+        }    
+    }    
+    
+    
+    
+    var obj_f1 = getObj("f_team_1");
+    var f1_value = obj_f1.options[obj_f1.selectedIndex].value;
+    
+    var obj_f2 = getObj("f_team_2");
+    var f2_value = obj_f2.options[obj_f2.selectedIndex].value;
+    if(isEmptyOrNull(f1_value) || isEmptyOrNull(f2_value) )
+    {
+        fnShowMessage("complete_team"," Finals");
+        return;
+    }    
+
+    if(f2_value == f1_value)
+    {
+        fnShowMessage("same_team"," Finals");
+        return;
+    }    
+
+    
+    var obj_winner = getObj("winner_team");
+    var winner_value = obj_winner.options[obj_winner.selectedIndex].value;
+    if(isEmptyOrNull(winner_value))
+    {
+        fnShowMessage("complete_team"," Tournament Winner");
+        return;
+    }    
+    var url ="/LuvCricket/userteamcountries.do?appEvent=savePredictCountries";
+    document.forms[0].action = url;
+    document.forms[0].submit();
 }    

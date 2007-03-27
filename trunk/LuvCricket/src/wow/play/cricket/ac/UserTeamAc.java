@@ -34,6 +34,7 @@ import wow.play.cricket.vo.LCTournamentVO;
 import wow.play.cricket.vo.PlayingNationsTeamVO;
 import wow.play.cricket.vo.RefxVO;
 import wow.play.cricket.vo.UserTeamDetailVO;
+import wow.play.cricket.vo.UserTeamDetail_1VO;
 import wow.play.cricket.vo.UserTeamVO;
 
 /**
@@ -495,7 +496,7 @@ public class UserTeamAc extends LCCommonAc
         //String user_team_id = objRefx.getRefx_value();
         
         //Check if created new.
-        String user_team_id = (String)request.getAttribute("user_team_id");
+        String user_team_id = request.getParameter("user_team_id");
         if(user_team_id == null)
         {
             user_team_id = objRefx.getRefx_value();
@@ -508,6 +509,100 @@ public class UserTeamAc extends LCCommonAc
         List <RefxVO> lstActiveCountries = logicTourn.fetchActiveCountriesForTournament(objUserTeam.getTournament_id());
         session.setAttribute("opt_nations",lstActiveCountries);
         
+        List<UserTeamDetail_1VO> lstPredictTeam = logic.selectPredictedUserTeam(user_team_id);
+        int semiFinalist = 1;
+        int finalist = 1;
+        for(UserTeamDetail_1VO objUTD: lstPredictTeam)
+        {
+            String status = objUTD.getCountry_status();
+            if("3".equals(objUTD.getCountry_status()))
+            {
+                request.setAttribute("sf_team_"+semiFinalist,objUTD.getCountry_id());
+                semiFinalist++;
+            }
+            else if("4".equals(objUTD.getCountry_status()))
+            {
+                request.setAttribute("f_team_"+finalist,objUTD.getCountry_id());
+                finalist++;
+            }
+            else if("5".equals(objUTD.getCountry_status()))
+            {
+                request.setAttribute("winner_team",objUTD.getCountry_id());
+            }
+        }
+        request.setAttribute("user_team_id",user_team_id);
+        return mapping.findForward("success");
+    }
+    
+    @IAppEventHandler(appEvent="savePredictCountries")
+    public ActionForward  savePredictCountries(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        List lst_predict_team = new ArrayList();
+        String user_team_id = request.getParameter("user_team_id");
+        String sf_team_1 = request.getParameter("sf_team_1");
+        String sf_team_2 = request.getParameter("sf_team_2");
+        String sf_team_3 = request.getParameter("sf_team_3");
+        String sf_team_4 = request.getParameter("sf_team_4");
+
+        String f_team_1 = request.getParameter("f_team_1");
+        String f_team_2 = request.getParameter("f_team_2");
+        
+        String winner_team = request.getParameter("winner_team");
+        //Semi final teams
+        UserTeamDetail_1VO objSf1VO = new UserTeamDetail_1VO();
+        objSf1VO.setCountry_id(sf_team_1);
+        objSf1VO.setCountry_status("3");
+        objSf1VO.setTeam_points("0");
+        objSf1VO.setUser_team_id(user_team_id);
+        lst_predict_team.add(objSf1VO);
+
+        UserTeamDetail_1VO objSf2VO = new UserTeamDetail_1VO();
+        objSf2VO.setCountry_id(sf_team_2);
+        objSf2VO.setCountry_status("3");
+        objSf2VO.setTeam_points("0");
+        objSf2VO.setUser_team_id(user_team_id);
+        lst_predict_team.add(objSf2VO);
+
+        UserTeamDetail_1VO objSf3VO = new UserTeamDetail_1VO();
+        objSf3VO.setCountry_id(sf_team_3);
+        objSf3VO.setCountry_status("3");
+        objSf3VO.setTeam_points("0");
+        objSf3VO.setUser_team_id(user_team_id);
+        lst_predict_team.add(objSf3VO);
+
+        UserTeamDetail_1VO objSf4VO = new UserTeamDetail_1VO();
+        objSf4VO.setCountry_id(sf_team_4);
+        objSf4VO.setCountry_status("3");
+        objSf4VO.setTeam_points("0");
+        objSf4VO.setUser_team_id(user_team_id);
+        lst_predict_team.add(objSf4VO);
+        
+        //Final Teams
+        UserTeamDetail_1VO objf1VO = new UserTeamDetail_1VO();
+        objf1VO.setCountry_id(f_team_1);
+        objf1VO.setCountry_status("4");
+        objf1VO.setTeam_points("0");
+        objf1VO.setUser_team_id(user_team_id);
+        lst_predict_team.add(objf1VO);
+
+        UserTeamDetail_1VO objf2VO = new UserTeamDetail_1VO();
+        objf2VO.setCountry_id(f_team_2);
+        objf2VO.setCountry_status("4");
+        objf2VO.setTeam_points("0");
+        objf2VO.setUser_team_id(user_team_id);
+        lst_predict_team.add(objf2VO);
+        
+        //Winner Team
+        UserTeamDetail_1VO winnerVO = new UserTeamDetail_1VO();
+        winnerVO.setCountry_id(winner_team);
+        winnerVO.setCountry_status("5");
+        winnerVO.setTeam_points("0");
+        winnerVO.setUser_team_id(user_team_id);
+        lst_predict_team.add(winnerVO);
+        
+        UserTeam logic = UserTeam.getInstance();
+        logic.insertPredictTeamForUser(user_team_id,lst_predict_team);
+        request.setAttribute(LCConstants.STATUS_MESSAGE_CODE,"record.updated");
         return mapping.findForward("success");
     }
 }
