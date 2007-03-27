@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : menu.xml
+    Created on : January 19, 2007, 12:50 AM
+    Author     : NURUL SIDDIK
+    Description:
+        Purpose of the document follows.
+-->
+
+<screenmenu>
+    <headmenunode>
+        <menudetails title="Administration" ></menudetails>
+        
+        <menuitem>
+            <menudetails title="Tournaments"/>
+            <menuitem>
+                <menudetails title="Create Tournament" onclick="javascript:fnOpenScreen(\'tournament.do?appEvent=create\')"/>
+            </menuitem>
+            <menuitem>
+                <menudetails title="Manage Tournament" onclick="javascript:fnOpenScreen(\'tournament.do\')"/>
+            </menuitem>
+            <menuitem>
+                <menudetails title="Associate Players to Tournament" onclick="javascript:fnOpenScreen(\'tournamentplayers.do?appEvent=initTournPlayers\')"/>
+            </menuitem>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Manage Countries "/>
+            <menuitem>
+                <menudetails title="Create Playing Nations" onclick="javascript:fnOpenScreen(\'playingnations.do?screen_mode=create\')"/>
+            </menuitem>
+            <menuitem>
+                <menudetails title="Edit Playing Nations" onclick="javascript:fnOpenScreen(\'playingnations.do?screen_mode=modify\')"/>
+            </menuitem>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Manage Players "/>
+            <menuitem>
+                <menudetails title="Create Player" onclick="javascript:fnOpenScreen(\'/playingnationsteam.do?appEvent=initCreate\')"/>
+            </menuitem>
+            <menuitem>
+                <menudetails title="Edit Players" onclick="javascript:fnOpenScreen(\'/playingnationsteam.do?appEvent=initModify\')"/>
+            </menuitem>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Score board "/>
+            <menuitem>
+                <menudetails title="Enter Match Score" onclick="javascript:fnOpenScreen(\'/matchscore.do?appEvent=initMatchScore\')"/>
+            </menuitem>
+            <menuitem>
+                <menudetails title="Update Player Contribution" onclick="javascript:fnOpenScreen(\'/playercontribution.do?appEvent=initPlayerContribution\')"/>
+            </menuitem>
+            
+        </menuitem>
+        
+        <menuitem>
+            <menudetails title="Processes "/>
+            <menuitem>
+                <menudetails title="Lock Team for the Day" onclick="javascript:fnOpenScreen(\'/tournament.do?appEvent=initLockProcess\')"/>
+            </menuitem>
+            <menuitem>
+                <menudetails title="Update user points" onclick="javascript:fnOpenScreen(\'/userteampoints.do?appEvent=initUpdatePlayerPoints\')"/>
+            </menuitem>
+            
+        </menuitem>
+        
+    </headmenunode>
+    <headmenunode>
+        <menudetails title="My Game"/>
+        <menuitem>
+            <menudetails title="Create Team" onclick="javascript:fnOpenScreen(\'userteam.do?appEvent=initUserTeam&amp;&amp;screen_mode=create\')"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Edit Team" onclick="javascript:fnOpenScreen(\'userteamplayers.do?appEvent=initModifyUserTeam&amp;&amp;screen_mode=modify\')"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Tournament Statistics"/>
+            <menuitem>
+                <menudetails title="View Player Contribution" onclick="javascript:fnShowPlayerContribution()"/>
+            </menuitem>
+        </menuitem>
+        
+    </headmenunode>
+    <headmenunode>
+        <menudetails title="My Preferences "/>
+        <menuitem>
+            <menudetails title="Edit my details" onclick="javascript:fnOpenScreen(\'editmydetails.do?appEvent=initEditUser\')"/>
+        </menuitem>
+    </headmenunode>
+    <headmenunode>
+        <menudetails title="Luv Cricket"/>
+        <menuitem>
+            <menudetails title="Home" onclick="javascript:fnOpenScreen(\'userwelcome.do?appEvent=displayHomePage\')"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Rules" onclick="javascript:fnOpenModelScreen(\'/LuvCricket/jsp/rules.jsp\')"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="About LuvCricket"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Report Error" onclick="javascript:fnReportError();"/>
+        </menuitem>
+    </headmenunode>
+</screenmenu>
