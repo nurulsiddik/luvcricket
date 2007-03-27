@@ -35,17 +35,17 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
     
     <body class="backgroundbase" onload="fnFilterTopPlayers('overall')">
         
-        <TABLE border="0" ALIGN="center" WIDTH="100%">
+        <TABLE border="1" ALIGN="center" WIDTH="100%">
             <tr>
-                <td>
+                <td width="25%">
                     <font class="userwelcomelabel">Welcome <%=(String)session.getAttribute("username")%> </font>
                 </td>
-                <td ALIGN="right">
+                <td ALIGN="right" width="60%">
                     <script language="JavaScript1.2" type="text/javascript">
                         screenMenu.writeMenuBar();
                     </script>
                 </td>
-                <td align="center" valign="top" style="font-weight: bold; font-style:Verdana; font-size: 18; color:red"><a href="javascript:onclickFaq()">FAQ</a>&nbsp;&nbsp;<img alt="LogOut" src="/LuvCricket/images/logout.gif" name="imgLogOut" onclick="fnLogOut()" style="cursor: Hand;"></td>
+                <td align="center" width="15%" valign="top" style="font-weight: bold; font-style:Verdana; font-size: 18; color:red"><a href="javascript:onclickFaq()">FAQ</a>&nbsp;&nbsp;<img alt="LogOut" src="/LuvCricket/images/logout.gif" name="imgLogOut" onclick="fnLogOut()" style="cursor: Hand;"></td>
             </tr>
             <tr>
                 <td style="font-family: Tahoma; font-weight:bold; font-size:11px; color:blue"><%=session.getAttribute("tournament_name")%> </td>
