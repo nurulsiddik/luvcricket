@@ -597,6 +597,23 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
         where player_id=#player_id#;
         
     </select>
-    
+    <select id="selectPredictWinner" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.UserTeamDetail_1VO">
+        select * from user_team_details_1 where user_team_id = #user_team_id:VARCHAR#
+    </select>
+    <delete id="deletePredictWinner" parameterClass="java.lang.String">
+        delete from user_team_details_1 where user_team_id=#user_team_id:VARCHAR#
+    </delete>
+    <insert id="insertPredictWinner" parameterClass="wow.play.cricket.vo.UserTeamDetail_1VO">
+        insert into user_team_details_1 (
+        user_team_id,
+        country_id,
+        country_status,
+        team_points)
+        values (
+        #user_team_id:VARCHAR#,
+        #country_id:INTEGER#,
+        #country_status:INTEGER#,
+        #team_points:INTEGER#)
+    </insert>
         
 </sqlMap>

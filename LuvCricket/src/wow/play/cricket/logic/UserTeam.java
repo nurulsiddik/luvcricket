@@ -20,6 +20,7 @@ import wow.play.cricket.vo.PlayerContributionVO;
 import wow.play.cricket.vo.PlayingNationsTeamVO;
 import wow.play.cricket.vo.RefxVO;
 import wow.play.cricket.vo.UserTeamDetailVO;
+import wow.play.cricket.vo.UserTeamDetail_1VO;
 import wow.play.cricket.vo.UserTeamVO;
 
 /**
@@ -496,4 +497,41 @@ public class UserTeam
         return retList;
     }
 
+    public List<UserTeamDetail_1VO> selectPredictedUserTeam(String user_team_id) throws Exception
+    {
+        SqlMapClient objSql = null;
+        List retList = null;
+        try
+        {
+            objSql = TransactionManager.getSQLInstance();
+            retList = objSql.queryForList("selectPredictWinner",user_team_id);
+            
+        }
+        finally
+        {
+            objSql.endTransaction();
+        }
+        return retList;
+    }
+    
+    public void insertPredictTeamForUser(String user_team_id, List<UserTeamDetail_1VO> predictedTeamList) throws Exception
+    {
+        SqlMapClient objSql = null;
+        try
+        {
+            objSql = TransactionManager.getSQLInstance();
+            objSql.startTransaction();
+            objSql.delete("deletePredictWinner",user_team_id);
+            
+            for(UserTeamDetail_1VO objUTD: predictedTeamList)
+            {
+                objSql.insert("insertPredictWinner",objUTD);
+            }
+            objSql.commitTransaction();
+        }
+        finally
+        {
+            objSql.endTransaction();
+        }
+    }
 }

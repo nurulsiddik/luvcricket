@@ -17,33 +17,97 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="/LuvCricket/css/stylesheet.css" title="style"/>
         <script type="text/javascript" src="/LuvCricket/js/common.js"></script> 
-        <%
-        String menu_name = (String)request.getSession().getAttribute("MENU_NAME");
-        XMLMenuParser parser = new XMLMenuParser(menu_name);
-        out.print(parser.parseScreenMenu());
-        %>
+        <script type="text/javascript" src="/LuvCricket/js/userteam.js"></script> 
     </head>
-    <body class="backgroundbase">
+    <body class="backgroundbase" onload="onLoadPredictTeam();">
         <html:form action="/userteamcountries">
             <table border="0" ALIGN="center" WIDTH="100%">
-                <lc:title menubar="true" title="Predict Tournament Winner" username="true"/>                
                 <tr height="100%">
                     <td  colspan="3" align="center">
                         <div style="border: 1px solid #666;">
                             <!-- WRITE YOUR CODE HERE -->
-                            <table>
-                                <tr>
-                                    <td colspan="2">Select Semifinalist.</td>
+                            <table border="0" width="80%">
+                                <tr align="center">
+                                    <td class="labelonly" align="center"  colspan="2"><b>Team Id</b>
+                                        <lc:dropdownbox name="user_team_id"  emptyoption="false" refxlist="opt_user_team" onchange="onChangeUserTeamPredictTeam();" />
+                                    </td>
                                 </tr>
+                                <tr><td colspan="2"><hr>&nbsp;</td></tr>
+                                <tr align="center">
+                                    <td colspan="2" align="center">
+                                        <div id="idDivSemiFinal">
+                                            <font class="textlable" style="color:blue">Select Semi Finalist Teams:<b style="color:red">&nbsp;(Changes allowed till 4th April 6:30 PM)</b></font>
+                                            <table border="0" width="80%">
+                                                <tr>
+                                                    <td class="textlable">Semifinalist 1:</td>
+                                                    <td><lc:dropdownbox name="sf_team_1" emptyoption="true" refxlist="opt_nations"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="textlable">Semifinalist 2:</td>
+                                                    <td><lc:dropdownbox name="sf_team_2" emptyoption="true" refxlist="opt_nations"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="textlable">Semifinalist 3:</td>
+                                                    <td><lc:dropdownbox name="sf_team_3" emptyoption="true" refxlist="opt_nations"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="textlable">Semifinalist 4:</td>
+                                                    <td><lc:dropdownbox name="sf_team_4" emptyoption="true" refxlist="opt_nations"/></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr><td colspan="2"><hr>&nbsp;</td></tr>
+                                <tr align="center">
+                                    <td colspan="2" align="center">
+                                        <div id="idDivFinal">
+                                            <font class="textlable" style="color:blue">Select Finalist Teams:<b style="color:red">&nbsp;(Changes allowed till 23rd April 6:30 PM)</b></font>
+                                            <table border="0" width="80%">
+                                                <tr>
+                                                    <td class="textlable">Finalist 1:</td>
+                                                    <td><lc:dropdownbox name="f_team_1" emptyoption="true" refxlist="opt_nations"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="textlable">Finalist 2:</td>
+                                                    <td><lc:dropdownbox name="f_team_2" emptyoption="true" refxlist="opt_nations"/></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr><td colspan="2"><hr>&nbsp;</td></tr>
+                                
+                                <tr align="center">
+                                    <td colspan="2" align="center">
+                                        <div id="idDivFinal">
+                                            <font class="textlable" style="color:blue">Select Tournament Winner:<b style="color:red">&nbsp;(Changes allowed till 27th April 6:30 PM)</b></font>
+                                            <table border="0" width="80%">
+                                                <tr>
+                                                    <td class="textlable">Winner :</td>
+                                                    <td><lc:dropdownbox name="winner_team" emptyoption="true" refxlist="opt_nations"/></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr><td colspan="2"><hr>&nbsp;</td></tr>
+                                <tr align="center">
+                                    <td colspan="2">
+                                        <input type="button" name="butSave" value=" SAVE " onclick="savePredictTeam();">&nbsp;&nbsp;
+                                        <input type="button" name="butClose" value=" CLOSE " onclick="window.close();">
+                                    </td>
+                                </tr>
+                                <tr><td colspan="2">*Note: All the points scored will be updated at the end of tournaments.</td></tr>
                             </table>
-                            
-                            
-
                         </div>
                     </td>
                 </tr>
                 
             </table>
         </html:form>
+        <lc:msg_error/>
     </body>
 </html>
