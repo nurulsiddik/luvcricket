@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : menu.xml
+    Created on : January 19, 2007, 12:50 AM
+    Author     : NURUL SIDDIK
+    Description:
+        Purpose of the document follows.
+-->
+
+<screenmenu>
+    <headmenunode>
+        <menudetails title="About Us" ></menudetails>
+                
+        <menuitem>
+            <menudetails title="Message display" onclick="javascript:showMessage()"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Investor Information"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Recruitment"/>
+        </menuitem>
+    </headmenunode>
+    <headmenunode>
+        <menudetails title="Products"/>
+        <menuitem>
+            <menudetails title="Widgets"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Gadgets"/>
+            <menuitem>
+                <menudetails title="Home Gadgets"/>
+            </menuitem>
+            <menuitem>
+                <menudetails title="Office Gadgets"/>
+            </menuitem>
+            <menuitem>
+                <menudetails title="Other Gadgets"/>
+            </menuitem>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Gizmos"/>
+            <menuitem>
+                <menudetails title="Home Gizmos"/>
+            </menuitem>
+            <menuitem>
+                <menudetails title="Office Gizmos"/>
+            </menuitem>
+            <menuitem>
+                <menudetails title="Other Gizmos"/>
+            </menuitem>
+        </menuitem>
+    </headmenunode>
+    <headmenunode>
+        <menudetails title="Services "/>
+    </headmenunode>
+    <headmenunode>
+        <menudetails title="Support"/>
+    </headmenunode>
+</screenmenu>
