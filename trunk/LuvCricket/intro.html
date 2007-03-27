@@ -1,0 +1,168 @@
+<html>
+    
+    <head>
+        <title>Intro Screen...</title>
+    </head>
+    
+    <body bgcolor="#000000" text="#000000">
+        
+        <div id="splashcontainer" style="position:absolute;width:450px;"></div>
+        
+        <layer id="splashcontainerns" width=550></layer>
+        
+        
+        <script>
+
+/*
+Dynamic Splash Screen effect- © Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions, 100's more DHTML scripts, and Terms Of Use, 
+Visit http://dynamicdrive.com
+*/
+
+//Specify the paths of the images to be used in the splash screen, if any.
+//If none, empty out array (ie: preloadimages=new Array())
+var preloadimages=new Array("http://abstract.simplenet.com/point.gif","http://abstract.simplenet.com/point2.gif")
+//configure delay in miliseconds between each message (default: 2 seconds)
+var intervals=2500
+var gradiant = (intervals-1000)/2;
+var color_step = 5;
+var multiplier = 1;
+var lastcolor=0;
+var color_step_interval = (gradiant/(255/color_step))*1;
+//configure destination URL
+var targetdestination="/LuvCricket/dummy.jsp"
+
+//configure messages to be displayed
+//If message contains apostrophe('), backslash them (ie: "I\'m fine")
+
+var splashmessage=new Array()
+var openingtags='<font face="Arial" size="6">'
+splashmessage[0]='For Indian Cricket fans'
+splashmessage[1]='World Cup Final is at Mumbai, 2011'
+splashmessage[2]='For die hard Cricket fans'
+splashmessage[3]='The game is still not over.'
+splashmessage[4]='Prove you could have been a better selector or Coach.'
+splashmessage[5]='Cricket is Back with LuvCricket.'
+splashmessage[6]='Second round opens from 26,March 2 PM.'
+splashmessage[7]='Please stand by...'
+var closingtags='</font>'
+
+//Do not edit below this line (besides HTML code at the very bottom)
+
+var i=0
+
+var ns4=document.layers?1:0
+var ie4=document.all?1:0
+var ns6=document.getElementById&&!document.all?1:0
+var theimages=new Array()
+
+//preload images
+if (document.images){
+for (p=0;p<preloadimages.length;p++){
+theimages[p]=new Image()
+theimages[p].src=preloadimages[p]
+}
+}
+
+function displaysplash(){
+if (i<splashmessage.length){
+sc_cross.style.visibility="hidden"
+sc_cross.innerHTML='<b><center>'+openingtags+splashmessage[i]+closingtags+'</center></b>'
+sc_cross.style.left=ns6?parseInt(window.pageXOffset)+parseInt(window.innerWidth)/2-parseInt(sc_cross.style.width)/2 : document.body.scrollLeft+document.body.clientWidth/2-parseInt(sc_cross.style.width)/2
+sc_cross.style.top=ns6?parseInt(window.pageYOffset)+parseInt(window.innerHeight)/2-sc_cross.offsetHeight/2 : document.body.scrollTop+document.body.clientHeight/2-sc_cross.offsetHeight/2
+sc_cross.style.visibility="visible"
+lastcolor=0;
+setTimeout("changeGradientColor()",color_step_interval);
+i++
+}
+else{
+window.location=targetdestination
+return
+}
+setTimeout("displaysplash()",intervals)
+}
+
+function changeGradientColor()
+{
+
+	lastcolor+=(color_step*multiplier);
+
+	if(lastcolor > 255)
+		lastcolor = 255;
+
+	if(lastcolor < 0)
+		lastcolor = 0;
+
+	var hexnum = (new Number(lastcolor)).toString(16);
+
+	if(hexnum.length == 1)
+		hexnum="0"+hexnum;
+
+	sc_cross.style.color="#"+hexnum+hexnum+hexnum;
+
+	if(lastcolor == 255)
+		multiplier = -1;
+
+	if(lastcolor == 0)
+		multiplier = 1;
+
+	if(lastcolor == 255)
+	{
+		setTimeout("changeGradientColor()",900);
+	}
+	else if(lastcolor != 0)
+		setTimeout("changeGradientColor()",color_step_interval);
+
+}
+
+function displaysplash_ns(){
+if (i<splashmessage.length){
+sc_ns.visibility="hide"
+sc_ns.document.write('<b>'+openingtags+splashmessage[i]+closingtags+'</b>')
+sc_ns.document.close()
+
+sc_ns.left=pageXOffset+window.innerWidth/2-sc_ns.document.width/2
+sc_ns.top=pageYOffset+window.innerHeight/2-sc_ns.document.height/2
+
+sc_ns.visibility="show"
+i++
+}
+else{
+window.location=targetdestination
+return
+}
+setTimeout("displaysplash_ns()",intervals)
+}
+
+
+
+function positionsplashcontainer(){
+if (ie4||ns6){
+sc_cross=ns6?document.getElementById("splashcontainer"):document.all.splashcontainer
+displaysplash()
+}
+else if (ns4){
+sc_ns=document.splashcontainerns
+sc_ns.visibility="show"
+displaysplash_ns()
+}
+else
+window.location=targetdestination
+}
+window.onload=positionsplashcontainer
+
+        </script>
+        
+        <!--Set href in below link to the URL of the target destination-->
+        
+        <div align="right">
+            <table border="0" width="200" height="100%" cellspacing="0" cellpadding="0">
+                <td width="100%" valign="bottom" align="right">
+                    [ <a href="/LuvCricket/dummy.jsp"><font color="#FFFFFF">Skip Intro</font></a> ]
+                </td>
+            </table>
+        </div>
+        
+        
+    </body>
+</html>

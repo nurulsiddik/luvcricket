@@ -1,0 +1,226 @@
+/* 
+    Document   : __NAME__
+    Created on : __DATE__, __TIME__
+    Author     : __USER__
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root {
+   background-color: #ccccff;
+   background-image: url(background.jpg);
+   display: block;
+   font-family: 'Courier New',Courier,monospace;
+   font-size: small
+}
+.CricHeading {
+   background-color: #ccff00;
+   color: #ff0000;
+   font-family: sans-serif;
+   font-weight: bold;
+   text-align: center;
+   vertical-align: middle;
+}
+.pageheader {
+   background-color: #B5F0EF;
+   color: #6512E7;
+   font-family: sans-serif;
+   font-weight: bold;
+   text-align: center;
+   vertical-align: middle;
+   font-size: 18px;
+   filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#FF99FF', startColorstr='#66CCFF', gradientType='0');
+}
+.userwelcomelabel {
+    color: darkgreen;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 12px;
+}
+.CricLabel {
+   font-family: Arial,Helvetica,sans-serif;
+   font-style: normal;
+   font-weight: bold
+}
+.CricTextContent {
+   font-family: Arial,Helvetica,sans-serif
+}
+.msgbody{
+    background-repeat: no-repeat;
+    background-color: #CBFEFC;
+}
+.msgbutton {
+    background-repeat: no-repeat;
+    border-width: 0px;
+    background-color: transparent;
+    height: 25px;
+    width: 90px;
+    cursor: hand;
+    font-weight: bold;
+    color: #990000;
+    background-image: url('/LuvCricket/images/ROvlPurple.gif');
+    
+}
+.msgtext {
+    font-family: Arial;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: true;
+}
+.bannerimage{
+    top: true;
+    background-repeat: no;
+}
+.backgroundbase{
+    background-color: #D3FEF0;
+    background-image: url('/LuvCricket/images/bkgrd_2.jpg');
+}
+.textbox{
+    border-color: darkgreen;
+    border-width: 1px;
+    font-family: Verdana;
+    font-size: 12px;
+    height: 20px;
+}
+.textlable{
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    /*height: 12px;*/
+    color: darkgreen;
+    text-align: right;
+}
+.rightlabel{
+    font-family: Verdana;
+    font-size: 11px;
+    font-weight: normal;
+    height: 12px;
+    color: darkgreen;
+    text-align: left;
+}
+
+.labelonly{
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    height: 12px;
+    color: darkgreen;
+}
+
+.tableheader{
+    color: #000000;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #E1E1E1;
+}
+.tableDataRowDisabled
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: Normal;
+    COLOR : #333333;
+    BACKGROUND:#EBEBEB;
+    height:20px;
+    cellspacing:0;
+    cellpadding:0;
+}
+.tableSelectedRow
+{
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold;
+    COLOR : #FFFFFF;
+    BACKGROUND:#000084;
+    HEIGHT:20px;
+    cellspacing="0";
+    cellpadding="0";
+}
+
+.divGridHeaderTab {
+    background-color: #66CCCC; 
+    color: #FFFFFF; 
+    font-family: Verdana;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    left: 0px;
+    position: relative;
+    border: 1px solid;
+}
+
+.firstPageGridHeaderTab {
+    color: #000000; 
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    left: 0px;
+    position: relative;
+    border: 1px solid;
+}
+
+.firstPageGridArea 
+{ 
+    color: darkblue; 
+    font-family: Verdana;
+    font-size: 10px;
+    overflow: auto;
+    font-weight: bold;
+    text-align: left;
+    height: 180px;
+    border: 1px solid;
+
+}
+
+.divGridArea 
+{ 
+    color: #000064; 
+    font-family: Verdana;
+    font-size: 10px;
+    background-color: #F9F9F9; 
+    overflow: auto;
+    text-align: left;
+    height: 180px;
+    border: 1px solid;
+    scrollbar-3dlight-color: #6296CA;
+    scrollbar-arrow-color:white;
+    scrollbar-track-color: #C3D8FF;
+    scrollbar-face-color: #6296CA;
+    scrollbar-highlight-color: #6296CA;
+    scrollbar-shadow-color: #0F337E;
+
+}
+
+.fixedDataTable {
+table-layout: fixed
+
+}
+
+.fixedDataCell {
+white-space: nowrap;
+overflow: hidden;
+}
+
+.ruleslabel{
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    height: 12px;
+    color: black;
+    text-align: left;
+}
+.rulestext{
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    height: 12px;
+    color: red;
+    text-align: right;
+}

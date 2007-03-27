@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+
+<struts-config>
+    
+    <form-beans>
+        
+        <form-bean name="LoginFormBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="userId" type="java.lang.String"/>
+            <form-property name="loginName" type="java.lang.String"/>
+            <form-property name="password" type="java.lang.String"/>           
+        </form-bean>
+        
+        <form-bean name="NewUserFormBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="objUserData" type="wow.play.cricket.vo.RegNewUserVO"/>
+        </form-bean>
+        
+        <form-bean name="TournamentBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="objTournament" type="wow.play.cricket.vo.TournamentVO"/>
+            <form-property name="objTournamentChanges" type="wow.play.cricket.vo.TournamentChangesVO"/>
+            <form-property name="objLCTournament" type="wow.play.cricket.vo.LCTournamentVO"/>
+        </form-bean>
+        <form-bean name="TournamentPlayerBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="objTournamentPlayer" type="wow.play.cricket.vo.TournamentPlayerVO"/>
+        </form-bean>
+
+        <form-bean name="PlayingNationsBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="objPlayingNations" type="wow.play.cricket.vo.PlayingNationsVO"/>
+        </form-bean>
+        
+        <form-bean name="PlayingNationsTeamBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="objPlayingNationsTeam" type="wow.play.cricket.vo.PlayingNationsTeamVO"/>
+        </form-bean>
+        
+        <form-bean name="UserTeamBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="objUserTeam" type="wow.play.cricket.vo.UserTeamVO"/>
+        </form-bean>    
+        
+        <form-bean name="MatchScoreBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="objTournMatches" type="wow.play.cricket.vo.TournamentMatchesVO"/>
+            <form-property name="objScorecard" type="wow.play.cricket.vo.ScorecardVO"/>
+        </form-bean>
+        
+        <form-bean name="PlayerTournamentContribution" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="objPlayerDetail" type="wow.play.cricket.vo.PlayingNationsTeamVO"/>
+            <form-property name="objPlayerTournContribution" type="wow.play.cricket.vo.PlayerContributionVO"/>
+        </form-bean>
+        
+    </form-beans>
+    
+    <global-exceptions>
+        <exception type="java.lang.Exception" key="AppEx" path="/jsp/error.jsp" handler="wow.play.cricket.common.exception.LCExceptionHandler" scope="request" />
+    </global-exceptions>
+    
+    
+    <global-forwards>
+        <forward name="relogin" path="/login.do?appEvent=relogin"/>
+    </global-forwards>
+    
+    <action-mappings>
+        <!-- Login and Welcome do -->
+        <action path="/login" name="LoginFormBean" scope="request" type="wow.play.cricket.ac.LoginAc">
+            <forward name="welcome" path="/jsp/loginpage.jsp"/>
+            <forward name="successlogin" path="/userwelcome.do?appEvent=welcomeuser"/>
+            <forward name="error" path="/jsp/loginpage.jsp"/>
+            <forward name="logout" path="/jsp/loginpage.jsp"/>
+            <forward name="sessionout" path="/jsp/relogin.jsp"/>
+            
+        </action>
+        
+        <!-- New user registration -->
+        <action path="/registernewuser" name="NewUserFormBean" scope="request" type="wow.play.cricket.ac.RegNewUserAc" input="/jsp/regNewUser.jsp">
+            <forward name="welcome" path="/jsp/regNewuser.jsp"/>
+            <forward name="success" path="/jsp/regNewuser.jsp?fwdvalue=success"/>
+            <forward name="forgotpassword" path="/jsp/resetpassword.jsp"/>
+            <forward name="error" path="/jsp/regNewuser.jsp?fwdvalue=error"/>
+        </action>
+        
+        <action path="/editmydetails" name="NewUserFormBean" scope="request" type="wow.play.cricket.ac.RegNewUserAc" input="/jsp/edituser.jsp">
+            <forward name="success" path="/jsp/edituser.jsp"/>
+            <forward name="error" path="/jsp/edituser.jsp"/>
+        </action>
+        
+        <!-- User Welcome page -->
+        <action path="/userwelcome" name="LoginFormBean" scope="request"  type="wow.play.cricket.ac.UserWelcomeAc">
+            <forward name="welcome" path="/jsp/commonFS.jsp?jspname=/jsp/userWelcome.jsp"/>
+            <forward name="error" path="/jsp/userWelcome.jsp"/>
+            <forward name="homepage" path="/jsp/userWelcome.jsp"/>
+        </action>
+        
+        <!-- Tournament page -->
+        <action path="/tournament" name="TournamentBean" scope="request"  type="wow.play.cricket.ac.TournamentAc">
+            <forward name="init" path="/jsp/tournament.jsp"/>
+            <forward name="success" path="/jsp/tournament.jsp"/>
+            <forward name="locktournamentdate" path="/jsp/locktournament.jsp"/>
+            <forward name="error" path="/jsp/tournament.jsp"/>
+        </action>
+
+        <action path="/tournamentplayers" name="TournamentPlayerBean" scope="request"  type="wow.play.cricket.ac.TournamentAc">
+            <forward name="init" path="/jsp/tournamentplayers.jsp"/>
+            <forward name="success" path="/jsp/tournamentplayers.jsp"/>
+            <forward name="error" path="/jsp/tournamentplayers.jsp"/>
+        </action>
+        
+        <!-- Playing Nations -->
+        <action path="/playingnations" name="PlayingNationsBean" scope="request" type="wow.play.cricket.ac.PlayingNationsAc">
+            <forward name="success" path="/jsp/playingnations.jsp"/>
+            <forward name="error" path="/jsp/playingnations.jsp"/>
+        </action>
+        
+        <!-- Playing nations Team -->
+        <action path="/playingnationsteam" name="PlayingNationsTeamBean" scope="request" type="wow.play.cricket.ac.PlayingNationsTeamAc">
+            <forward name="success" path="/jsp/playingnationsteam.jsp"/>
+            <forward name="error" path="/jsp/playingnationsteam.jsp"/>
+        </action>
+        
+        <!-- User team -->
+        <action path="/userteam" name="UserTeamBean" scope="request" type="wow.play.cricket.ac.UserTeamAc" input="/jsp/userteam.jsp">
+            <forward name="success" path="/jsp/userteam.jsp"/>
+            <forward name="teamcreated" path="/userteamplayers.do?appEvent=initModifyUserTeam&amp;&amp;screen_mode=modify"/>
+            <forward name="error" path="/jsp/userteam.jsp"/>
+        </action>
+        <action path="/userteamplayers" name="UserTeamBean" scope="request" type="wow.play.cricket.ac.UserTeamAc">
+            <forward name="success" path="/jsp/userteamplayers.jsp"/>
+            <forward name="error" path="jsp/userteamplayers.jsp"/>
+            <forward name="teamplayersupdated" path="/userwelcome.do?appEvent=displayHomePage"/>
+            <forward name="noteamfound" path="/userteam.do?appEvent=initUserTeam&amp;&amp;screen_mode=create"/>
+        </action>
+        <action path="/userteamcountries" name="UserTeamBean" scope="request" type="wow.play.cricket.ac.UserTeamAc">
+            <forward name="success" path="/jsp/predicttournamentwinner.jsp"/>
+            <forward name="error" path="/jsp/predicttournamentwinner.jsp"/>
+        </action>
+        
+        <!-- Match Score Temp change temp-->
+        <action path="/matchscore" name="MatchScoreBean" scope="request" type="wow.play.cricket.ac.ScorecardAc" input="/jsp/matchscore.jsp">
+            <forward name="success" path="/jsp/matchscore.jsp"/>
+        </action>
+        <action path="/playercontribution" name="MatchScoreBean" scope="request" type="wow.play.cricket.ac.ScorecardAc" input="/jsp/playercontribution.jsp">
+            <forward name="success" path="/jsp/playercontribution.jsp"/>
+        </action>
+        
+        <action path="/userteampoints" name="MatchScoreBean" scope="request" type="wow.play.cricket.ac.UpdatePlayerPointsForUserTeamAc" input="/jsp/userteampoints.jsp">
+            <forward name="success" path="/jsp/userteampoints.jsp"/>
+            <forward name="error" path="/jsp/userteampoints.jsp"/>
+        </action>
+        <action path="/playertournamentcontribution" name="PlayerTournamentContribution" scope="request" type="wow.play.cricket.ac.PlayingNationsTeamAc" input="/jsp/displayplayercontribution.jsp">
+            <forward name="success" path="/jsp/displayplayercontribution.jsp"/>
+            <forward name="error" path="/jsp/displayplayercontribution.jsp"/>
+        </action>
+
+    </action-mappings>
+    
+    <!--    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+-->
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    -->
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+    
+</struts-config>
