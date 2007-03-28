@@ -17,7 +17,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <META HTTP-EQUIV="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
         <META HTTP-EQUIV="Page-Exit" content="revealTrans(Duration=1.0,Transition=23)"> 
-
+        
         <link rel="stylesheet" type="text/css" href="/LuvCricket/css/stylesheet.css" title="style"/>
         <script type="text/javascript" src="/LuvCricket/js/common.js"></script> 
         <script type="text/javascript" src="/LuvCricket/js/login.js"></script>
@@ -25,19 +25,26 @@
     </head>
     <body style="filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#C0CFE2', startColorstr='#FFFFFF', gradientType='0');" onload="checkCookie('lc_user_cookie');fnInitLogin();">
         <html:form action="/login" method="POST">
-            <p style="font-color:red; font-family:sans-serif;font-weight: bold; vertical-align: top; text-align: center; align:center" align="center">
-                This is a beta release of website. Please act as an intelligent user to enter data. Released specially because of <img height="100px" width="150px" alt="icc" src="/LuvCricket/images/icc_wc.jpg"> 
-            </p>
-            <table border="0" ALIGN="center" WIDTH="100%" onkeypress="trackEnter();">
+            <table border="0" ALIGN="center" WIDTH="80%" onkeypress="trackEnter();">
+                <tr>
+                    <td >
+                        <img style="border-color:white" alt="icc" src="/LuvCricket/images/cricket_back.gif"> 
+                    </td>
+                    <td align="center">
+                        <marquee><img height="100px" width="150px" alt="icc" src="/LuvCricket/images/icc_wc.jpg">&nbsp;&nbsp;</marquee> 
+                    </td>
+                </tr>
                 <tr >
-                    <td width="60%" rowspan="5">
-                        <img alt="login image" src="/LuvCricket/images/login_image.jpg"/>
+                    <td width="100%" colspan="2" align="left">
+                        <div style="background-image: url('/LuvCricket/images/top_border.jpg'); height:50px;">
+                            <p>&nbsp;</p>
+                        </div>
                     </td>
                     <!--<td>&nbsp;2</td>-->
                 </tr>
                 <tr valign="top">
                     <!--<td width="40%">&nbsp;3</td>-->
-                    <td>
+                    <td width="50%">
                         <!-- User Login -->
                         <table border="0" width="100%">
                             <tr >
@@ -62,6 +69,37 @@
                                 <td align="left" style="font-family:sans-serif;font-weight: bold; font-size: 12px;"><a href="javascript:fnRegUser()">New User Sign Up.</a></td>                                
                             </tr>
                         </table>
+                    </td>
+                    <td width="50%">
+                        <table width="50%">
+                            <tr>
+                                <td style="color:darkblue;font-family:sans-serif;font-weight: bold; font-size: 13px;">
+                                    World Cup 2007 Schedule 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="height:175px; width:350px; overflow:auto;border: 1px 1px 1px 1px solid;">
+                                        <table width="100%">
+                                            <logic:notEmpty name = "tournament_matches" scope = "session">
+                                                <logic:iterate id="id_tourn_matches" indexId="i" scope="session" name="tournament_matches" type="wow.play.cricket.vo.TournamentMatchesVO">
+                                                    <tr>
+                                                        <td style="font-family:sans-serif;font-weight: bold; font-size: 12px;"><bean:write name="id_tourn_matches" property="match_date"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="font-family:Verdana;font-weight: bold; font-size: 11px; color:darkred;"><bean:write name="id_tourn_matches" property="country_id1"/> vs <bean:write name="id_tourn_matches" property="country_id2"/></td>
+                                                    </tr>
+                                                    <tr><td><hr></td></tr>
+                                                </logic:iterate>
+                                            </logic:notEmpty>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
                     </td>
                 </tr>
                 

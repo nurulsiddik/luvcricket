@@ -615,5 +615,24 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
         #country_status:INTEGER#,
         #team_points:INTEGER#)
     </insert>
+    
+    <select id="fetchTournamentMatchesFromDate" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.TournamentMatchesVO">
+        select 
+        match_id,
+        tournament_id,
+        date_format(match_date,'%D %b %y %a') match_date,
+        match_venue,
+        country_id1,
+        country_id2,
+        match_type,
+        match_result,
+        match_winner,
+        match_tournament_status,
+        comments,
+        first_batting_team
+        from tournament_matches 
+        where tournament_id=#tournament_id:SMALLINT# 
+        and match_date &gt;= #match_date:DATETIME#  
+    </select>
         
 </sqlMap>

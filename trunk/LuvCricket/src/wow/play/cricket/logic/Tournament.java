@@ -18,6 +18,7 @@ import wow.play.cricket.vo.LCTournamentVO;
 import wow.play.cricket.vo.RefxVO;
 import wow.play.cricket.vo.RulesVO;
 import wow.play.cricket.vo.TournamentChangesVO;
+import wow.play.cricket.vo.TournamentMatchesVO;
 import wow.play.cricket.vo.TournamentPlayerVO;
 import wow.play.cricket.vo.TournamentVO;
 
@@ -267,5 +268,23 @@ public class Tournament
             objSql.endTransaction();
         }
         return objVO;
+    }
+    
+    public List<TournamentMatchesVO> fetchTournamentMatchesFromDate(String tournament_id, String fromdate) throws Exception
+    {
+        List retList = null;
+        try
+        {
+            objSql = TransactionManager.getSQLInstance();
+            Map paramMap = new HashMap();
+            paramMap.put("tournament_id",tournament_id);
+            paramMap.put("match_date",fromdate);
+            retList = objSql.queryForList("fetchTournamentMatchesFromDate",paramMap);
+        }
+        finally
+        {
+            objSql.endTransaction();
+        }
+        return retList;
     }
 }
