@@ -9,6 +9,8 @@
 
 package wow.play.cricket.ac;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -21,6 +23,7 @@ import wow.play.cricket.common.LCConstants;
 import wow.play.cricket.common.crypt.JCrypt;
 import wow.play.cricket.common.exception.LCException;
 import wow.play.cricket.logic.RegNewUserLogic;
+import wow.play.cricket.logic.Tournament;
 import wow.play.cricket.vo.RegNewUserVO;
 
 /**
@@ -61,6 +64,12 @@ public class LoginAc extends Action
         DynaValidatorForm dForm = (DynaValidatorForm) form;
         dForm.set("userId", "");
         dForm.set("password", "");
+        //Fetch tournament matches:
+        Tournament logic = new Tournament();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String currDate = sdf.format(new Date());
+        request.getSession().setAttribute("tournament_matches",logic.fetchTournamentMatchesFromDate("0",currDate));
+        
         return mapping.findForward("welcome");
     }
     
