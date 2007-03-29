@@ -35,7 +35,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
     
     <body class="backgroundbase" onload="fnFilterTopPlayers('overall')">
         
-        <TABLE border="1" ALIGN="center" WIDTH="100%">
+        <TABLE border="0" ALIGN="center" WIDTH="100%">
             <tr>
                 <td width="25%">
                     <font class="userwelcomelabel">Welcome <%=(String)session.getAttribute("username")%> </font>
