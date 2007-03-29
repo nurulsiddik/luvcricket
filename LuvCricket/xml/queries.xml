@@ -615,6 +615,24 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
         #country_status:INTEGER#,
         #team_points:INTEGER#)
     </insert>
+
+    
+    <select id="topTeamGraph" resultClass="wow.play.cricket.analytics.vo.TopTeamDataVO" >
+        <!-- select user_team_id,  date_format(effective_date,'%d/%m/%y') as date, team_points from user_team_details where user_team_id in ($teams_to_show$) and effective_date >= '20070327' order by effective_date,user_team_id -->
+        SELECT  ut.user_team_id,  date_format(ut.effective_date,'%d/%m/%y') as date, ut.team_points FROM tournament_changes tc,user_team_details ut where tc.tournament_id = #tournament_id# and tc.tournament_stage = #tournament_stage#
+        and ut.user_team_id in ($teams_to_show$)
+        and ut.effective_date &gt;= tc.stage_effective_date
+        and (
+                (tc.tournament_stage = (select max(tc2.tournament_stage) from tournament_changes tc2 where tc2.tournament_id = #tournament_id#)) 
+                OR
+                (ut.effective_date &lt; (select tc1.stage_effective_date from tournament_changes tc1 where tc1.tournament_id = #tournament_id# and tc1.tournament_stage = (tc.tournament_stage+1)))
+            )
+        order by effective_date,user_team_id 
+    </select>
+    <select id="fetchTournamentStages" resultClass="wow.play.cricket.vo.RefxVO" parameterClass="java.lang.Integer">
+        select tournament_stage refx_value, stage_description refx_label, tournament_id refx_add_info
+        from tournament_changes where tournament_id = #value#;
+    </select>
     
     <select id="fetchTournamentMatchesFromDate" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.TournamentMatchesVO">
         select 
@@ -634,5 +652,6 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
         where tournament_id=#tournament_id:SMALLINT# 
         and match_date &gt;= #match_date:DATETIME#  
     </select>
+
         
 </sqlMap>

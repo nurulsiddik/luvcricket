@@ -270,6 +270,12 @@ public class Tournament
         return objVO;
     }
     
+    public List fetchTournamentStages(String tournament_id) throws Exception
+    {
+        objSql = TransactionManager.getSQLInstance();
+        return objSql.queryForList("fetchTournamentStages",Integer.valueOf(tournament_id));
+    }
+    
     public List<TournamentMatchesVO> fetchTournamentMatchesFromDate(String tournament_id, String fromdate) throws Exception
     {
         List retList = null;
@@ -287,4 +293,5 @@ public class Tournament
         }
         return retList;
     }
+
 }

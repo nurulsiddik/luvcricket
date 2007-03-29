@@ -95,6 +95,10 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                             <td style="font-weight: bold; font-size: 16px; color: darkgreen">Total Points:&nbsp;</td>
                                             <td style="font-weight: bold; font-size: 18px; color: red"><%=session.getAttribute("team_points")%></td>
                                         </tr>
+                                        <tr>                                            
+                                            <td style="font-weight: bold; font-size: 18px; color: darkblue" colspan="2"><a href="/LuvCricket/analytics/topteams.do?appEvent=topTeams"> Click here for analytics</a></td>
+                                        </tr>
+                                        
                                     </table>
                                 </logic:notEmpty>
                                 <logic:empty name = "userteam_players_list" scope = "session">
@@ -271,6 +275,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                 </div>
             </div>
         </logic:notEmpty>
+        <p>        
         
     </body>
 </html>

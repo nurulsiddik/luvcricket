@@ -78,6 +78,10 @@
             <menuitem>
                 <menudetails title="View Player Contribution" onclick="javascript:fnShowPlayerContribution()"/>
             </menuitem>
+            <menuitem>
+                <menudetails title="Performance Analysis" onclick="javascript:fnOpenScreen(\'analytics/topteams.do?appEvent=topTeams\')"/>
+            </menuitem>
+
         </menuitem>
         
     </headmenunode>

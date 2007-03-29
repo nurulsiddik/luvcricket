@@ -11,10 +11,10 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
        and a managed datasource -->
     <transactionManager type="JDBC" commitRequired="false">
         <dataSource type="SIMPLE">
-            <property name="JDBC.Driver" value="sun.jdbc.odbc.JdbcOdbcDriver"/>
-            <property name="JDBC.ConnectionURL" value="jdbc:odbc:cricDB"/>
-            <property name="JDBC.Username" value=""/>
-            <property name="JDBC.Password" value=""/>
+            <property name="JDBC.Driver" value="com.mysql.jdbc.Driver"/>
+            <property name="JDBC.ConnectionURL" value="jdbc:mysql://tgn019:3306/crickdb"/>
+            <property name="JDBC.Username" value="root"/>
+            <property name="JDBC.Password" value="sa"/>
             <property name="JDBC.DefaultAutoCommit" value="false" />
             <property name="Pool.MaximumActiveConnections" value="5"/>
             <property name="Pool.MaximumIdleConnections" value="2"/>
