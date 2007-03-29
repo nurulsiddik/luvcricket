@@ -38,7 +38,7 @@ public final class LCWebListener implements ServletContextListener
             System.out.println("");
             
         } 
-        catch(Exception ex)
+        catch(Throwable ex)
         {
             ex.printStackTrace();
         }
