@@ -129,6 +129,7 @@
                                             <td class="textlable">Player Type</td>
                                             <td>
                                                 <lc:dropdownbox refx="PLAYER_TYPE" name="lstPlayerType" emptyoption="true"/>
+                                                &nbsp;&nbsp;<a href="javascript:showSchedule();" style="font-color:#FFD9F2; font-family: Verdana; font-size: 10px; font-weight: bold;">Match Schedule</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -200,6 +201,27 @@
             <input type="hidden" name="compare_team" value="<%=(String)request.getAttribute("compare_team")%>"/>
             <input type="hidden" name="number_of_changes" value="<%=(String)request.getAttribute("number_of_changes")%>"/>
         </html:form>
+        
+        <div id="divTournMatches" style="height:215px; width:356px; overflow:auto;border: 1px 1px 1px 1px solid; background-image:url('/LuvCricket/images/wc_small_2007.jpg'); left:550px; top: 150px; position:absolute; visibility:hidden;">
+            <img alt="close" src="/LuvCricket/images/door_exit.gif" style="cursor:hand;" onclick="hideSchedule()"/>
+            <div style="height:175px; width:346px; overflow:auto;">
+                <table width="100%">
+                    <logic:notEmpty name = "tournament_matches" scope = "session">
+                        <logic:iterate id="id_tourn_matches" indexId="i" scope="session" name="tournament_matches" type="wow.play.cricket.vo.TournamentMatchesVO">
+                            <tr>
+                                <td style="font-family:sans-serif;font-weight: bold; font-size: 12px;"><bean:write name="id_tourn_matches" property="match_date"/></td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:Verdana;font-weight: bold; font-size: 11px; color:darkred;"><bean:write name="id_tourn_matches" property="country_id1"/> vs <bean:write name="id_tourn_matches" property="country_id2"/></td>
+                            </tr>
+                            <tr><td><hr></td></tr>
+                        </logic:iterate>
+                    </logic:notEmpty>
+                </table>
+            </div>
+            
+        </div>
+        
         <lc:msg_error/>
     </body>
 </html>
