@@ -115,6 +115,14 @@
         <appender-ref ref="FILE"/>
         <appender-ref ref="CONSOLE"/>      
     </logger>
+
+    <!-- CEWOLF Logger -->  
+    <logger name="de.laures.cewolf.taglib.tags.ProducerTag">
+        <level value="DEBUG" />
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="CONSOLE"/>      
+    </logger>
+	
     
     
     <root>

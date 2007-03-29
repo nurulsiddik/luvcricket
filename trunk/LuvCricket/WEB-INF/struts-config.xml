@@ -151,6 +151,13 @@
             <forward name="success" path="/jsp/displayplayercontribution.jsp"/>
             <forward name="error" path="/jsp/displayplayercontribution.jsp"/>
         </action>
+        
+        
+        <action path="/analytics/topteams" scope="request" type="wow.play.cricket.analytics.ac.GraphsAC" >
+            <forward name="success" path="/jsp/TopTeams.jsp"/>
+            <!--<forward name="error" path="/jsp/userteampoints.jsp"/>-->
+        </action>
+        
 
     </action-mappings>
     
