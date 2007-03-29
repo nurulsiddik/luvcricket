@@ -732,3 +732,15 @@ function savePredictTeam()
     document.forms[0].action = url;
     document.forms[0].submit();
 }    
+
+function showSchedule()
+{
+    var divTournMatches = getObj("divTournMatches");
+    divTournMatches.style.visibility = "visible";
+}    
+function hideSchedule()
+{
+    var divTournMatches = getObj("divTournMatches");
+    divTournMatches.style.visibility = "hidden";
+
+}    
