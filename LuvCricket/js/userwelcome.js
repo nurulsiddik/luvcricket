@@ -54,7 +54,7 @@ function fnFilterTopPlayers(tabclick) {
     
     // On load called
     var textLB = getObj("idTextShuffleLeaderBoard");
-    textLB.stagedisplay = "1";
+    textLB.stagedisplay = "0";
     fnShuffleLeaderBoard();
     
 }
