@@ -5,7 +5,8 @@
 <%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean" %>
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
 <%@ taglib uri="/WEB-INF/lc-tags.tld" prefix="lc" %>
-
+<%@ page import="java.util.Calendar" %>
+<%@ page import="java.util.Date" %>
 <!--
     --COMMENT ON THIS JSP
 -->
@@ -19,6 +20,37 @@
         <script type="text/javascript" src="/LuvCricket/js/common.js"></script> 
         <script type="text/javascript" src="/LuvCricket/js/userteam.js"></script> 
     </head>
+    <%
+        int flgPredStage = 0; // if 0 then allow to change
+        
+        Calendar cal_sf = Calendar.getInstance();
+        cal_sf.set(2007,3,4,18,30); //4th April, 06:30
+        long date_sf = cal_sf.getTimeInMillis();
+        
+        Calendar cal_f = Calendar.getInstance();
+        cal_f.set(2007,3,23,18,30); //23rd April, 06:30
+        long date_f = cal_f.getTimeInMillis();
+        
+        Calendar cal_winner = Calendar.getInstance();
+        cal_winner.set(2007,3,27,18,30); //27th April, 06:30
+        long date_winner = cal_winner.getTimeInMillis();
+        
+        long date_curr = new Date().getTime();
+        
+        if(date_curr > date_sf)
+        {
+            flgPredStage = 1;   //Lock semi final teams
+        }
+        if(date_curr > date_f)
+        {
+            flgPredStage = 2;   //Lock final teams
+        }
+        if(date_curr > date_winner)
+        {
+            flgPredStage = 3;   //Lock tournament winner
+        }    
+        
+    %>
     <body class="backgroundbase" onload="onLoadPredictTeam();">
         <html:form action="/userteamcountries">
             <table border="0" ALIGN="center" WIDTH="100%">
@@ -40,19 +72,19 @@
                                             <table border="0" width="80%">
                                                 <tr>
                                                     <td class="textlable">Semifinalist 1:</td>
-                                                    <td><lc:dropdownbox name="sf_team_1" emptyoption="true" refxlist="opt_nations"/></td>
+                                                    <td><lc:dropdownbox name="sf_team_1" emptyoption="true" refxlist="opt_nations" onchange="onChangePredictTeam(1);"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="textlable">Semifinalist 2:</td>
-                                                    <td><lc:dropdownbox name="sf_team_2" emptyoption="true" refxlist="opt_nations"/></td>
+                                                    <td><lc:dropdownbox name="sf_team_2" emptyoption="true" refxlist="opt_nations" onchange="onChangePredictTeam(1);"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="textlable">Semifinalist 3:</td>
-                                                    <td><lc:dropdownbox name="sf_team_3" emptyoption="true" refxlist="opt_nations"/></td>
+                                                    <td><lc:dropdownbox name="sf_team_3" emptyoption="true" refxlist="opt_nations" onchange="onChangePredictTeam(1);"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="textlable">Semifinalist 4:</td>
-                                                    <td><lc:dropdownbox name="sf_team_4" emptyoption="true" refxlist="opt_nations"/></td>
+                                                    <td><lc:dropdownbox name="sf_team_4" emptyoption="true" refxlist="opt_nations" onchange="onChangePredictTeam(1);"/></td>
                                                 </tr>
                                             </table>
                                         </div>
@@ -67,11 +99,11 @@
                                             <table border="0" width="80%">
                                                 <tr>
                                                     <td class="textlable">Finalist 1:</td>
-                                                    <td><lc:dropdownbox name="f_team_1" emptyoption="true" refxlist="opt_nations"/></td>
+                                                    <td><lc:dropdownbox name="f_team_1" emptyoption="true" refxlist="opt_nations" onchange="onChangePredictTeam(2);"/></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="textlable">Finalist 2:</td>
-                                                    <td><lc:dropdownbox name="f_team_2" emptyoption="true" refxlist="opt_nations"/></td>
+                                                    <td><lc:dropdownbox name="f_team_2" emptyoption="true" refxlist="opt_nations" onchange="onChangePredictTeam(2);"/></td>
                                                 </tr>
                                             </table>
                                         </div>
@@ -82,12 +114,12 @@
                                 
                                 <tr align="center">
                                     <td colspan="2" align="center">
-                                        <div id="idDivFinal">
+                                        <div id="idDivWinner">
                                             <font class="textlable" style="color:blue">Select Tournament Winner:<b style="color:red">&nbsp;(Changes allowed till 27th April 6:30 PM)</b></font>
                                             <table border="0" width="80%">
                                                 <tr>
                                                     <td class="textlable">Winner :</td>
-                                                    <td><lc:dropdownbox name="winner_team" emptyoption="true" refxlist="opt_nations"/></td>
+                                                    <td><lc:dropdownbox name="winner_team" emptyoption="true" refxlist="opt_nations" onchange="onChangePredictTeam(3);"/></td>
                                                 </tr>
                                             </table>
                                         </div>
@@ -100,14 +132,16 @@
                                         <input type="button" name="butClose" value=" CLOSE " onclick="window.close();">
                                     </td>
                                 </tr>
-                                <tr><td colspan="2">*Note: All the points scored will be updated at the end of tournaments.</td></tr>
+                                <tr><td colspan="2" style="color:green;font-weight:bold;font-size:12;font-family:sans-serif;">*Note: All the points scored will be updated at the end of tournaments.</td></tr>
                             </table>
                         </div>
                     </td>
                 </tr>
                 
             </table>
+        <input type="hidden" name="flagLockPrediction" id="flagLockPrediction" value="<%=flgPredStage%>"/>
         </html:form>
         <lc:msg_error/>
+        
     </body>
 </html>

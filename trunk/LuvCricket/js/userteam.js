@@ -628,13 +628,68 @@ function fnOpenPredictTeam()
     //alert("Predict your choice of teams for Semifinals,Finals and Winner.Opens from 28th March, 2006.");
 }    
 
+var old_val_sf1;
+var old_val_sf2;
+var old_val_sf3;
+var old_val_sf4;
+var old_val_f1;
+var old_val_f2;
+var old_val_win;
+
+
 function onLoadPredictTeam()
 {
     window.focus();
     if(document.status_message_code == "record.updated")
     {
         window.close();
+    }
+    //Initialize the drop down values.
+    var obj_sf1 = getObj("sf_team_1");
+    old_val_sf1 = obj_sf1.options[obj_sf1.selectedIndex].value;
+    
+    var obj_sf2 = getObj("sf_team_2");
+    old_val_sf2 = obj_sf1.options[obj_sf2.selectedIndex].value;
+    
+    var obj_sf3 = getObj("sf_team_3");
+    old_val_sf3 = obj_sf1.options[obj_sf3.selectedIndex].value;
+    
+    var obj_sf4 = getObj("sf_team_4");
+    old_val_sf4 = obj_sf1.options[obj_sf4.selectedIndex].value;
+    
+    
+    var obj_f1 = getObj("f_team_1");
+    old_val_f1 = obj_f1.options[obj_f1.selectedIndex].value;
+    
+    var obj_f2 = getObj("f_team_2");
+    old_val_f2 = obj_f2.options[obj_f2.selectedIndex].value;
+
+    var obj_winner = getObj("winner_team");
+    old_val_win = obj_winner.options[obj_winner.selectedIndex].value;
+    
+    
+    //
+    var divSemi = getObj("idDivSemiFinal");
+    var divFinal = getObj("idDivFinal");
+    var divWinner = getObj("idDivWinner");
+    
+    var objLockPrediction = getObj("flagLockPrediction");
+    flagLockPrediction = objLockPrediction.value;
+
+    if(parseInt(flagLockPrediction) >= 1)
+    {
+        divSemi.style.backgroundColor = "#9B9B9B";
     }    
+    if(parseInt(flagLockPrediction) >= 2)
+    {
+        divFinal.style.backgroundColor = "#9B9B9B";
+    }    
+    if(parseInt(flagLockPrediction) >= 3)
+    {
+        divWinner.style.backgroundColor = "#9B9B9B";
+    }    
+    
+    
 }    
 
 function onChangeUserTeamPredictTeam()
@@ -731,6 +786,42 @@ function savePredictTeam()
     var url ="/LuvCricket/userteamcountries.do?appEvent=savePredictCountries";
     document.forms[0].action = url;
     document.forms[0].submit();
+}    
+
+function onChangePredictTeam(stage_value)
+{
+    var objLockPrediction = getObj("flagLockPrediction");
+    flagLockPrediction = objLockPrediction.value;
+
+    var obj_sf1 = getObj("sf_team_1");
+    var obj_sf2 = getObj("sf_team_2");
+    var obj_sf3 = getObj("sf_team_3");
+    var obj_sf4 = getObj("sf_team_4");
+    var obj_f1 = getObj("f_team_1");
+    var obj_f2 = getObj("f_team_2");
+    var obj_winner = getObj("winner_team");
+    
+    if(parseInt(flagLockPrediction) >= parseInt(stage_value))
+    {
+        fnShowMessage("time_over");
+        if(parseInt(stage_value) == 1)
+        {
+            obj_sf1.value = old_val_sf1;
+            obj_sf2.value = old_val_sf2;
+            obj_sf3.value = old_val_sf3;
+            obj_sf4.value = old_val_sf4;
+        }    
+        else if(parseInt(stage_value) == 2)
+        {
+            obj_f1.value = old_val_f1;
+            obj_f2.value = old_val_f2;
+        }
+        else if(parseInt(stage_value) == 3)
+        {
+            obj_winner.value = old_val_win;
+        }
+        return;
+    }    
 }    
 
 function showSchedule()
