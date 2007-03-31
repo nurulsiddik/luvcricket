@@ -15,6 +15,7 @@ import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 import wow.play.cricket.logic.ProcessJobs;
+import wow.play.cricket.logic.Tournament;
 
 /**
  *
@@ -35,7 +36,7 @@ public class LCProcessJobs
         {
             obj = new LCProcessJobs();
             obj.init();
-        } 
+        }
         catch (Exception ex)
         {
             ex.printStackTrace();
@@ -61,7 +62,31 @@ public class LCProcessJobs
         {
             Date currDate = new Date();
             LCLogger.info("\n\n\n\n Executing Schedule task: LOCK TOURNAMENT AT : "+ currDate);
-            Calendar cal = Calendar.getInstance();
+            
+            Tournament logic = new Tournament();
+            Date next_tourn_date;
+            try
+            {
+                next_tourn_date = logic.fetchNextMatchDate("0");
+                LCLogger.info("Next Match date fetched from tournament matches: "+next_tourn_date);
+            }
+            catch (Exception ex)
+            {
+                LCLogger.error("Error fetching next match date,hence setting to next day from tomorrow.");
+                ex.printStackTrace();
+                
+                Calendar cal = Calendar.getInstance();
+                cal.setTime(currDate);
+                //Add a day...
+                cal.add(Calendar.DAY_OF_MONTH,1);
+                cal.set(Calendar.HOUR_OF_DAY,0);
+                cal.set(Calendar.MINUTE,0);
+                cal.set(Calendar.SECOND,0);
+                ///cal.set(Calendar.MILLISECOND,0);
+                next_tourn_date = cal.getTime();
+            }
+            
+            /*Calendar cal = Calendar.getInstance();
             cal.setTime(currDate);
             //Add a day...
             cal.add(Calendar.DAY_OF_MONTH,1);
@@ -69,7 +94,7 @@ public class LCProcessJobs
             cal.set(Calendar.MINUTE,0);
             cal.set(Calendar.SECOND,0);
             ///cal.set(Calendar.MILLISECOND,0);
-            Date next_tourn_date = cal.getTime();
+            Date next_tourn_date = cal.getTime();*/
             
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             LCLogger.info("NEXT TOURN DATE SET TO "+sdf.format(next_tourn_date));
@@ -77,7 +102,7 @@ public class LCProcessJobs
             {
                 //Process for tournament id 0 - WORLD CUP...
                 ProcessJobs.lockTournamentChanges("0",sdf.format(next_tourn_date));
-            } 
+            }
             catch (Exception ex)
             {
                 LCLogger.error("Errors Processing Schedule job..Lock Tournament.");

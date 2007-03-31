@@ -10,6 +10,7 @@
 package wow.play.cricket.logic;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -292,6 +293,21 @@ public class Tournament
             objSql.endTransaction();
         }
         return retList;
+    }
+    
+    public Date fetchNextMatchDate(String tournament_id) throws Exception
+    {
+        Date retDate = null;
+        try
+        {
+            objSql = TransactionManager.getSQLInstance();
+            retDate = (Date) objSql.queryForObject("fetchNextMatchDate",tournament_id);
+        }
+        finally
+        {
+            objSql.endTransaction();
+        }
+        return retDate;
     }
 
 }
