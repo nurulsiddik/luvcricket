@@ -652,6 +652,9 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
         where tournament_id=#tournament_id:SMALLINT# 
         and match_date &gt;= #match_date:DATETIME#  
     </select>
-
+    
+    <select id="fetchNextMatchDate" parameterClass="java.lang.String" resultClass="java.util.Date">
+        select match_date from tournament_matches where tournament_id = #tournament_id:SMALLINT# and match_date > CURRENT_DATE LIMIT 1;
+    </select>
         
 </sqlMap>
