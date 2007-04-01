@@ -96,7 +96,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                             <td style="font-weight: bold; font-size: 18px; color: red"><%=session.getAttribute("team_points")%></td>
                                         </tr>
                                         <tr>                                            
-                                            <td style="font-weight: bold; font-size: 18px; color: darkblue" colspan="2"><a href="/LuvCricket/analytics/topteams.do?appEvent=topTeams"> Click here for analytics</a></td>
+                                            <td style="font-weight: bold; font-size: 14px; color: darkblue" colspan="2"><a href="/LuvCricket/analytics/topteams.do?appEvent=topTeams"> Click here for analytics</a><img alt="New" src="/LuvCricket/images/new.gif"/></td>
                                         </tr>
                                         
                                     </table>
