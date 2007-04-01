@@ -197,3 +197,9 @@ function fnShuffleLeaderBoard()
         }   
    }     
 }    
+
+function fnOpenPredictTeam()
+{
+    var url ="/LuvCricket/userteamcountries.do?appEvent=initPredictCountries";
+    window.open(url,"predictteam","height=520,width=800,status=yes,toolbar=no,menubar=no,location=no");
+}    
