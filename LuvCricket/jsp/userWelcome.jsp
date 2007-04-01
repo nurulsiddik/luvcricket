@@ -98,6 +98,9 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                         <tr>                                            
                                             <td style="font-weight: bold; font-size: 14px; color: darkblue" colspan="2"><a href="/LuvCricket/analytics/topteams.do?appEvent=topTeams"> Click here for analytics</a><img alt="New" src="/LuvCricket/images/new.gif"/></td>
                                         </tr>
+                                        <tr>                                            
+                                            <td style="font-weight: bold; font-size: 14px; color: darkblue" colspan="2"><a href="javascript:fnOpenPredictTeam();">If you have not predicted winners yet..</a><img alt="New" src="/LuvCricket/images/new.gif"/></td>
+                                        </tr>
                                         
                                     </table>
                                 </logic:notEmpty>
