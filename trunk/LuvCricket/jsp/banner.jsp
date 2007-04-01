@@ -11,7 +11,7 @@
         <title></title>
         <link rel="stylesheet" type="text/css" href="/LuvCricket/css/stylesheet.css">
     </head>
-    <body bgcolor="#9dff00" background="/LuvCricket/images/bannercreator-nu.gif">
+    <body bgcolor="#9dff00" background="/LuvCricket/images/bannercreator-nu1.gif">
         <!--<img alt="banner.jsp" class="bannerimage" src="/LuvCricket/images/bannercreator-nu.gif">-->
         <marquee style="color:darkblue; font-family:sans-serif;font-weight: bold; vertical-align: top; text-align: top;">
             This is beta release. Please enter proper data.
