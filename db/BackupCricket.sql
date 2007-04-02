@@ -591,6 +591,142 @@ INSERT INTO `player_contribution` (`match_id`,`player_id`,`runs_scored`,`wickets
  (24,55,0,0,0,0,0,1),
  (24,56,22,0,0,0,0,23),
  (24,58,9,0,1,0,0,15);
+INSERT INTO `player_contribution` (`match_id`,`player_id`,`runs_scored`,`wickets_taken`,`catches`,`stumps`,`runout`,`player_points`) VALUES 
+ (25,0,35,0,2,0,0,46),
+ (25,1,0,1,0,0,0,26),
+ (25,2,41,0,0,0,0,42),
+ (25,3,7,0,1,0,0,13),
+ (25,5,158,0,0,0,0,194),
+ (25,7,5,3,0,0,0,91),
+ (25,8,9,0,0,0,0,10),
+ (25,11,0,3,0,0,0,86),
+ (25,12,13,1,1,0,0,44),
+ (25,13,0,2,0,0,0,51),
+ (25,14,33,0,1,0,0,39),
+ (25,136,77,0,0,0,0,88),
+ (25,138,9,2,0,0,0,60),
+ (25,139,5,0,0,0,0,6),
+ (25,140,1,0,0,0,0,2),
+ (25,141,2,0,0,0,0,3),
+ (25,143,5,2,0,0,0,56),
+ (25,144,52,0,2,0,0,73),
+ (25,145,4,1,1,0,0,35),
+ (25,146,29,0,0,0,1,35),
+ (25,148,9,0,0,0,0,10),
+ (25,150,10,0,0,0,0,11),
+ (26,106,59,0,0,0,0,70),
+ (26,107,31,0,1,0,1,42),
+ (26,108,0,2,1,0,0,56),
+ (26,109,86,0,1,0,0,102),
+ (26,110,0,1,0,0,0,26),
+ (26,111,4,0,0,0,0,5),
+ (26,113,5,0,2,0,0,16),
+ (26,114,13,0,0,0,1,19),
+ (26,115,0,0,2,0,0,11),
+ (26,116,1,5,0,0,0,162),
+ (26,118,0,0,1,0,0,6),
+ (26,121,12,0,0,0,0,13),
+ (26,122,50,0,0,0,0,61),
+ (26,125,58,0,0,0,0,69),
+ (26,127,26,1,0,0,0,52);
+INSERT INTO `player_contribution` (`match_id`,`player_id`,`runs_scored`,`wickets_taken`,`catches`,`stumps`,`runout`,`player_points`) VALUES 
+ (26,129,5,0,0,0,0,6),
+ (26,130,0,4,0,0,0,111),
+ (26,131,1,3,1,0,0,92),
+ (26,132,28,0,1,2,0,44),
+ (26,133,9,0,0,0,0,10),
+ (26,134,12,0,1,0,0,18),
+ (26,135,0,1,0,0,0,26),
+ (27,91,45,0,0,0,0,46),
+ (27,94,0,3,0,0,0,86),
+ (27,95,0,0,4,0,0,21),
+ (27,96,80,1,1,0,0,121),
+ (27,97,0,3,0,0,0,86),
+ (27,98,33,0,0,0,0,34),
+ (27,100,0,0,0,0,0,1),
+ (27,101,0,0,0,0,0,1),
+ (27,103,0,0,0,0,0,1),
+ (27,104,0,3,1,0,0,91),
+ (27,136,37,0,1,0,1,48),
+ (27,138,18,0,0,0,0,19),
+ (27,139,4,0,0,0,0,5),
+ (27,140,0,0,0,0,0,1),
+ (27,141,44,0,0,0,0,45),
+ (27,143,0,2,0,0,0,51),
+ (27,144,15,0,0,0,0,16),
+ (27,145,9,0,0,0,0,10),
+ (27,146,19,0,0,0,0,20),
+ (27,147,14,0,0,0,0,15),
+ (27,148,8,0,0,0,0,9),
+ (27,241,15,0,0,0,0,16),
+ (28,76,6,1,0,0,0,32),
+ (28,77,0,1,0,0,0,26),
+ (28,78,31,0,1,0,0,37),
+ (28,79,10,0,1,0,0,16),
+ (28,80,90,1,0,0,0,126),
+ (28,82,43,4,1,0,0,159),
+ (28,83,1,0,0,0,0,2),
+ (28,85,0,0,0,0,1,6);
+INSERT INTO `player_contribution` (`match_id`,`player_id`,`runs_scored`,`wickets_taken`,`catches`,`stumps`,`runout`,`player_points`) VALUES 
+ (28,86,19,0,1,1,0,30),
+ (28,87,0,2,0,0,0,51),
+ (28,88,48,0,0,0,0,49),
+ (28,196,27,1,0,0,0,53),
+ (28,197,5,1,0,0,0,31),
+ (28,198,18,1,0,0,0,44),
+ (28,199,0,0,0,0,0,1),
+ (28,202,1,0,0,0,0,2),
+ (28,205,2,0,1,0,0,8),
+ (28,206,12,1,0,0,0,38),
+ (28,207,63,0,2,0,0,84),
+ (28,208,31,0,1,0,0,37),
+ (28,209,4,2,0,0,0,55),
+ (28,210,38,0,0,0,1,44),
+ (29,0,0,0,2,0,0,11),
+ (29,1,0,2,1,0,0,56),
+ (29,2,0,0,0,0,0,1),
+ (29,3,59,0,1,0,0,75),
+ (29,5,47,0,0,0,0,48),
+ (29,7,0,0,1,0,0,6),
+ (29,8,0,0,0,0,0,1),
+ (29,11,0,3,0,0,0,86),
+ (29,12,0,0,0,0,0,1),
+ (29,13,0,1,0,0,0,26),
+ (29,14,0,0,0,0,0,1),
+ (29,15,24,0,0,0,0,25),
+ (29,16,1,0,0,0,0,2),
+ (29,17,0,0,0,0,0,1),
+ (29,18,11,0,0,0,0,12),
+ (29,20,25,0,0,0,0,26),
+ (29,21,6,0,0,0,0,7),
+ (29,22,0,0,0,0,0,1),
+ (29,23,2,0,0,0,0,3),
+ (29,25,25,0,0,0,0,26),
+ (29,28,3,0,0,0,0,4),
+ (29,29,0,0,0,0,0,1),
+ (30,121,82,0,0,0,0,93),
+ (30,122,4,0,0,0,0,5),
+ (30,125,39,0,0,0,0,40);
+INSERT INTO `player_contribution` (`match_id`,`player_id`,`runs_scored`,`wickets_taken`,`catches`,`stumps`,`runout`,`player_points`) VALUES 
+ (30,126,0,0,1,0,0,6),
+ (30,127,115,3,0,0,0,236),
+ (30,130,0,2,0,0,1,56),
+ (30,131,0,2,0,0,0,51),
+ (30,132,7,0,0,2,0,18),
+ (30,133,23,0,0,0,0,24),
+ (30,134,8,0,0,0,0,9),
+ (30,135,0,2,1,0,0,56),
+ (30,136,2,0,1,0,0,8),
+ (30,137,6,1,0,0,0,32),
+ (30,138,21,1,0,0,0,47),
+ (30,139,76,0,0,0,0,87),
+ (30,141,10,0,0,0,0,11),
+ (30,143,2,2,0,0,0,53),
+ (30,144,2,0,1,0,0,8),
+ (30,145,3,0,0,0,0,4),
+ (30,146,44,1,0,0,0,70),
+ (30,148,0,0,0,0,0,1),
+ (30,150,13,0,0,0,0,14);
 /*!40000 ALTER TABLE `player_contribution` ENABLE KEYS */;
 
 
@@ -934,6 +1070,8 @@ INSERT INTO `playing_nations_team` (`player_id`,`country_id`,`player_name`,`play
  (238,'Scotland','Glenn Rogers',2,NULL,'http://content-ind.cricinfo.com/wc2007/content/player/272473.html','http://ind.cricinfo.com/db/PICTURES/CMS/72300/72398.1.jpg',1,'Glenn Rogers'),
  (239,'Scotland','Colin Smith',4,NULL,'http://content-ind.cricinfo.com/wc2007/content/player/25112.html','http://ind.cricinfo.com/db/PICTURES/DB/102004/054891.player.jpg',1,'Colin Smith'),
  (240,'Scotland','Fraser Watts',1,NULL,'http://content-ind.cricinfo.com/wc2007/content/player/25120.html','http://ind.cricinfo.com/db/PICTURES/DB/102004/054889.player.jpg',1,'Fraser Watts');
+INSERT INTO `playing_nations_team` (`player_id`,`country_id`,`player_name`,`player_type`,`player_role`,`player_link`,`player_photolink`,`player_status`,`player_welknown_name`) VALUES 
+ (241,'New Zealand','Hamish Marshall',1,'','http://content-ind.cricinfo.com/ci/content/player/37696.html','http://ind.cricinfo.com/db/PICTURES/CMS/66100/66190.1.jpg',1,'Hamish Marshall');
 /*!40000 ALTER TABLE `playing_nations_team` ENABLE KEYS */;
 
 
@@ -1589,7 +1727,143 @@ INSERT INTO `scorecard` (`match_id`,`innings`,`playing_position`,`batsman_id`,`h
  (24,2,8,22,1,NULL,NULL,0),
  (24,2,9,20,1,NULL,NULL,0),
  (24,2,10,17,1,NULL,NULL,0),
- (24,2,11,27,1,NULL,NULL,0);
+ (24,2,11,27,1,NULL,NULL,0),
+ (25,1,1,3,5,144,143,7),
+ (25,1,2,5,5,145,138,158),
+ (25,1,3,0,7,146,NULL,35);
+INSERT INTO `scorecard` (`match_id`,`innings`,`playing_position`,`batsman_id`,`howout`,`helper_id`,`bowler_id`,`runs_scored`) VALUES 
+ (25,1,4,2,4,NULL,138,41),
+ (25,1,5,12,5,144,145,13),
+ (25,1,6,8,3,NULL,143,9),
+ (25,1,7,14,2,NULL,NULL,33),
+ (25,1,8,7,2,NULL,NULL,5),
+ (25,1,9,1,1,NULL,NULL,0),
+ (25,1,10,13,1,NULL,NULL,0),
+ (25,1,11,11,1,NULL,NULL,0),
+ (25,2,1,141,5,14,11,2),
+ (25,2,2,139,4,NULL,13,5),
+ (25,2,3,146,5,0,7,29),
+ (25,2,4,145,5,12,11,4),
+ (25,2,5,136,4,NULL,7,77),
+ (25,2,6,138,5,0,11,9),
+ (25,2,7,144,5,3,1,52),
+ (25,2,8,148,4,NULL,7,9),
+ (25,2,9,150,4,NULL,12,10),
+ (25,2,10,143,3,NULL,13,5),
+ (25,2,11,140,2,NULL,NULL,1),
+ (26,1,1,134,5,113,108,12),
+ (26,1,2,127,5,109,116,26),
+ (26,1,3,121,5,118,116,12),
+ (26,1,4,132,5,115,110,28),
+ (26,1,5,133,7,107,NULL,9),
+ (26,1,6,125,5,113,108,58),
+ (26,1,7,122,5,115,116,50),
+ (26,1,8,129,5,108,116,5),
+ (26,1,9,135,5,107,116,0),
+ (26,1,10,130,2,NULL,NULL,0),
+ (26,1,11,131,7,114,NULL,1),
+ (26,2,1,106,6,132,131,59),
+ (26,2,2,118,3,NULL,135,0),
+ (26,2,3,109,5,132,130,86);
+INSERT INTO `scorecard` (`match_id`,`innings`,`playing_position`,`batsman_id`,`howout`,`helper_id`,`bowler_id`,`runs_scored`) VALUES 
+ (26,2,4,107,5,131,131,31),
+ (26,2,5,115,4,NULL,131,0),
+ (26,2,6,113,6,132,127,5),
+ (26,2,7,114,3,NULL,130,13),
+ (26,2,8,110,5,134,130,0),
+ (26,2,9,111,2,NULL,NULL,4),
+ (26,2,10,108,3,NULL,130,0),
+ (26,2,11,116,2,NULL,NULL,1),
+ (27,1,1,141,3,NULL,104,44),
+ (27,1,2,139,5,96,97,4),
+ (27,1,3,146,5,95,104,19),
+ (27,1,4,145,5,95,104,9),
+ (27,1,5,136,5,95,96,37),
+ (27,1,6,138,5,95,97,18),
+ (27,1,7,144,5,104,94,15),
+ (27,1,8,147,2,NULL,NULL,14),
+ (27,1,9,148,3,NULL,94,8),
+ (27,1,10,143,4,NULL,94,0),
+ (27,1,11,140,3,NULL,97,0),
+ (27,2,1,103,3,NULL,143,0),
+ (27,2,2,91,7,136,NULL,45),
+ (27,2,3,241,5,136,143,15),
+ (27,2,4,96,2,NULL,NULL,80),
+ (27,2,5,98,2,NULL,NULL,33),
+ (27,2,6,104,1,NULL,NULL,0),
+ (27,2,7,95,1,NULL,NULL,0),
+ (27,2,8,94,1,NULL,NULL,0),
+ (27,2,9,100,1,NULL,NULL,0),
+ (27,2,10,97,1,NULL,NULL,0),
+ (27,2,11,101,1,NULL,NULL,0),
+ (28,1,1,83,3,NULL,209,1),
+ (28,1,2,76,5,207,209,6);
+INSERT INTO `scorecard` (`match_id`,`innings`,`playing_position`,`batsman_id`,`howout`,`helper_id`,`bowler_id`,`runs_scored`) VALUES 
+ (28,1,3,78,5,207,206,31),
+ (28,1,4,88,5,208,197,48),
+ (28,1,5,80,7,210,NULL,90),
+ (28,1,6,82,3,NULL,196,43),
+ (28,1,7,86,5,205,198,19),
+ (28,1,8,79,2,NULL,NULL,10),
+ (28,1,9,85,2,NULL,NULL,0),
+ (28,1,10,77,1,NULL,NULL,0),
+ (28,1,11,87,1,NULL,NULL,0),
+ (28,2,1,208,5,78,82,31),
+ (28,2,2,199,5,79,77,0),
+ (28,2,3,205,7,85,NULL,2),
+ (28,2,4,207,6,86,76,63),
+ (28,2,5,198,5,82,87,18),
+ (28,2,6,206,4,NULL,87,12),
+ (28,2,7,196,3,NULL,82,27),
+ (28,2,8,210,5,86,80,38),
+ (28,2,9,197,3,NULL,82,5),
+ (28,2,10,202,4,NULL,82,1),
+ (28,2,11,209,2,NULL,NULL,4),
+ (29,1,1,28,5,7,1,3),
+ (29,1,2,16,3,NULL,11,1),
+ (29,1,3,18,5,1,11,11),
+ (29,1,4,25,5,3,13,25),
+ (29,1,5,21,5,0,11,6),
+ (29,1,6,15,5,0,1,24),
+ (29,1,7,20,2,NULL,NULL,25),
+ (29,1,8,23,2,NULL,NULL,2),
+ (29,1,9,22,1,NULL,NULL,0),
+ (29,1,10,17,1,NULL,NULL,0),
+ (29,1,11,29,1,NULL,NULL,0),
+ (29,2,1,3,2,NULL,NULL,59),
+ (29,2,2,5,2,NULL,NULL,47),
+ (29,2,3,0,1,NULL,NULL,0);
+INSERT INTO `scorecard` (`match_id`,`innings`,`playing_position`,`batsman_id`,`howout`,`helper_id`,`bowler_id`,`runs_scored`) VALUES 
+ (29,2,4,2,1,NULL,NULL,0),
+ (29,2,5,12,1,NULL,NULL,0),
+ (29,2,6,8,1,NULL,NULL,0),
+ (29,2,7,14,1,NULL,NULL,0),
+ (29,2,8,7,1,NULL,NULL,0),
+ (29,2,9,1,1,NULL,NULL,0),
+ (29,2,10,13,1,NULL,NULL,0),
+ (29,2,11,11,1,NULL,NULL,0),
+ (30,1,1,134,3,NULL,143,8),
+ (30,1,2,127,3,NULL,143,115),
+ (30,1,3,132,5,144,137,7),
+ (30,1,4,121,3,NULL,138,82),
+ (30,1,5,133,5,136,146,23),
+ (30,1,6,125,2,NULL,NULL,39),
+ (30,1,7,122,2,NULL,NULL,4),
+ (30,1,8,126,1,NULL,NULL,0),
+ (30,1,9,135,1,NULL,NULL,0),
+ (30,1,10,130,1,NULL,NULL,0),
+ (30,1,11,131,1,NULL,NULL,0),
+ (30,2,1,141,5,126,130,10),
+ (30,2,2,138,3,NULL,135,21),
+ (30,2,3,139,3,NULL,130,76),
+ (30,2,4,136,6,132,135,2),
+ (30,2,5,146,6,132,127,44),
+ (30,2,6,145,4,NULL,131,3),
+ (30,2,7,148,7,130,NULL,0),
+ (30,2,8,144,5,135,127,2),
+ (30,2,9,137,2,NULL,NULL,6),
+ (30,2,10,150,4,NULL,131,13),
+ (30,2,11,143,3,NULL,127,2);
 /*!40000 ALTER TABLE `scorecard` ENABLE KEYS */;
 
 
@@ -1694,6 +1968,34 @@ INSERT INTO `tournament_matches` (`match_id`,`tournament_id`,`match_date`,`match
  (22,0,'2007-03-24 00:00:00','Warner Park, St Kitts','Australia','South Africa','1','1','Australia',NULL,NULL,'Australia'),
  (23,0,'2007-03-24 00:00:00','Beausejour Stadium, St Lucia','England','Kenya','1','1','England',NULL,NULL,'Kenya'),
  (24,0,'2007-03-25 00:00:00','Queen\'s Park Oval, Trinidad','Bangladesh','Bermuda','1','1','Bangladesh',NULL,NULL,'Bermuda');
+INSERT INTO `tournament_matches` (`match_id`,`tournament_id`,`match_date`,`match_venue`,`country_id1`,`country_id2`,`match_type`,`match_result`,`match_winner`,`match_tournament_status`,`comments`,`first_batting_team`) VALUES 
+ (25,0,'2007-03-27 00:00:00','Sir Vivian Richards Stadium, St Peter\'s, Antigua','West Indies','Australia','1','1','Australia',NULL,NULL,'Australia'),
+ (26,0,'2007-03-28 00:00:00','Providence Stadium, Guyana','South Africa','Sri Lanka','1','1','South Africa',NULL,NULL,'Sri Lanka'),
+ (27,0,'2007-03-29 00:00:00','Sir Vivian Richards Stadium, St Peter\'s, Antigua','West Indies','New Zealand','1','1','New Zealand',NULL,NULL,'West Indies'),
+ (28,0,'2007-03-30 00:00:00','Providence Stadium, Guyana','Ireland','England','1','1','England',NULL,NULL,'England'),
+ (29,0,'2007-03-31 00:00:00','Sir Vivian Richards Stadium, St Peter\'s, Antigua','Australia','Bangladesh','1','1','Australia',NULL,NULL,'Bangladesh'),
+ (30,0,'2007-04-01 00:00:00','Providence Stadium, Guyana','West Indies','Sri Lanka','1','1','Sri Lanka',NULL,NULL,'Sri Lanka'),
+ (31,0,'2007-04-02 00:00:00','Sir Vivian Richards Stadium, St Peter\'s, Antigua','Bangladesh','New Zealand','1',NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `tournament_matches` (`match_id`,`tournament_id`,`match_date`,`match_venue`,`country_id1`,`country_id2`,`match_type`,`match_result`,`match_winner`,`match_tournament_status`,`comments`,`first_batting_team`) VALUES 
+ (32,0,'2007-04-03 00:00:00','Providence Stadium, Guyana','Ireland','South Africa','1',NULL,NULL,NULL,NULL,NULL),
+ (33,0,'2007-04-04 00:00:00','Sir Vivian Richards Stadium, St Peter\'s, Antigua','England','Sri Lanka','1',NULL,NULL,NULL,NULL,NULL),
+ (34,0,'2007-04-07 00:00:00','Providence Stadium, Guyana','Bangladesh','South Africa','1',NULL,NULL,NULL,NULL,NULL),
+ (35,0,'2007-04-08 00:00:00','Sir Vivian Richards Stadium, St Peter\'s, Antigua','Australia','England','1',NULL,NULL,NULL,NULL,NULL),
+ (36,0,'2007-04-09 00:00:00','Providence Stadium, Guyana','Ireland','New Zealand','1',NULL,NULL,NULL,NULL,NULL),
+ (37,0,'2007-04-10 00:00:00','National Cricket Stadium, Grenada','West Indies','South Africa','1',NULL,NULL,NULL,NULL,NULL),
+ (38,0,'2007-04-11 00:00:00','Kensington Oval, Barbados','England','Bangladesh','1',NULL,NULL,NULL,NULL,NULL),
+ (39,0,'2007-04-12 00:00:00','National Cricket Stadium, Grenada','Sri Lanka','New Zealand','1',NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `tournament_matches` (`match_id`,`tournament_id`,`match_date`,`match_venue`,`country_id1`,`country_id2`,`match_type`,`match_result`,`match_winner`,`match_tournament_status`,`comments`,`first_batting_team`) VALUES 
+ (40,0,'2007-04-13 00:00:00','Kensington Oval, Barbados','Australia','Ireland','1',NULL,NULL,NULL,NULL,NULL),
+ (41,0,'2007-04-14 00:00:00','National Cricket Stadium, Grenada','South Africa','New Zealand','1',NULL,NULL,NULL,NULL,NULL),
+ (42,0,'2007-04-15 00:00:00','Kensington Oval, Barbados','Bangladesh','Ireland','1',NULL,NULL,NULL,NULL,NULL),
+ (43,0,'2007-04-16 00:00:00','National Cricket Stadium, Grenada','Australia','Sri Lanka','1',NULL,NULL,NULL,NULL,NULL),
+ (44,0,'2007-04-17 00:00:00','Kensington Oval, Barbados','South Africa','England','1',NULL,NULL,NULL,NULL,NULL),
+ (45,0,'2007-04-18 00:00:00','National Cricket Stadium, Grenada','Ireland','Sri Lanka','1',NULL,NULL,NULL,NULL,NULL),
+ (46,0,'2007-04-19 00:00:00','Kensington Oval, Barbados','West Indies','Bangladesh','1',NULL,NULL,NULL,NULL,NULL),
+ (47,0,'2007-04-20 00:00:00','National Cricket Stadium, Grenada','Australia','New Zealand','1',NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `tournament_matches` (`match_id`,`tournament_id`,`match_date`,`match_venue`,`country_id1`,`country_id2`,`match_type`,`match_result`,`match_winner`,`match_tournament_status`,`comments`,`first_batting_team`) VALUES 
+ (48,0,'2007-04-21 00:00:00','Kensington Oval, Barbados','West Indies','England','1',NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `tournament_matches` ENABLE KEYS */;
 
 
@@ -1994,7 +2296,8 @@ INSERT INTO `tournament_players` (`tournament_id`,`player_id`,`player_value`) VA
  (0,237,75),
  (0,238,65),
  (0,239,70),
- (0,240,70);
+ (0,240,70),
+ (0,241,115);
 /*!40000 ALTER TABLE `tournament_players` ENABLE KEYS */;
 
 
@@ -2021,7 +2324,7 @@ CREATE TABLE `tournaments` (
 
 /*!40000 ALTER TABLE `tournaments` DISABLE KEYS */;
 INSERT INTO `tournaments` (`tournament_id`,`tournament_name`,`tournament_description`,`tournament_status`,`current_stage`,`tournament_value`,`next_effective_date`,`last_points_updated_date`) VALUES 
- (0,'WORLD CUP 2007','World Cup 2007 West Indies','4',1,1400,'2007-03-27 00:00:00','2007-03-25 00:00:00');
+ (0,'WORLD CUP 2007','World Cup 2007 West Indies','1',1,1400,'2007-04-02 00:00:00','2007-04-01 00:00:00');
 /*!40000 ALTER TABLE `tournaments` ENABLE KEYS */;
 
 
@@ -2072,22 +2375,24 @@ INSERT INTO `user_authentication` (`user_id`,`user_name`,`password`,`user_type`,
  (804,'yogesh','ll865wjxaZ4Jg','player','Bond...James bond...','yogesh.jamkhindikar','Bond 11',NULL,'yogesh_jam@rediffmail.com'),
  (810,'Gayathri','llHLLM0BGXGs.','player','','gayathri.mohan','GM-11',NULL,'gayathri_m_in@yahoo.com'),
  (811,'Santosh Kumar','ll4tmOYN4H1Vs','player','','santosh.kumar','Daku\'s Eleven',NULL,'santosh.kumar@trigyn.com'),
- (816,'Hira','llR\\PUB1HQgCg','player','','Hira.kanal','Hira',NULL,'hiranand.kanal@trigyn.com'),
+ (816,'Hira','llR\\PUB1HQgCg','player','','Hira.kanal','super',NULL,'hiranand.kanal@trigyn.com'),
  (824,'Vivek','lldtyQXj7Ti9Y','player','Vivek\'s Team','Vivek','My Team',NULL,'vivek.kedare@trigyn.com'),
  (983,'Shamsher Khan','llu4C26HS4fLU','player','every ball goes to boundary line when i ball','shamsher.khan',NULL,NULL,'shamsher.khan@trigyn.com'),
- (1008,'Naresh','llkrkCffhRgzA','player','batsman','Naresh','Naresh 2007',NULL,'naresh.mumbai@yahoo.com'),
- (1057,'Jayesh Mehta','llGN58\\JyBHDw','player',':)','Jayesh.Mehta','India1',NULL,'jayesh.mehta@trigyn.com');
+ (1001,'sunilkumar','llg9\\zuLs8cUE','player','','sunil.gurram','sunny Team',NULL,'sunil.gurram@trigyn.com'),
+ (1005,'mehul','llXQtEygS4F1o','player','Winners Don\'t Need Taarif','Mehul.Bhatt','Winnersxxx',NULL,'Mehul.Bhatt@trigyn.com');
 INSERT INTO `user_authentication` (`user_id`,`user_name`,`password`,`user_type`,`description`,`login_name`,`default_user_team`,`default_tournament`,`email`) VALUES 
+ (1008,'Naresh','llkrkCffhRgzA','player','batsman','Naresh','Naresh 2007',NULL,'naresh.mumbai@yahoo.com'),
+ (1057,'Jayesh Mehta','llGN58\\JyBHDw','player',':)','Jayesh.Mehta','India1',NULL,'jayesh.mehta@trigyn.com'),
  (1060,'samual','ller3cZ.TBrck','player','','samual.almeida','sam',NULL,'samual97@rediffmail.com'),
  (1062,'Nagaraju','ll.njDNjWUFbE','player','Raj','nagaraju.merugu','Lotus',NULL,'nagaraju.merugu@trigyn.com'),
  (5143,'pushkar','llkZ4DnH6CBcU','player','tarif k kabil nahi','push.prabhu','Push\'s 11',NULL,'pushkar.prabhu@trigyn.com'),
  (5145,'deep mayekar','llxat7wWtLzz.','player','','deep.mayekar','Best Of 2007',NULL,'deep.mayekar@trigyn.com'),
- (9000,'dharmesh','ll\\1rQfvb9fyw','player','Normally, Sachin and Rahul get my advice.','dharmesh','dharmesh',NULL,'gujjuboy@gmail.com'),
+ (9000,'dharmesh@S8','ll\\1rQfvb9fyw','player','Normally, Sachin and Rahul get my advice.','dharmesh','dharmesh',NULL,'gujjuboy@gmail.com'),
  (9001,'Raj Alexandar','llOn0c38R5hVQ','player','','raj.alexandar','WC Superstars',NULL,'raj.alex@gmail.com'),
- (9002,'Gopal Shah','llBLtTjkP5YmQ','player','','gopal.shah',NULL,NULL,'shahgopal75@yahoo.com'),
- (9003,'ashish','llnrstCUfX3Gk','player','meri taarif jaanke kyaa karoge','devilseye007','destroyers',NULL,'ashh12345@yahoo.com'),
- (9015,'I am','ll3u.8maCqssU','player','Great','me.me',NULL,NULL,'new@new.com');
+ (9002,'Gopal Shah','llBLtTjkP5YmQ','player','','gopal.shah',NULL,NULL,'shahgopal75@yahoo.com');
 INSERT INTO `user_authentication` (`user_id`,`user_name`,`password`,`user_type`,`description`,`login_name`,`default_user_team`,`default_tournament`,`email`) VALUES 
+ (9003,'ashish','llnrstCUfX3Gk','player','meri taarif jaanke kyaa karoge','devilseye007','destroyers',NULL,'ashh12345@yahoo.com'),
+ (9015,'I am','ll3u.8maCqssU','player','Great','me.me',NULL,NULL,'new@new.com'),
  (9101,'hitesh','llE\\\\cJD8Ot.o','player','kuch bhi nahi','hitesh.rathod','indiabest',NULL,'pintu.rathod@gmail.com'),
  (9966,'vipul','llf.u00GcFqNo','player','cricket master','vipul.varshney','Vipul Varshney',NULL,'varshney.vipul@gmail.com'),
  (9995,'testing','ll3u.8maCqssU','player','','test.user',NULL,NULL,'new@new.com'),
@@ -2119,14 +2424,15 @@ INSERT INTO `user_team` (`user_team_id`,`user_id`,`tournament_id`,`user_team_poi
  ('ashwin11',369,0,0,'BEST OF WC',11),
  ('Best Of 2007',5145,0,0,'',11),
  ('Bond 11',804,0,0,'',0),
- ('Daku\'s Eleven',811,0,0,'',0),
- ('Dazzling Eleven',223,0,0,'',0),
- ('destroyers',9003,0,0,'The greatest team the world has ever see',0),
+ ('Daku\'s Eleven',811,0,0,'',11),
+ ('Dazzling Eleven',223,0,0,'',11),
+ ('destroyers',9003,0,0,'The greatest team the world has ever see',11),
  ('Dhanesh',106,0,0,'',11),
  ('Dhanesh yadav',106,0,0,'',11),
- ('dharmesh',9000,0,0,'dharmesh team',0),
- ('dharmshXI',9000,0,0,'dharmesh elevan',0),
- ('Fantastic Eleven',223,0,0,'',0),
+ ('dharmesh',9000,0,0,'dharmesh team',7),
+ ('dharmshXI',9000,0,0,'dharmesh elevan',5),
+ ('EngIreland',1001,0,0,'',0),
+ ('Fantastic Eleven',223,0,0,'',11),
  ('GM-11',810,0,0,'',0),
  ('Gopals',9001,0,0,'',0),
  ('Gravity',790,0,0,'Stay on Earth',0),
@@ -2138,29 +2444,35 @@ INSERT INTO `user_team` (`user_team_id`,`user_id`,`tournament_id`,`user_team_poi
  ('India1',1057,0,0,'India1',0),
  ('indiabest',9101,0,0,'',9),
  ('JP-11',242,0,0,'JP\'S 11',0),
- ('JP_SUP_8_11',242,0,0,'JP_SUP_8_11',0),
- ('Lotus',1062,0,0,'Nothing offical about it',8);
+ ('JP_SUP_8_11',242,0,0,'JP_SUP_8_11',8);
 INSERT INTO `user_team` (`user_team_id`,`user_id`,`tournament_id`,`user_team_points`,`user_team_descr`,`number_of_changes`) VALUES 
- ('Maratha Warriaers',781,0,0,'Maratha Marta Hai ya Marta Hai ',0),
+ ('Lotus',1062,0,0,'Nothing offical about it',8),
+ ('Maratha Warriaers',781,0,0,'Maratha Marta Hai ya Marta Hai ',8),
  ('Movers n Shakers',31,0,0,'',0),
- ('My Team',824,0,0,'My Team',0),
+ ('My Team',824,0,0,'My Team',5),
  ('myteam',561,0,0,'',0),
  ('MyTeam-Sushil',799,0,0,'MyTeam-Sushil',0),
  ('Myteam11',239,0,0,'s',0),
- ('Myteam2',561,0,0,'',0),
- ('Naresh 2007',1008,0,0,'',0),
- ('NARU',261,0,0,'',0),
- ('Push\'s 11',5143,0,0,'meri wali team',0),
+ ('Myteam2',561,0,0,'',7),
+ ('Naresh 2007',1008,0,0,'',11),
+ ('NARU',261,0,0,'',11),
+ ('Push\'s 11',5143,0,0,'meri wali team',11),
  ('rx100',784,0,0,'we r the best',10),
  ('sam',1060,0,0,'',11),
- ('SAM\'s',811,0,0,'',0),
+ ('SAM\'s',811,0,0,'',11),
  ('SandyXI',9999,0,0,'',0),
- ('Super_Boy',783,0,0,'jo jita wahi sikander',0),
+ ('sunny Team',1001,0,0,'',0),
+ ('SunnyTeam',1001,0,0,'',0),
+ ('super',816,0,0,'',10),
+ ('Super_Boy',783,0,0,'jo jita wahi sikander',7),
  ('The Mavericks',31,0,0,'',9),
  ('The Rock',757,0,0,'if u smell ,whats the rock is cooking',0),
  ('Vipul Varshney',9966,0,0,'Best time',0),
  ('WC Superstars',9001,0,0,'',0),
- ('WILLOW XI',691,0,0,'My team',0),
+ ('WILLOW XI',691,0,0,'My team',5),
+ ('Winners for Ever',1005,0,0,'winners',11);
+INSERT INTO `user_team` (`user_team_id`,`user_id`,`tournament_id`,`user_team_points`,`user_team_descr`,`number_of_changes`) VALUES 
+ ('Winnersxxx',1005,0,0,'Winners don\'t do different things',11),
  ('world 11',9001,0,0,'',0);
 /*!40000 ALTER TABLE `user_team` ENABLE KEYS */;
 
@@ -2207,21 +2519,32 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('ashwin11',199,34,121,148,138,210,207,130,209,143,37,'2007-03-24 00:00:00',0,0),
  ('ashwin11',199,34,121,148,138,210,207,130,209,143,37,'2007-03-25 00:00:00',0,0);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
- ('ashwin11',199,34,121,148,138,210,207,130,209,143,37,'2007-03-27 00:00:00',0,0),
+ ('ashwin11',199,34,121,148,138,210,207,130,209,143,37,'2007-03-27 00:00:00',0,126),
+ ('ashwin11',199,34,121,148,138,210,207,130,209,143,37,'2007-03-28 00:00:00',0,124),
+ ('ashwin11',199,34,121,148,138,210,207,130,209,143,37,'2007-03-29 00:00:00',0,79),
+ ('ashwin11',199,34,121,148,138,210,207,130,209,143,37,'2007-03-30 00:00:00',0,184),
+ ('ashwin11',199,34,121,148,138,210,207,130,209,143,37,'2007-03-31 00:00:00',0,0),
+ ('ashwin11',199,34,121,148,138,210,207,130,209,143,37,'2007-04-01 00:00:00',0,250),
  ('Best Of 2007',0,5,171,233,6,12,239,10,169,187,228,'2007-03-14 00:00:00',0,400),
  ('Best Of 2007',0,5,134,233,6,154,132,135,152,151,53,'2007-03-15 00:00:00',7,302),
  ('Best Of 2007',0,5,107,222,83,104,95,114,221,217,212,'2007-03-16 00:00:00',9,280),
  ('Best Of 2007',31,5,43,222,83,104,33,37,29,203,204,'2007-03-17 00:00:00',7,81),
- ('Best Of 2007',31,5,43,222,83,104,33,37,29,203,204,'2007-03-18 00:00:00',0,152),
+ ('Best Of 2007',31,5,43,222,83,104,33,37,29,203,204,'2007-03-18 00:00:00',0,152);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('Best Of 2007',31,5,43,222,83,104,33,37,29,203,204,'2007-03-19 00:00:00',0,188),
  ('Best Of 2007',5,230,117,171,109,104,115,238,108,100,168,'2007-03-20 00:00:00',9,168),
  ('Best Of 2007',134,121,19,163,74,18,132,135,25,160,152,'2007-03-21 00:00:00',11,395),
  ('Best Of 2007',105,91,98,183,104,188,95,100,92,238,187,'2007-03-22 00:00:00',11,402),
- ('Best Of 2007',43,31,206,147,138,40,33,39,128,202,204,'2007-03-23 00:00:00',11,216);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Best Of 2007',43,31,206,147,138,40,33,39,128,202,204,'2007-03-23 00:00:00',11,216),
  ('Best Of 2007',43,31,206,147,138,40,33,39,128,202,204,'2007-03-24 00:00:00',0,0),
  ('Best Of 2007',43,31,206,147,138,40,33,39,128,202,204,'2007-03-25 00:00:00',0,0),
- ('Best Of 2007',43,31,206,147,138,40,33,39,128,202,204,'2007-03-27 00:00:00',0,0),
+ ('Best Of 2007',43,31,206,147,138,40,33,39,128,202,204,'2007-03-27 00:00:00',0,60),
+ ('Best Of 2007',43,31,206,147,138,40,33,39,128,202,204,'2007-03-28 00:00:00',0,0),
+ ('Best Of 2007',43,31,206,147,138,40,33,39,128,202,204,'2007-03-29 00:00:00',0,34),
+ ('Best Of 2007',43,31,206,147,138,40,33,39,128,202,204,'2007-03-30 00:00:00',0,40);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Best Of 2007',43,31,206,147,138,40,33,39,128,202,204,'2007-03-31 00:00:00',0,0),
+ ('Best Of 2007',43,31,206,147,138,40,33,39,128,202,204,'2007-04-01 00:00:00',0,47),
  ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-16 00:00:00',0,105),
  ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-17 00:00:00',0,295),
  ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-18 00:00:00',0,85),
@@ -2229,34 +2552,58 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-20 00:00:00',0,40),
  ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-21 00:00:00',0,323),
  ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-22 00:00:00',0,63),
- ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-23 00:00:00',0,70);
+ ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-23 00:00:00',0,70),
+ ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-24 00:00:00',0,43);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
- ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-24 00:00:00',0,43),
  ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-25 00:00:00',0,43),
- ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-27 00:00:00',0,0),
- ('Daku\'s Eleven',2,5,8,139,12,14,144,143,140,137,10,'2007-03-27 00:00:00',0,0),
+ ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-27 00:00:00',0,86),
+ ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-28 00:00:00',0,0),
+ ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-29 00:00:00',0,91),
+ ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-30 00:00:00',0,81),
+ ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-03-31 00:00:00',0,100),
+ ('Bond 11',21,66,78,28,104,198,23,11,39,238,64,'2007-04-01 00:00:00',0,0),
+ ('Daku\'s Eleven',2,5,8,139,12,14,144,143,140,137,10,'2007-03-27 00:00:00',0,466),
+ ('Daku\'s Eleven',5,136,139,141,14,145,207,1,10,11,13,'2007-03-28 00:00:00',7,0),
+ ('Daku\'s Eleven',76,90,80,88,79,82,86,89,87,85,77,'2007-03-29 00:00:00',11,0),
+ ('Daku\'s Eleven',76,90,80,88,79,82,86,89,87,85,77,'2007-03-30 00:00:00',0,495);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Daku\'s Eleven',76,90,80,88,79,82,86,89,87,85,77,'2007-03-31 00:00:00',0,0),
+ ('Daku\'s Eleven',76,90,80,88,79,82,86,89,87,85,77,'2007-04-01 00:00:00',0,0),
  ('Dazzling Eleven',62,49,69,193,141,72,67,73,52,143,53,'2007-03-13 00:00:00',0,153),
  ('Dazzling Eleven',5,0,171,193,6,190,4,10,9,13,180,'2007-03-14 00:00:00',10,430),
  ('Dazzling Eleven',163,134,127,159,154,198,132,130,135,151,161,'2007-03-15 00:00:00',11,524),
  ('Dazzling Eleven',78,80,105,103,214,104,220,212,120,92,27,'2007-03-16 00:00:00',11,166),
  ('Dazzling Eleven',34,43,41,69,20,198,23,27,29,71,65,'2007-03-17 00:00:00',10,484),
  ('Dazzling Eleven',183,5,90,78,14,56,3,13,89,184,213,'2007-03-18 00:00:00',11,336),
- ('Dazzling Eleven',34,31,163,43,138,141,33,52,53,160,150,'2007-03-19 00:00:00',11,450);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Dazzling Eleven',34,31,163,43,138,141,33,52,53,160,150,'2007-03-19 00:00:00',11,450),
  ('Dazzling Eleven',105,103,118,106,166,229,172,180,92,100,116,'2007-03-20 00:00:00',11,421),
- ('Dazzling Eleven',16,134,133,159,20,154,132,22,129,73,160,'2007-03-21 00:00:00',11,450),
+ ('Dazzling Eleven',16,134,133,159,20,154,132,22,129,73,160,'2007-03-21 00:00:00',11,450);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('Dazzling Eleven',105,133,134,230,224,229,132,100,97,129,189,'2007-03-22 00:00:00',7,184),
  ('Dazzling Eleven',34,133,134,206,56,198,132,97,129,130,197,'2007-03-23 00:00:00',6,323),
  ('Dazzling Eleven',34,133,134,206,56,198,132,108,129,130,197,'2007-03-24 00:00:00',1,33),
  ('Dazzling Eleven',34,133,134,206,56,198,132,108,129,130,197,'2007-03-25 00:00:00',0,23),
- ('Dazzling Eleven',139,0,5,2,12,7,3,150,11,13,202,'2007-03-27 00:00:00',0,0),
+ ('Dazzling Eleven',139,0,5,2,12,7,3,150,11,13,202,'2007-03-27 00:00:00',0,584),
+ ('Dazzling Eleven',107,106,134,121,109,113,115,129,130,108,202,'2007-03-28 00:00:00',10,445),
+ ('Dazzling Eleven',139,141,146,103,96,104,95,93,92,101,150,'2007-03-29 00:00:00',11,305),
+ ('Dazzling Eleven',139,141,146,103,96,104,95,93,92,101,150,'2007-03-30 00:00:00',0,0),
+ ('Dazzling Eleven',2,5,0,28,14,7,3,1,11,13,22,'2007-03-31 00:00:00',11,315),
+ ('Dazzling Eleven',139,141,149,134,145,138,132,150,129,130,135,'2007-04-01 00:00:00',11,302);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Dazzling Eleven',91,99,103,105,96,104,95,92,94,97,100,'2007-04-02 00:00:00',11,0),
  ('destroyers',0,24,178,165,7,96,3,11,97,180,217,'2007-03-21 00:00:00',0,42),
  ('destroyers',91,181,183,240,96,190,95,94,97,184,238,'2007-03-22 00:00:00',9,500),
- ('destroyers',127,34,208,205,141,198,132,131,202,150,209,'2007-03-23 00:00:00',11,361);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('destroyers',127,34,208,205,141,198,132,131,202,150,209,'2007-03-23 00:00:00',11,361),
  ('destroyers',0,178,88,171,6,167,3,11,169,174,175,'2007-03-24 00:00:00',11,357),
  ('destroyers',28,21,16,49,20,50,46,53,25,22,27,'2007-03-25 00:00:00',11,272),
- ('destroyers',0,136,146,148,7,138,3,11,143,150,13,'2007-03-27 00:00:00',0,0),
+ ('destroyers',0,136,146,148,7,138,3,11,143,150,13,'2007-03-27 00:00:00',0,547),
+ ('destroyers',0,136,146,148,7,138,3,11,143,150,13,'2007-03-28 00:00:00',0,0),
+ ('destroyers',0,136,146,148,7,138,3,11,143,150,13,'2007-03-29 00:00:00',0,147),
+ ('destroyers',88,76,83,199,82,198,207,202,77,87,85,'2007-03-30 00:00:00',11,456),
+ ('destroyers',88,76,83,199,82,198,207,202,77,87,85,'2007-03-31 00:00:00',0,0);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('destroyers',5,0,2,21,7,17,3,20,11,13,1,'2007-04-01 00:00:00',11,0),
+ ('destroyers',146,136,134,148,145,138,132,143,131,124,150,'2007-04-02 00:00:00',11,0),
  ('Dhanesh',78,107,103,216,82,109,220,94,108,212,217,'2007-03-16 00:00:00',0,289),
  ('Dhanesh',78,107,103,216,82,109,220,94,108,212,217,'2007-03-17 00:00:00',0,0),
  ('Dhanesh',78,107,103,216,82,109,220,94,108,212,217,'2007-03-18 00:00:00',0,54),
@@ -2264,56 +2611,82 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('Dhanesh',99,107,178,227,104,109,176,97,108,168,169,'2007-03-20 00:00:00',8,266),
  ('Dhanesh',121,133,21,28,74,153,164,131,64,22,27,'2007-03-21 00:00:00',11,365),
  ('Dhanesh',99,103,105,227,96,104,220,94,97,184,212,'2007-03-22 00:00:00',11,410),
- ('Dhanesh',31,44,146,201,141,210,33,131,197,202,203,'2007-03-23 00:00:00',11,366);
+ ('Dhanesh',31,44,146,201,141,210,33,131,197,202,203,'2007-03-23 00:00:00',11,366),
+ ('Dhanesh',31,44,146,201,141,210,33,131,197,202,203,'2007-03-24 00:00:00',0,0);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
- ('Dhanesh',31,44,146,201,141,210,33,131,197,202,203,'2007-03-24 00:00:00',0,0),
  ('Dhanesh',31,44,146,201,141,210,33,131,197,202,203,'2007-03-25 00:00:00',0,0),
- ('Dhanesh',31,44,146,201,141,210,33,131,197,202,203,'2007-03-27 00:00:00',0,0),
+ ('Dhanesh',31,44,146,201,141,210,33,131,197,202,203,'2007-03-27 00:00:00',0,38),
+ ('Dhanesh',31,44,146,201,141,210,33,131,197,202,203,'2007-03-28 00:00:00',0,92),
+ ('Dhanesh',98,136,139,146,104,145,144,94,97,137,143,'2007-03-29 00:00:00',10,447),
+ ('Dhanesh',78,80,88,199,82,198,207,77,87,89,196,'2007-03-30 00:00:00',11,630),
+ ('Dhanesh',78,80,88,199,82,198,207,77,87,89,196,'2007-03-31 00:00:00',0,0),
+ ('Dhanesh',78,80,88,199,82,198,207,77,87,89,196,'2007-04-01 00:00:00',0,0),
+ ('Dhanesh',91,98,105,21,96,104,23,97,94,22,20,'2007-04-02 00:00:00',11,0),
  ('Dhanesh yadav',105,107,117,216,82,109,239,94,108,212,213,'2007-03-16 00:00:00',0,312),
  ('Dhanesh yadav',105,107,117,216,82,109,239,94,108,212,213,'2007-03-17 00:00:00',0,0),
- ('Dhanesh yadav',105,107,117,216,82,109,239,94,108,212,213,'2007-03-18 00:00:00',0,65),
+ ('Dhanesh yadav',105,107,117,216,82,109,239,94,108,212,213,'2007-03-18 00:00:00',0,65);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('Dhanesh yadav',105,107,117,216,82,109,239,94,108,212,213,'2007-03-19 00:00:00',0,0),
  ('Dhanesh yadav',105,107,117,171,109,226,176,97,108,168,169,'2007-03-20 00:00:00',6,107),
  ('Dhanesh yadav',69,70,127,134,20,153,23,22,27,135,160,'2007-03-21 00:00:00',11,352),
  ('Dhanesh yadav',91,98,99,230,104,226,220,94,97,189,212,'2007-03-22 00:00:00',11,248),
- ('Dhanesh yadav',127,133,139,205,145,210,132,37,150,202,204,'2007-03-23 00:00:00',11,439);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Dhanesh yadav',127,133,139,205,145,210,132,37,150,202,204,'2007-03-23 00:00:00',11,439),
  ('Dhanesh yadav',127,133,139,205,145,210,132,37,150,202,204,'2007-03-24 00:00:00',0,0),
  ('Dhanesh yadav',127,133,139,205,145,210,132,37,150,202,204,'2007-03-25 00:00:00',0,0),
- ('Dhanesh yadav',127,133,139,205,145,210,132,37,150,202,204,'2007-03-27 00:00:00',0,0),
+ ('Dhanesh yadav',127,133,139,205,145,210,132,37,150,202,204,'2007-03-27 00:00:00',0,52),
+ ('Dhanesh yadav',127,133,139,205,145,210,132,37,150,202,204,'2007-03-28 00:00:00',0,106),
+ ('Dhanesh yadav',98,105,139,146,96,104,144,94,97,137,150,'2007-03-29 00:00:00',9,459);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Dhanesh yadav',76,80,88,199,198,82,207,87,77,89,196,'2007-03-30 00:00:00',11,625),
+ ('Dhanesh yadav',76,80,88,199,198,82,207,87,77,89,196,'2007-03-31 00:00:00',0,0),
+ ('Dhanesh yadav',76,80,88,199,198,82,207,87,77,89,196,'2007-04-01 00:00:00',0,0),
+ ('Dhanesh yadav',91,103,105,15,96,104,23,97,94,20,22,'2007-04-02 00:00:00',11,0),
  ('dharmesh',43,80,156,171,138,104,132,37,1,184,151,'2007-03-13 00:00:00',0,112),
  ('dharmesh',16,134,57,171,7,14,132,1,135,184,196,'2007-03-14 00:00:00',7,124),
  ('dharmesh',45,57,134,127,154,198,132,151,135,52,196,'2007-03-15 00:00:00',6,324),
  ('dharmesh',80,105,211,99,214,113,86,212,100,84,114,'2007-03-16 00:00:00',11,273),
  ('dharmesh',80,105,211,99,214,113,86,212,100,84,114,'2007-03-17 00:00:00',0,0),
  ('dharmesh',80,105,211,99,214,113,86,212,100,84,114,'2007-03-18 00:00:00',0,187),
- ('dharmesh',80,105,211,99,214,113,86,212,100,84,114,'2007-03-19 00:00:00',0,0),
- ('dharmesh',118,99,105,98,113,226,172,168,100,114,228,'2007-03-20 00:00:00',6,403);
+ ('dharmesh',80,105,211,99,214,113,86,212,100,84,114,'2007-03-19 00:00:00',0,0);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('dharmesh',118,99,105,98,113,226,172,168,100,114,228,'2007-03-20 00:00:00',6,403),
  ('dharmesh',134,127,28,66,154,20,23,151,130,129,64,'2007-03-21 00:00:00',11,707),
  ('dharmesh',91,98,105,211,104,229,239,100,102,213,228,'2007-03-22 00:00:00',11,363),
  ('dharmesh',41,43,134,148,138,198,207,37,130,150,202,'2007-03-23 00:00:00',11,379),
  ('dharmesh',41,43,134,148,138,198,207,37,130,150,202,'2007-03-24 00:00:00',0,0),
  ('dharmesh',41,43,134,148,138,198,207,37,130,150,202,'2007-03-25 00:00:00',0,0),
- ('dharmesh',141,0,2,148,138,6,3,150,13,1,143,'2007-03-27 00:00:00',0,0),
+ ('dharmesh',141,0,2,148,138,6,3,150,13,1,143,'2007-03-27 00:00:00',0,318),
+ ('dharmesh',106,118,122,134,109,113,132,116,128,130,135,'2007-03-28 00:00:00',11,616),
+ ('dharmesh',99,139,148,141,145,96,95,143,94,97,150,'2007-03-29 00:00:00',11,434),
+ ('dharmesh',199,80,78,83,82,198,86,196,77,197,87,'2007-03-30 00:00:00',11,560),
+ ('dharmesh',2,5,15,16,6,12,3,1,20,22,11,'2007-03-31 00:00:00',11,321);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('dharmesh',136,146,134,127,138,145,144,130,131,137,140,'2007-04-01 00:00:00',11,521),
+ ('dharmesh',127,134,241,21,104,96,95,130,131,94,101,'2007-04-02 00:00:00',7,0),
  ('dharmshXI',80,211,106,99,83,104,86,100,114,219,217,'2007-03-16 00:00:00',0,412),
  ('dharmshXI',80,211,106,99,83,104,86,100,114,219,217,'2007-03-17 00:00:00',0,0),
  ('dharmshXI',80,211,106,99,83,104,86,100,114,219,217,'2007-03-18 00:00:00',0,196),
  ('dharmshXI',80,211,106,99,83,104,86,100,114,219,217,'2007-03-19 00:00:00',0,0),
- ('dharmshXI',171,99,106,233,96,104,115,100,114,228,169,'2007-03-20 00:00:00',6,448);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('dharmshXI',171,99,106,233,96,104,115,100,114,228,169,'2007-03-20 00:00:00',6,448),
  ('dharmshXI',133,156,69,16,153,20,67,131,63,152,135,'2007-03-21 00:00:00',11,254),
  ('dharmshXI',98,218,227,235,96,104,95,94,215,228,236,'2007-03-22 00:00:00',11,452),
  ('dharmshXI',127,44,122,148,145,198,33,129,202,204,203,'2007-03-23 00:00:00',11,178),
- ('dharmshXI',127,44,122,148,145,198,33,129,202,204,203,'2007-03-24 00:00:00',0,0),
+ ('dharmshXI',127,44,122,148,145,198,33,129,202,204,203,'2007-03-24 00:00:00',0,0);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('dharmshXI',127,44,122,148,145,198,33,129,202,204,203,'2007-03-25 00:00:00',0,0),
- ('dharmshXI',136,0,8,148,145,7,144,137,1,11,143,'2007-03-27 00:00:00',0,0),
+ ('dharmshXI',136,0,8,148,145,7,144,137,1,11,143,'2007-03-27 00:00:00',0,521),
+ ('dharmshXI',133,107,122,134,113,109,115,130,131,116,119,'2007-03-28 00:00:00',11,625),
+ ('dharmshXI',146,136,103,98,138,104,144,140,100,97,137,'2007-03-29 00:00:00',11,317),
+ ('dharmshXI',199,206,76,78,79,82,207,196,197,85,87,'2007-03-30 00:00:00',11,508),
+ ('dharmshXI',0,8,19,21,14,12,3,9,20,26,13,'2007-03-31 00:00:00',11,148),
+ ('dharmshXI',133,139,121,122,138,145,132,137,143,129,135,'2007-04-01 00:00:00',11,419),
+ ('dharmshXI',121,122,133,103,104,96,132,129,135,100,20,'2007-04-02 00:00:00',5,0),
  ('Fantastic Eleven',181,45,70,139,50,74,182,71,65,195,53,'2007-03-13 00:00:00',0,260),
  ('Fantastic Eleven',45,2,8,181,166,167,182,9,1,168,195,'2007-03-14 00:00:00',7,235),
- ('Fantastic Eleven',134,127,45,121,58,210,132,53,130,131,52,'2007-03-15 00:00:00',10,491),
- ('Fantastic Eleven',106,107,76,88,82,224,86,213,221,53,92,'2007-03-16 00:00:00',10,414),
- ('Fantastic Eleven',24,34,43,62,20,198,23,37,197,29,25,'2007-03-17 00:00:00',11,493);
+ ('Fantastic Eleven',134,127,45,121,58,210,132,53,130,131,52,'2007-03-15 00:00:00',10,491);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Fantastic Eleven',106,107,76,88,82,224,86,213,221,53,92,'2007-03-16 00:00:00',10,414),
+ ('Fantastic Eleven',24,34,43,62,20,198,23,37,197,29,25,'2007-03-17 00:00:00',11,493),
  ('Fantastic Eleven',5,216,90,78,190,224,220,11,13,89,87,'2007-03-18 00:00:00',11,423),
  ('Fantastic Eleven',31,34,43,159,154,54,164,150,137,37,152,'2007-03-19 00:00:00',11,438),
  ('Fantastic Eleven',230,171,99,237,166,229,172,108,114,94,97,'2007-03-20 00:00:00',11,357),
@@ -2321,69 +2694,103 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('Fantastic Eleven',105,218,121,127,104,96,239,228,129,213,184,'2007-03-22 00:00:00',8,373),
  ('Fantastic Eleven',34,121,127,200,141,198,207,129,37,202,209,'2007-03-23 00:00:00',8,280),
  ('Fantastic Eleven',34,121,127,200,113,82,207,37,129,202,209,'2007-03-24 00:00:00',2,53),
- ('Fantastic Eleven',34,121,127,200,113,82,207,37,129,202,209,'2007-03-25 00:00:00',0,0),
- ('Fantastic Eleven',141,139,5,0,7,12,3,150,137,11,209,'2007-03-27 00:00:00',0,0),
- ('Gopals',134,88,133,149,7,104,86,202,130,137,203,'2007-03-25 00:00:00',0,0);
+ ('Fantastic Eleven',34,121,127,200,113,82,207,37,129,202,209,'2007-03-25 00:00:00',0,0);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
- ('Gopals',134,88,133,149,7,104,86,202,130,137,203,'2007-03-27 00:00:00',0,0),
+ ('Fantastic Eleven',141,139,5,0,7,12,3,150,137,11,209,'2007-03-27 00:00:00',0,494),
+ ('Fantastic Eleven',118,127,121,133,109,113,132,116,108,129,209,'2007-03-28 00:00:00',10,467),
+ ('Fantastic Eleven',105,99,139,141,96,104,95,97,94,143,209,'2007-03-29 00:00:00',10,506),
+ ('Fantastic Eleven',105,99,139,141,96,104,95,97,94,143,209,'2007-03-30 00:00:00',0,55),
+ ('Fantastic Eleven',0,2,5,21,7,17,3,1,11,13,20,'2007-03-31 00:00:00',11,343),
+ ('Fantastic Eleven',136,141,134,133,145,138,132,135,131,130,129,'2007-04-01 00:00:00',11,284),
+ ('Fantastic Eleven',91,99,103,105,96,104,95,92,94,97,100,'2007-04-02 00:00:00',11,0),
+ ('Gopals',134,88,133,149,7,104,86,202,130,137,203,'2007-03-25 00:00:00',0,0),
+ ('Gopals',134,88,133,149,7,104,86,202,130,137,203,'2007-03-27 00:00:00',0,91),
+ ('Gopals',134,88,133,149,7,104,86,202,130,137,203,'2007-03-28 00:00:00',0,139);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Gopals',134,88,133,149,7,104,86,202,130,137,203,'2007-03-29 00:00:00',0,91),
+ ('Gopals',134,88,133,149,7,104,86,202,130,137,203,'2007-03-30 00:00:00',0,81),
+ ('Gopals',134,88,133,149,7,104,86,202,130,137,203,'2007-03-31 00:00:00',0,6),
+ ('Gopals',134,88,133,149,7,104,86,202,130,137,203,'2007-04-01 00:00:00',0,121),
  ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-16 00:00:00',0,220),
  ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-17 00:00:00',0,0),
  ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-18 00:00:00',0,276),
  ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-19 00:00:00',0,0),
  ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-20 00:00:00',0,0),
  ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-21 00:00:00',0,0),
- ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-22 00:00:00',0,125),
+ ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-22 00:00:00',0,125);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-23 00:00:00',0,0),
  ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-24 00:00:00',0,166),
- ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-25 00:00:00',0,0);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-25 00:00:00',0,0),
  ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-27 00:00:00',0,0),
+ ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-28 00:00:00',0,0),
+ ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-29 00:00:00',0,0),
+ ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-30 00:00:00',0,158),
+ ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-03-31 00:00:00',0,0),
+ ('Gravity',80,211,216,222,83,224,86,84,89,93,92,'2007-04-01 00:00:00',0,0),
  ('Hemant\'s SA-EN-NZ',225,78,218,99,109,82,95,114,213,100,212,'2007-03-16 00:00:00',0,325),
- ('Hemant\'s SA-EN-NZ',225,78,218,99,109,82,95,114,213,100,212,'2007-03-17 00:00:00',0,0),
+ ('Hemant\'s SA-EN-NZ',225,78,218,99,109,82,95,114,213,100,212,'2007-03-17 00:00:00',0,0);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('Hemant\'s SA-EN-NZ',225,78,218,99,109,82,95,114,213,100,212,'2007-03-18 00:00:00',0,134),
  ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-19 00:00:00',0,0),
  ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-20 00:00:00',0,191),
  ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-21 00:00:00',0,0),
  ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-22 00:00:00',0,148),
  ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-23 00:00:00',0,0),
- ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-24 00:00:00',0,160);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-24 00:00:00',0,160),
  ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-25 00:00:00',0,0),
  ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-27 00:00:00',0,0),
+ ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-28 00:00:00',0,121);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-29 00:00:00',0,22),
+ ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-30 00:00:00',0,196),
+ ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-03-31 00:00:00',0,0),
+ ('Hemant\'s SA-EN-NZ',78,99,218,225,82,109,95,100,114,212,213,'2007-04-01 00:00:00',0,0),
  ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-14 00:00:00',0,390),
  ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-15 00:00:00',0,0),
  ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-16 00:00:00',0,0),
  ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-17 00:00:00',0,0),
  ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-18 00:00:00',0,374),
  ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-19 00:00:00',0,0),
- ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-20 00:00:00',0,73),
- ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-21 00:00:00',0,0),
- ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-22 00:00:00',0,7);
+ ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-20 00:00:00',0,73);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-21 00:00:00',0,0),
+ ('Hemant\'s Team',0,2,170,177,6,231,4,1,9,13,236,'2007-03-22 00:00:00',0,7),
  ('Hemant\'s Team',44,201,34,127,40,210,125,204,135,143,209,'2007-03-23 00:00:00',11,292),
  ('Hemant\'s Team',44,201,34,127,40,210,125,204,135,143,209,'2007-03-24 00:00:00',0,0),
  ('Hemant\'s Team',44,201,34,127,40,210,125,204,135,143,209,'2007-03-25 00:00:00',0,0),
- ('Hemant\'s Team',44,201,34,127,40,210,125,204,135,143,209,'2007-03-27 00:00:00',0,0),
+ ('Hemant\'s Team',44,201,34,127,40,210,125,204,135,143,209,'2007-03-27 00:00:00',0,56),
+ ('Hemant\'s Team',44,201,34,127,40,210,125,204,135,143,209,'2007-03-28 00:00:00',0,147),
+ ('Hemant\'s Team',44,201,34,127,40,210,125,204,135,143,209,'2007-03-29 00:00:00',0,51),
+ ('Hemant\'s Team',44,201,34,127,40,210,125,204,135,143,209,'2007-03-30 00:00:00',0,99),
+ ('Hemant\'s Team',44,201,34,127,40,210,125,204,135,143,209,'2007-03-31 00:00:00',0,0);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Hemant\'s Team',44,201,34,127,40,210,125,204,135,143,209,'2007-04-01 00:00:00',0,385),
  ('Hira',5,173,8,183,12,14,3,9,238,228,232,'2007-03-14 00:00:00',0,264),
  ('Hira',122,55,127,134,54,48,132,131,129,130,53,'2007-03-15 00:00:00',11,548),
  ('Hira',122,55,127,134,54,48,132,131,129,130,53,'2007-03-16 00:00:00',0,0),
  ('Hira',122,55,127,134,54,48,132,131,129,130,53,'2007-03-17 00:00:00',0,0),
  ('Hira',122,55,127,134,54,48,132,131,129,130,53,'2007-03-18 00:00:00',0,0),
  ('Hira',122,55,127,134,54,48,132,131,129,130,53,'2007-03-19 00:00:00',0,51),
- ('Hira',171,98,177,106,109,231,115,120,236,94,174,'2007-03-20 00:00:00',11,423);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Hira',171,98,177,106,109,231,115,120,236,94,174,'2007-03-20 00:00:00',11,423),
  ('Hira',134,127,66,28,154,20,132,130,64,27,152,'2007-03-21 00:00:00',11,862),
  ('Hira',240,194,99,98,104,96,95,238,189,100,97,'2007-03-22 00:00:00',11,246),
- ('Hira',206,44,133,41,198,210,132,32,130,203,38,'2007-03-23 00:00:00',11,291),
+ ('Hira',206,44,133,41,198,210,132,32,130,203,38,'2007-03-23 00:00:00',11,291);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('Hira',206,44,133,41,198,210,132,32,130,203,38,'2007-03-24 00:00:00',0,0),
  ('Hira',206,44,133,41,198,210,132,32,130,203,38,'2007-03-25 00:00:00',0,0),
- ('Hira',206,44,133,41,198,210,132,32,130,203,38,'2007-03-27 00:00:00',0,0),
+ ('Hira',2,8,148,141,138,14,3,150,11,13,10,'2007-03-27 00:00:00',0,325),
+ ('Hira',133,118,141,148,14,138,132,1,120,13,131,'2007-03-28 00:00:00',6,152),
+ ('Hira',133,118,141,148,14,138,132,1,120,13,131,'2007-03-29 00:00:00',0,73),
+ ('Hira',76,80,88,90,82,198,86,87,77,197,85,'2007-03-30 00:00:00',11,554),
+ ('Hira',76,80,88,90,82,198,86,87,77,197,85,'2007-03-31 00:00:00',0,0),
+ ('Hira',76,80,88,90,82,198,86,87,77,197,85,'2007-04-01 00:00:00',0,0),
  ('indiabest',121,122,156,158,155,210,132,126,135,151,131,'2007-03-15 00:00:00',0,352),
  ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-16 00:00:00',9,34),
  ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-17 00:00:00',0,237),
- ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-18 00:00:00',0,27),
- ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-19 00:00:00',0,170);
+ ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-18 00:00:00',0,27);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-19 00:00:00',0,170),
  ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-20 00:00:00',0,76),
  ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-21 00:00:00',0,38),
  ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-22 00:00:00',0,128),
@@ -2391,38 +2798,61 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-24 00:00:00',0,1),
  ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-25 00:00:00',0,38),
  ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-27 00:00:00',0,0),
+ ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-28 00:00:00',0,0),
+ ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-29 00:00:00',0,46),
+ ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-30 00:00:00',0,95);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-03-31 00:00:00',0,4),
+ ('indiabest',28,34,91,43,155,210,33,27,39,87,215,'2007-04-01 00:00:00',0,0),
  ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-13 00:00:00',0,52),
  ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-14 00:00:00',0,108),
  ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-15 00:00:00',0,121),
- ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-16 00:00:00',0,6);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-16 00:00:00',0,6),
  ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-17 00:00:00',0,21),
  ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-18 00:00:00',0,75),
  ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-19 00:00:00',0,152),
  ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-20 00:00:00',0,34),
- ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-21 00:00:00',0,57),
+ ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-21 00:00:00',0,57);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-22 00:00:00',0,0),
  ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-23 00:00:00',0,217),
  ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-24 00:00:00',0,214),
  ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-25 00:00:00',0,0),
- ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-27 00:00:00',0,0),
- ('JP_SUP_8_11',146,148,5,0,7,138,3,11,140,143,13,'2007-03-27 00:00:00',0,0);
+ ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-27 00:00:00',0,250),
+ ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-28 00:00:00',0,153),
+ ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-29 00:00:00',0,51),
+ ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-30 00:00:00',0,203),
+ ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-03-31 00:00:00',0,48),
+ ('JP-11',5,122,156,171,82,210,33,38,131,180,143,'2007-04-01 00:00:00',0,109),
+ ('JP_SUP_8_11',146,148,5,0,7,138,3,11,140,143,13,'2007-03-27 00:00:00',0,644);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('JP_SUP_8_11',121,5,133,106,109,138,132,135,130,116,143,'2007-03-28 00:00:00',8,538),
+ ('JP_SUP_8_11',5,99,136,146,96,138,132,116,130,94,143,'2007-03-29 00:00:00',5,345),
+ ('JP_SUP_8_11',5,80,88,199,138,198,207,77,89,130,143,'2007-03-30 00:00:00',7,330),
+ ('JP_SUP_8_11',5,2,0,21,17,14,3,1,11,25,143,'2007-03-31 00:00:00',9,312),
+ ('JP_SUP_8_11',146,121,133,136,138,17,132,130,131,150,143,'2007-04-01 00:00:00',9,434),
+ ('JP_SUP_8_11',21,133,91,98,17,96,95,130,20,94,97,'2007-04-02 00:00:00',8,0),
  ('Lotus',34,123,2,178,231,56,164,150,143,35,131,'2007-03-13 00:00:00',0,80),
  ('Lotus',2,5,123,178,56,231,164,35,131,10,9,'2007-03-14 00:00:00',3,166),
  ('Lotus',2,5,123,178,56,231,164,35,131,10,9,'2007-03-15 00:00:00',0,108),
  ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-16 00:00:00',8,201),
- ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-17 00:00:00',0,0),
+ ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-17 00:00:00',0,0);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-18 00:00:00',0,60),
  ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-19 00:00:00',0,62),
  ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-20 00:00:00',0,275),
  ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-21 00:00:00',0,19),
  ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-22 00:00:00',0,104),
  ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-23 00:00:00',0,0),
- ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-24 00:00:00',0,155);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-24 00:00:00',0,155),
  ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-25 00:00:00',0,23),
  ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-27 00:00:00',0,0),
+ ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-28 00:00:00',0,70),
+ ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-29 00:00:00',0,34),
+ ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-30 00:00:00',0,63);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-03-31 00:00:00',0,0),
+ ('Lotus',98,106,78,117,56,231,164,119,93,77,92,'2007-04-01 00:00:00',0,0),
  ('Maratha Warriaers',8,16,80,99,20,104,164,87,114,157,162,'2007-03-14 00:00:00',0,5),
  ('Maratha Warriaers',8,16,80,99,20,104,164,87,114,157,162,'2007-03-15 00:00:00',0,72),
  ('Maratha Warriaers',8,16,80,99,20,104,164,87,114,157,162,'2007-03-16 00:00:00',0,189),
@@ -2436,15 +2866,26 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('Maratha Warriaers',44,41,31,199,145,210,33,143,202,129,209,'2007-03-23 00:00:00',11,278),
  ('Maratha Warriaers',2,0,8,178,167,166,86,169,174,180,11,'2007-03-24 00:00:00',11,447),
  ('Maratha Warriaers',2,0,8,178,167,166,86,169,174,180,11,'2007-03-25 00:00:00',0,0),
- ('Maratha Warriaers',0,2,5,148,7,138,3,1,11,143,150,'2007-03-27 00:00:00',0,0),
+ ('Maratha Warriaers',0,2,5,148,7,138,3,1,11,143,150,'2007-03-27 00:00:00',0,635),
+ ('Maratha Warriaers',0,2,5,148,7,138,3,1,11,143,150,'2007-03-28 00:00:00',0,0),
+ ('Maratha Warriaers',99,98,136,148,96,104,95,94,97,143,100,'2007-03-29 00:00:00',9,548),
+ ('Maratha Warriaers',80,88,78,28,82,17,23,87,89,77,20,'2007-03-30 00:00:00',11,448),
+ ('Maratha Warriaers',8,0,2,5,17,12,23,20,13,9,22,'2007-03-31 00:00:00',8,119),
+ ('Maratha Warriaers',8,0,2,5,17,12,23,20,13,9,22,'2007-04-01 00:00:00',0,0),
  ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-20 00:00:00',0,272),
- ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-21 00:00:00',0,10),
+ ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-21 00:00:00',0,10);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-22 00:00:00',0,147),
  ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-23 00:00:00',0,0),
  ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-24 00:00:00',0,343),
- ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-25 00:00:00',0,0);
+ ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-25 00:00:00',0,0),
+ ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-27 00:00:00',0,207),
+ ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-28 00:00:00',0,48),
+ ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-29 00:00:00',0,121),
+ ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-30 00:00:00',0,32),
+ ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-31 00:00:00',0,123),
+ ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-04-01 00:00:00',0,0);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
- ('Movers n Shakers',5,118,76,107,96,231,3,215,238,232,151,'2007-03-27 00:00:00',0,0),
  ('My Team',0,2,5,181,179,188,3,13,174,189,228,'2007-03-14 00:00:00',0,412),
  ('My Team',0,45,123,127,58,56,207,196,52,131,135,'2007-03-15 00:00:00',10,191),
  ('My Team',78,88,106,107,104,224,220,97,215,87,212,'2007-03-16 00:00:00',11,466),
@@ -2454,59 +2895,83 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('My Team',106,107,199,206,96,109,239,97,100,232,209,'2007-03-20 00:00:00',8,305),
  ('My Team',208,121,134,206,17,20,132,73,25,129,65,'2007-03-21 00:00:00',10,320),
  ('My Team',98,134,206,44,231,96,239,97,94,189,100,'2007-03-22 00:00:00',9,193),
- ('My Team',43,44,121,134,141,198,207,129,130,196,209,'2007-03-23 00:00:00',9,261);
+ ('My Team',43,44,121,134,141,198,207,129,130,196,209,'2007-03-23 00:00:00',9,261),
+ ('My Team',80,88,178,2,82,83,3,87,175,169,174,'2007-03-24 00:00:00',11,503);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
- ('My Team',80,88,178,2,82,83,3,87,175,169,174,'2007-03-24 00:00:00',11,503),
  ('My Team',49,21,15,178,17,20,23,22,169,25,53,'2007-03-25 00:00:00',9,289),
- ('My Team',0,2,136,141,7,138,3,11,13,143,209,'2007-03-27 00:00:00',0,0),
+ ('My Team',0,2,136,141,7,138,3,11,13,143,209,'2007-03-27 00:00:00',0,536),
+ ('My Team',106,134,136,141,138,109,132,13,131,135,209,'2007-03-28 00:00:00',6,352),
+ ('My Team',139,91,136,141,96,138,144,13,97,94,209,'2007-03-29 00:00:00',6,472),
+ ('My Team',80,136,139,141,82,138,144,13,87,196,209,'2007-03-30 00:00:00',4,444),
+ ('My Team',2,136,139,141,7,138,3,11,13,20,25,'2007-03-31 00:00:00',6,246),
+ ('My Team',2,136,139,141,7,138,3,11,13,20,25,'2007-04-01 00:00:00',0,153),
+ ('My Team',2,136,139,133,96,104,3,97,94,20,25,'2007-04-02 00:00:00',5,0),
  ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-13 00:00:00',0,248),
  ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-14 00:00:00',0,0),
- ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-15 00:00:00',0,0),
+ ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-15 00:00:00',0,0);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-16 00:00:00',0,0),
  ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-17 00:00:00',0,104),
  ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-18 00:00:00',0,0),
  ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-19 00:00:00',0,108),
- ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-20 00:00:00',0,0);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-20 00:00:00',0,0),
  ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-21 00:00:00',0,224),
  ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-22 00:00:00',0,0),
  ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-23 00:00:00',0,140),
  ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-24 00:00:00',0,0),
  ('myteam',146,62,177,233,72,138,144,73,64,150,234,'2007-03-25 00:00:00',0,0),
- ('myteam',98,107,2,134,96,198,3,131,1,92,108,'2007-03-27 00:00:00',0,0),
+ ('myteam',98,107,2,134,96,198,3,131,1,92,108,'2007-03-27 00:00:00',0,81);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('myteam',98,107,2,134,96,198,3,131,1,92,108,'2007-03-28 00:00:00',0,208),
+ ('myteam',98,107,2,134,96,198,3,131,1,92,108,'2007-03-29 00:00:00',0,155),
+ ('myteam',98,107,2,134,96,198,3,131,1,92,108,'2007-03-30 00:00:00',0,44),
+ ('myteam',98,107,2,134,96,198,3,131,1,92,108,'2007-03-31 00:00:00',0,132),
+ ('myteam',98,107,2,134,96,198,3,131,1,92,108,'2007-04-01 00:00:00',0,60),
  ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-13 00:00:00',0,0),
  ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-14 00:00:00',0,359),
  ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-15 00:00:00',0,0),
  ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-16 00:00:00',0,0),
  ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-17 00:00:00',0,0),
- ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-18 00:00:00',0,426);
+ ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-18 00:00:00',0,426),
+ ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-19 00:00:00',0,0);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
- ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-19 00:00:00',0,0),
  ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-20 00:00:00',0,19),
  ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-21 00:00:00',0,0),
  ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-22 00:00:00',0,59),
  ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-23 00:00:00',0,0),
  ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-24 00:00:00',0,374),
  ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-25 00:00:00',0,0),
- ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-27 00:00:00',0,0),
+ ('Myteam2',5,2,186,183,14,188,3,11,10,232,189,'2007-03-27 00:00:00',0,374),
+ ('Myteam2',2,5,106,134,96,138,3,11,94,108,204,'2007-03-28 00:00:00',7,144),
+ ('Myteam2',2,5,106,134,96,138,3,11,94,108,204,'2007-03-29 00:00:00',0,226),
+ ('Myteam2',2,5,106,134,96,138,3,11,94,108,204,'2007-03-30 00:00:00',0,0),
+ ('Myteam2',2,5,106,134,96,138,3,11,94,108,204,'2007-03-31 00:00:00',0,210),
+ ('Myteam2',2,5,106,134,96,138,3,11,94,108,204,'2007-04-01 00:00:00',0,56);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('Naresh 2007',158,34,123,201,72,142,3,143,131,27,157,'2007-03-15 00:00:00',0,51),
  ('Naresh 2007',158,34,123,201,72,142,3,143,131,27,157,'2007-03-16 00:00:00',0,0),
  ('Naresh 2007',158,34,123,201,72,142,3,143,131,27,157,'2007-03-17 00:00:00',0,78),
- ('Naresh 2007',158,34,123,201,72,142,3,143,131,27,157,'2007-03-18 00:00:00',0,73);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Naresh 2007',158,34,123,201,72,142,3,143,131,27,157,'2007-03-18 00:00:00',0,73),
  ('Naresh 2007',158,34,123,201,72,142,3,143,131,27,157,'2007-03-19 00:00:00',0,163),
  ('Naresh 2007',107,235,98,170,109,104,115,114,180,101,232,'2007-03-20 00:00:00',11,222),
  ('Naresh 2007',107,235,98,170,109,104,115,114,180,101,232,'2007-03-21 00:00:00',0,0),
  ('Naresh 2007',91,98,181,227,96,188,95,100,101,215,232,'2007-03-22 00:00:00',8,435),
  ('Naresh 2007',30,31,121,139,141,210,33,202,203,204,209,'2007-03-23 00:00:00',11,398),
  ('Naresh 2007',30,31,121,139,141,210,33,202,203,204,209,'2007-03-24 00:00:00',0,0),
- ('Naresh 2007',30,31,121,139,141,210,33,202,203,204,209,'2007-03-25 00:00:00',0,0),
- ('Naresh 2007',0,2,139,141,7,145,3,10,13,143,150,'2007-03-27 00:00:00',0,0),
+ ('Naresh 2007',30,31,121,139,141,210,33,202,203,204,209,'2007-03-25 00:00:00',0,0);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Naresh 2007',0,2,139,141,7,145,3,10,13,143,150,'2007-03-27 00:00:00',0,354),
+ ('Naresh 2007',0,2,139,141,7,145,3,10,13,143,150,'2007-03-28 00:00:00',0,0),
+ ('Naresh 2007',105,99,139,136,96,104,95,93,97,94,143,'2007-03-29 00:00:00',9,509),
+ ('Naresh 2007',80,88,76,199,82,81,86,77,85,87,197,'2007-03-30 00:00:00',11,511),
+ ('Naresh 2007',80,88,76,199,82,81,86,77,85,87,197,'2007-03-31 00:00:00',0,0),
+ ('Naresh 2007',80,88,76,199,82,81,86,77,85,87,197,'2007-04-01 00:00:00',0,0),
+ ('Naresh 2007',91,98,241,15,96,104,95,94,93,97,22,'2007-04-02 00:00:00',11,0),
  ('NARU',62,70,139,200,74,141,207,71,137,157,209,'2007-03-13 00:00:00',0,176),
  ('NARU',62,70,139,200,74,141,207,71,137,157,209,'2007-03-14 00:00:00',0,0),
- ('NARU',55,121,127,134,153,210,132,131,135,151,160,'2007-03-15 00:00:00',11,454);
+ ('NARU',55,121,127,134,153,210,132,131,135,151,160,'2007-03-15 00:00:00',11,454),
+ ('NARU',55,121,127,134,153,210,132,131,135,151,160,'2007-03-16 00:00:00',0,0);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
- ('NARU',55,121,127,134,153,210,132,131,135,151,160,'2007-03-16 00:00:00',0,0),
  ('NARU',70,31,43,44,40,74,33,202,209,204,203,'2007-03-17 00:00:00',11,251),
  ('NARU',70,31,43,44,40,74,33,202,209,204,203,'2007-03-18 00:00:00',0,0),
  ('NARU',31,34,44,163,40,145,33,160,161,162,151,'2007-03-19 00:00:00',7,416),
@@ -2516,8 +2981,13 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('NARU',31,127,41,44,141,210,132,202,203,196,209,'2007-03-23 00:00:00',11,264),
  ('NARU',31,127,41,44,141,210,132,202,203,196,209,'2007-03-24 00:00:00',0,0),
  ('NARU',31,127,41,44,141,210,132,202,203,196,209,'2007-03-25 00:00:00',0,0),
- ('NARU',5,0,2,205,14,145,3,11,1,143,137,'2007-03-27 00:00:00',0,0);
+ ('NARU',5,0,2,205,14,145,3,11,1,143,137,'2007-03-27 00:00:00',0,537),
+ ('NARU',106,118,127,134,109,113,132,135,131,114,204,'2007-03-28 00:00:00',11,445),
+ ('NARU',91,98,136,105,96,145,95,204,143,94,97,'2007-03-29 00:00:00',10,503);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('NARU',80,76,83,88,82,81,86,87,89,77,197,'2007-03-30 00:00:00',11,506),
+ ('NARU',2,0,5,21,7,18,3,20,1,11,22,'2007-03-31 00:00:00',11,329),
+ ('NARU',136,127,133,148,145,138,132,131,135,130,143,'2007-04-01 00:00:00',11,554),
  ('Push\'s 11',8,70,117,230,48,56,125,88,94,10,228,'2007-03-13 00:00:00',0,38),
  ('Push\'s 11',8,133,117,230,113,138,86,10,1,65,180,'2007-03-14 00:00:00',7,46),
  ('Push\'s 11',49,121,127,156,56,154,132,130,131,135,157,'2007-03-15 00:00:00',11,494),
@@ -2525,14 +2995,21 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('Push\'s 11',88,117,106,222,104,109,115,108,213,212,215,'2007-03-17 00:00:00',0,0),
  ('Push\'s 11',88,117,106,222,104,109,115,108,213,212,215,'2007-03-18 00:00:00',0,76),
  ('Push\'s 11',88,117,106,222,104,109,115,108,213,212,215,'2007-03-19 00:00:00',0,0),
- ('Push\'s 11',107,240,230,171,166,109,115,108,100,238,92,'2007-03-20 00:00:00',8,211),
+ ('Push\'s 11',107,240,230,171,166,109,115,108,100,238,92,'2007-03-20 00:00:00',8,211);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('Push\'s 11',133,24,156,19,18,155,132,129,130,65,75,'2007-03-21 00:00:00',11,379),
  ('Push\'s 11',99,98,211,216,104,96,95,100,221,195,97,'2007-03-22 00:00:00',11,313),
- ('Push\'s 11',0,133,43,134,12,109,132,130,180,212,217,'2007-03-23 00:00:00',11,211);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Push\'s 11',0,133,43,134,12,109,132,130,180,212,217,'2007-03-23 00:00:00',11,211),
  ('Push\'s 11',0,133,43,134,12,109,132,130,180,212,217,'2007-03-24 00:00:00',0,205),
  ('Push\'s 11',0,133,43,134,12,109,132,130,180,212,217,'2007-03-25 00:00:00',0,0),
- ('Push\'s 11',0,139,148,149,12,145,3,1,10,143,11,'2007-03-27 00:00:00',0,0),
+ ('Push\'s 11',0,139,148,149,12,145,3,1,10,143,11,'2007-03-27 00:00:00',0,322),
+ ('Push\'s 11',0,139,148,149,12,145,3,1,10,143,11,'2007-03-28 00:00:00',0,0),
+ ('Push\'s 11',146,141,99,103,145,96,95,100,97,143,102,'2007-03-29 00:00:00',9,356),
+ ('Push\'s 11',88,80,0,5,82,12,3,89,84,10,196,'2007-03-30 00:00:00',11,387),
+ ('Push\'s 11',88,80,0,5,82,12,3,89,84,10,196,'2007-03-31 00:00:00',0,135),
+ ('Push\'s 11',88,80,0,5,82,12,3,89,84,10,196,'2007-04-01 00:00:00',0,0);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Push\'s 11',99,103,91,241,104,96,95,97,100,20,102,'2007-04-02 00:00:00',11,0),
  ('rx100',0,31,15,91,56,82,3,202,27,238,157,'2007-03-17 00:00:00',0,42),
  ('rx100',0,31,15,91,56,82,3,202,27,238,157,'2007-03-18 00:00:00',0,97),
  ('rx100',0,31,15,91,56,82,3,202,27,238,157,'2007-03-19 00:00:00',0,125),
@@ -2540,24 +3017,35 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('rx100',62,121,28,163,20,72,132,130,75,157,152,'2007-03-21 00:00:00',10,538),
  ('rx100',62,121,28,163,20,72,132,130,75,157,152,'2007-03-22 00:00:00',0,0),
  ('rx100',127,43,200,205,210,138,132,131,39,150,203,'2007-03-23 00:00:00',10,325),
- ('rx100',127,43,200,205,210,138,132,131,39,150,203,'2007-03-24 00:00:00',0,0);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('rx100',127,43,200,205,210,138,132,131,39,150,203,'2007-03-24 00:00:00',0,0),
  ('rx100',127,43,200,205,210,138,132,131,39,150,203,'2007-03-25 00:00:00',0,0),
- ('rx100',127,43,200,205,210,138,132,131,39,150,203,'2007-03-27 00:00:00',0,0),
+ ('rx100',127,43,200,205,210,138,132,131,39,150,203,'2007-03-27 00:00:00',0,71),
+ ('rx100',127,43,200,205,210,138,132,131,39,150,203,'2007-03-28 00:00:00',0,188);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('rx100',127,43,200,205,210,138,132,131,39,150,203,'2007-03-29 00:00:00',0,19),
+ ('rx100',127,43,200,205,210,138,132,131,39,150,203,'2007-03-30 00:00:00',0,52),
+ ('rx100',127,43,200,205,210,138,132,131,39,150,203,'2007-03-31 00:00:00',0,0),
+ ('rx100',127,43,200,205,210,138,132,131,39,150,203,'2007-04-01 00:00:00',0,366),
  ('sam',8,0,178,171,188,179,3,11,131,152,189,'2007-03-14 00:00:00',0,332),
  ('sam',8,0,178,171,188,179,3,11,131,152,189,'2007-03-15 00:00:00',0,105),
  ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-16 00:00:00',11,400),
  ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-17 00:00:00',0,0),
  ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-18 00:00:00',0,71),
  ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-19 00:00:00',0,0),
- ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-20 00:00:00',0,204),
+ ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-20 00:00:00',0,204);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-21 00:00:00',0,0),
  ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-22 00:00:00',0,248),
- ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-23 00:00:00',0,0);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-23 00:00:00',0,0),
  ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-24 00:00:00',0,192),
  ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-25 00:00:00',0,0),
  ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-27 00:00:00',0,0),
+ ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-28 00:00:00',0,137),
+ ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-29 00:00:00',0,121),
+ ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-30 00:00:00',0,159),
+ ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-03-31 00:00:00',0,0),
+ ('sam',105,106,90,216,82,96,115,108,212,217,213,'2007-04-01 00:00:00',0,0);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('SAM\'s',146,139,69,148,141,231,239,150,137,75,180,'2007-03-13 00:00:00',0,337),
  ('SAM\'s',146,139,69,148,141,231,239,150,137,75,180,'2007-03-14 00:00:00',0,165),
  ('SAM\'s',146,139,69,148,141,231,239,150,137,75,180,'2007-03-15 00:00:00',0,0),
@@ -2565,20 +3053,26 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('SAM\'s',146,139,69,148,141,231,239,150,137,75,180,'2007-03-17 00:00:00',0,42),
  ('SAM\'s',146,139,69,148,141,231,239,150,137,75,180,'2007-03-18 00:00:00',0,0),
  ('SAM\'s',146,139,69,148,141,231,239,150,137,75,180,'2007-03-19 00:00:00',0,153),
- ('SAM\'s',193,105,91,194,96,188,95,184,97,94,195,'2007-03-20 00:00:00',11,269);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('SAM\'s',193,105,91,194,96,188,95,184,97,94,195,'2007-03-20 00:00:00',11,269),
  ('SAM\'s',127,134,121,122,20,153,132,162,161,160,157,'2007-03-21 00:00:00',11,417),
  ('SAM\'s',127,134,121,122,20,153,132,162,161,160,157,'2007-03-22 00:00:00',0,0),
- ('SAM\'s',30,31,34,41,229,231,33,37,157,203,238,'2007-03-23 00:00:00',10,248),
+ ('SAM\'s',30,31,34,41,229,231,33,37,157,203,238,'2007-03-23 00:00:00',10,248);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('SAM\'s',30,31,34,41,229,231,33,37,157,203,238,'2007-03-24 00:00:00',0,0),
  ('SAM\'s',30,31,34,41,229,231,33,37,157,203,238,'2007-03-25 00:00:00',0,0),
- ('SAM\'s',0,136,141,199,12,210,3,1,11,13,150,'2007-03-27 00:00:00',0,0),
+ ('SAM\'s',0,136,141,199,12,210,3,1,11,13,150,'2007-03-27 00:00:00',0,368),
+ ('SAM\'s',106,107,121,127,109,210,132,108,130,131,204,'2007-03-28 00:00:00',10,582),
+ ('SAM\'s',141,146,98,91,145,96,95,97,150,196,197,'2007-03-29 00:00:00',11,383),
+ ('SAM\'s',76,80,88,90,79,82,86,89,87,85,77,'2007-03-30 00:00:00',11,495),
+ ('SAM\'s',76,80,88,90,79,82,86,89,87,85,77,'2007-03-31 00:00:00',0,0),
+ ('SAM\'s',76,80,88,90,79,82,86,89,87,85,77,'2007-04-01 00:00:00',0,0),
+ ('SAM\'s',15,91,98,103,96,104,95,20,29,94,97,'2007-04-02 00:00:00',11,0),
  ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-13 00:00:00',0,388),
  ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-14 00:00:00',0,141),
- ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-15 00:00:00',0,0),
- ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-16 00:00:00',0,0),
- ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-17 00:00:00',0,77);
+ ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-15 00:00:00',0,0);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-16 00:00:00',0,0),
+ ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-17 00:00:00',0,77),
  ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-18 00:00:00',0,63),
  ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-19 00:00:00',0,163),
  ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-20 00:00:00',0,71),
@@ -2587,22 +3081,44 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-23 00:00:00',0,102),
  ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-24 00:00:00',0,29),
  ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-25 00:00:00',0,0),
- ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-27 00:00:00',0,0),
- ('Super_Boy',0,2,148,141,12,138,3,1,150,137,143,'2007-03-27 00:00:00',0,0),
- ('The Mavericks',41,80,211,28,40,224,67,97,42,75,202,'2007-03-16 00:00:00',0,130);
+ ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-27 00:00:00',0,112);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-28 00:00:00',0,0),
+ ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-29 00:00:00',0,102),
+ ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-30 00:00:00',0,0),
+ ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-03-31 00:00:00',0,0),
+ ('SandyXI',69,136,148,194,74,141,239,75,150,174,184,'2007-04-01 00:00:00',0,34),
+ ('super',106,117,133,134,109,14,132,1,108,135,129,'2007-03-28 00:00:00',0,332),
+ ('super',106,117,133,134,109,14,132,1,108,135,129,'2007-03-29 00:00:00',0,0),
+ ('super',76,78,80,5,12,14,3,13,11,87,209,'2007-03-30 00:00:00',10,301),
+ ('super',76,78,80,5,12,14,3,13,11,87,209,'2007-03-31 00:00:00',0,237),
+ ('super',76,78,80,5,12,14,3,13,11,87,209,'2007-04-01 00:00:00',0,0),
+ ('Super_Boy',0,2,148,141,12,138,3,1,150,137,143,'2007-03-27 00:00:00',0,311);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Super_Boy',0,2,148,141,12,138,3,1,150,137,143,'2007-03-28 00:00:00',0,0),
+ ('Super_Boy',0,2,148,141,12,138,3,1,150,137,143,'2007-03-29 00:00:00',0,124),
+ ('Super_Boy',0,2,148,141,12,138,3,1,150,137,143,'2007-03-30 00:00:00',0,0),
+ ('Super_Boy',0,2,5,28,18,14,3,1,11,20,22,'2007-03-31 00:00:00',7,321),
+ ('Super_Boy',0,2,5,28,18,14,3,1,11,20,22,'2007-04-01 00:00:00',0,0),
+ ('The Mavericks',41,80,211,28,40,224,67,97,42,75,202,'2007-03-16 00:00:00',0,130),
  ('The Mavericks',41,80,211,28,40,224,67,97,42,75,202,'2007-03-17 00:00:00',0,176),
  ('The Mavericks',41,80,211,28,40,224,67,97,42,75,202,'2007-03-18 00:00:00',0,118),
  ('The Mavericks',41,80,211,28,40,224,67,97,42,75,202,'2007-03-19 00:00:00',0,150),
  ('The Mavericks',107,105,127,158,109,229,164,100,152,97,174,'2007-03-20 00:00:00',10,206),
- ('The Mavericks',105,107,127,158,109,229,164,124,100,152,174,'2007-03-21 00:00:00',1,279),
+ ('The Mavericks',105,107,127,158,109,229,164,124,100,152,174,'2007-03-21 00:00:00',1,279);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('The Mavericks',105,91,211,98,96,214,220,100,232,215,97,'2007-03-22 00:00:00',9,390),
  ('The Mavericks',105,91,211,98,96,214,220,100,232,215,97,'2007-03-23 00:00:00',0,0),
  ('The Mavericks',105,91,211,98,96,214,220,100,232,215,97,'2007-03-24 00:00:00',0,0),
  ('The Mavericks',105,91,211,98,96,214,220,100,232,215,97,'2007-03-25 00:00:00',0,0),
- ('The Mavericks',105,91,211,98,96,214,220,100,232,215,97,'2007-03-27 00:00:00',0,0);
+ ('The Mavericks',105,91,211,98,96,214,220,100,232,215,97,'2007-03-27 00:00:00',0,0),
+ ('The Mavericks',105,91,211,98,96,214,220,100,232,215,97,'2007-03-28 00:00:00',0,0),
+ ('The Mavericks',105,91,211,98,96,214,220,100,232,215,97,'2007-03-29 00:00:00',0,288),
+ ('The Mavericks',105,91,211,98,96,214,220,100,232,215,97,'2007-03-30 00:00:00',0,0),
+ ('The Mavericks',105,91,211,98,96,214,220,100,232,215,97,'2007-03-31 00:00:00',0,0),
+ ('The Mavericks',105,91,211,98,96,214,220,100,232,215,97,'2007-04-01 00:00:00',0,0),
+ ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-17 00:00:00',0,384);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
- ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-17 00:00:00',0,384),
  ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-18 00:00:00',0,0),
  ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-19 00:00:00',0,155),
  ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-20 00:00:00',0,0),
@@ -2612,23 +3128,34 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-24 00:00:00',0,0),
  ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-25 00:00:00',0,108),
  ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-27 00:00:00',0,0),
- ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-15 00:00:00',0,0),
- ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-16 00:00:00',0,49);
+ ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-28 00:00:00',0,0),
+ ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-29 00:00:00',0,0),
+ ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-30 00:00:00',0,3);
 INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-03-31 00:00:00',0,41),
+ ('The Rock',199,44,24,16,20,18,33,39,22,204,202,'2007-04-01 00:00:00',0,0),
+ ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-15 00:00:00',0,0),
+ ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-16 00:00:00',0,49),
  ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-17 00:00:00',0,69),
  ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-18 00:00:00',0,286),
  ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-19 00:00:00',0,207),
  ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-20 00:00:00',0,122),
  ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-21 00:00:00',0,0),
  ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-22 00:00:00',0,7),
- ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-23 00:00:00',0,203),
+ ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-23 00:00:00',0,203);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-24 00:00:00',0,244),
  ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-25 00:00:00',0,0),
- ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-27 00:00:00',0,0),
- ('WILLOW XI',70,139,146,177,74,179,144,73,143,150,180,'2007-03-13 00:00:00',0,288);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-27 00:00:00',0,225),
+ ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-28 00:00:00',0,19),
+ ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-29 00:00:00',0,5),
+ ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-30 00:00:00',0,0),
+ ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-03-31 00:00:00',0,93),
+ ('Vipul Varshney',216,2,41,139,7,231,33,11,175,212,114,'2007-04-01 00:00:00',0,87),
+ ('WILLOW XI',70,139,146,177,74,179,144,73,143,150,180,'2007-03-13 00:00:00',0,288),
  ('WILLOW XI',2,5,8,177,14,179,3,1,13,180,184,'2007-03-14 00:00:00',8,288),
- ('WILLOW XI',121,134,199,205,82,210,132,129,202,126,101,'2007-03-15 00:00:00',11,612),
+ ('WILLOW XI',121,134,199,205,82,210,132,129,202,126,101,'2007-03-15 00:00:00',11,612);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
  ('WILLOW XI',112,105,80,216,82,109,86,217,85,100,202,'2007-03-16 00:00:00',9,330),
  ('WILLOW XI',43,34,69,28,74,20,33,65,37,202,209,'2007-03-17 00:00:00',10,563),
  ('WILLOW XI',5,88,43,78,82,56,3,87,84,184,53,'2007-03-18 00:00:00',10,220),
@@ -2637,10 +3164,27 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
  ('WILLOW XI',28,69,121,134,17,20,132,129,135,162,238,'2007-03-21 00:00:00',10,264),
  ('WILLOW XI',98,99,121,183,96,231,132,100,213,97,238,'2007-03-22 00:00:00',8,141),
  ('WILLOW XI',146,206,121,44,210,138,132,174,130,150,209,'2007-03-23 00:00:00',9,234),
- ('WILLOW XI',5,88,78,28,7,113,3,27,87,174,180,'2007-03-24 00:00:00',10,402);
-INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('WILLOW XI',5,88,78,28,7,113,3,27,87,174,180,'2007-03-24 00:00:00',10,402),
  ('WILLOW XI',49,28,78,88,7,20,23,27,87,25,180,'2007-03-25 00:00:00',4,168),
- ('WILLOW XI',5,146,2,139,12,138,3,13,143,1,150,'2007-03-27 00:00:00',0,0);
+ ('WILLOW XI',5,146,2,139,12,138,3,13,143,1,150,'2007-03-27 00:00:00',0,538);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('WILLOW XI',118,133,139,146,109,138,115,130,116,143,131,'2007-03-28 00:00:00',7,494),
+ ('WILLOW XI',98,83,139,146,96,138,95,94,77,13,143,'2007-03-29 00:00:00',7,357),
+ ('WILLOW XI',83,78,199,0,82,12,3,13,77,20,135,'2007-03-30 00:00:00',8,225),
+ ('WILLOW XI',0,28,2,5,12,7,3,13,20,11,135,'2007-03-31 00:00:00',5,284),
+ ('WILLOW XI',127,2,139,28,145,96,132,131,143,20,135,'2007-04-01 00:00:00',7,505),
+ ('WILLOW XI',98,28,127,91,96,109,132,20,116,135,94,'2007-04-02 00:00:00',5,0),
+ ('Winners for Ever',98,99,148,139,96,145,95,94,97,143,150,'2007-03-29 00:00:00',0,423),
+ ('Winners for Ever',80,88,90,78,82,198,86,87,77,85,89,'2007-03-30 00:00:00',11,528),
+ ('Winners for Ever',80,88,90,78,82,198,86,87,77,85,89,'2007-03-31 00:00:00',0,0),
+ ('Winners for Ever',80,88,90,78,82,198,86,87,77,85,89,'2007-04-01 00:00:00',0,0),
+ ('Winners for Ever',98,103,241,99,96,104,95,94,97,100,20,'2007-04-02 00:00:00',11,0);
+INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`player4`,`player5`,`player6`,`player7`,`player8`,`player9`,`player10`,`player11`,`effective_date`,`number_of_changes`,`team_points`) VALUES 
+ ('Winnersxxx',139,141,146,148,96,145,95,93,143,94,97,'2007-03-29 00:00:00',0,454),
+ ('Winnersxxx',88,90,80,76,82,81,86,84,87,77,85,'2007-03-30 00:00:00',11,479),
+ ('Winnersxxx',88,90,80,76,82,81,86,84,87,77,85,'2007-03-31 00:00:00',0,0),
+ ('Winnersxxx',88,90,80,76,82,81,86,84,87,77,85,'2007-04-01 00:00:00',0,0),
+ ('Winnersxxx',28,98,103,91,96,18,95,94,97,20,22,'2007-04-02 00:00:00',11,0);
 /*!40000 ALTER TABLE `user_team_details` ENABLE KEYS */;
 
 
@@ -2651,7 +3195,7 @@ INSERT INTO `user_team_details` (`user_team_id`,`player1`,`player2`,`player3`,`p
 DROP TABLE IF EXISTS `user_team_details_1`;
 CREATE TABLE `user_team_details_1` (
   `user_team_id` varchar(40) default NULL,
-  `country_id` int(11) default NULL,
+  `country_id` varchar(30) default NULL,
   `country_status` smallint(5) unsigned default NULL,
   `team_points` int(10) unsigned NOT NULL default '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -2661,6 +3205,79 @@ CREATE TABLE `user_team_details_1` (
 --
 
 /*!40000 ALTER TABLE `user_team_details_1` DISABLE KEYS */;
+INSERT INTO `user_team_details_1` (`user_team_id`,`country_id`,`country_status`,`team_points`) VALUES 
+ ('myteam','Australia',3,0),
+ ('myteam','Sri Lanka',3,0),
+ ('myteam','New Zealand',3,0),
+ ('myteam','South Africa',3,0),
+ ('myteam','New Zealand',4,0),
+ ('myteam','South Africa',4,0),
+ ('myteam','New Zealand',5,0),
+ ('SAM\'s','Australia',3,0),
+ ('SAM\'s','South Africa',3,0),
+ ('SAM\'s','New Zealand',3,0),
+ ('SAM\'s','Sri Lanka',3,0),
+ ('SAM\'s','Australia',4,0),
+ ('SAM\'s','South Africa',4,0),
+ ('SAM\'s','South Africa',5,0),
+ ('Dazzling Eleven','Australia',3,0),
+ ('Dazzling Eleven','New Zealand',3,0),
+ ('Dazzling Eleven','South Africa',3,0),
+ ('Dazzling Eleven','England',3,0),
+ ('Dazzling Eleven','New Zealand',4,0),
+ ('Dazzling Eleven','Australia',4,0),
+ ('Dazzling Eleven','New Zealand',5,0),
+ ('Fantastic Eleven','Australia',3,0),
+ ('Fantastic Eleven','South Africa',3,0),
+ ('Fantastic Eleven','West Indies',3,0),
+ ('Fantastic Eleven','New Zealand',3,0),
+ ('Fantastic Eleven','New Zealand',4,0),
+ ('Fantastic Eleven','South Africa',4,0);
+INSERT INTO `user_team_details_1` (`user_team_id`,`country_id`,`country_status`,`team_points`) VALUES 
+ ('Fantastic Eleven','New Zealand',5,0),
+ ('Winners for Ever','Australia',3,0),
+ ('Winners for Ever','South Africa',3,0),
+ ('Winners for Ever','New Zealand',3,0),
+ ('Winners for Ever','West Indies',3,0),
+ ('Winners for Ever','Australia',4,0),
+ ('Winners for Ever','New Zealand',4,0),
+ ('Winners for Ever','New Zealand',5,0),
+ ('WILLOW XI','Australia',3,0),
+ ('WILLOW XI','New Zealand',3,0),
+ ('WILLOW XI','South Africa',3,0),
+ ('WILLOW XI','Sri Lanka',3,0),
+ ('WILLOW XI','South Africa',4,0),
+ ('WILLOW XI','Sri Lanka',4,0),
+ ('WILLOW XI','South Africa',5,0),
+ ('NARU','Australia',3,0),
+ ('NARU','South Africa',3,0),
+ ('NARU','Sri Lanka',3,0),
+ ('NARU','New Zealand',3,0),
+ ('NARU','Australia',4,0),
+ ('NARU','Sri Lanka',4,0),
+ ('NARU','Australia',5,0),
+ ('destroyers','Australia',3,0),
+ ('destroyers','South Africa',3,0),
+ ('destroyers','New Zealand',3,0),
+ ('destroyers','Sri Lanka',3,0),
+ ('destroyers','New Zealand',4,0),
+ ('destroyers','South Africa',4,0);
+INSERT INTO `user_team_details_1` (`user_team_id`,`country_id`,`country_status`,`team_points`) VALUES 
+ ('destroyers','South Africa',5,0),
+ ('My Team','Australia',3,0),
+ ('My Team','New Zealand',3,0),
+ ('My Team','South Africa',3,0),
+ ('My Team','Sri Lanka',3,0),
+ ('My Team','Australia',4,0),
+ ('My Team','South Africa',4,0),
+ ('My Team','Australia',5,0),
+ ('JP_SUP_8_11','Australia',3,0),
+ ('JP_SUP_8_11','South Africa',3,0),
+ ('JP_SUP_8_11','New Zealand',3,0),
+ ('JP_SUP_8_11','West Indies',3,0),
+ ('JP_SUP_8_11','Australia',4,0),
+ ('JP_SUP_8_11','New Zealand',4,0),
+ ('JP_SUP_8_11','Australia',5,0);
 /*!40000 ALTER TABLE `user_team_details_1` ENABLE KEYS */;
 
 
