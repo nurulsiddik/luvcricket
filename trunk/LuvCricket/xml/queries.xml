@@ -656,5 +656,56 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
     <select id="fetchNextMatchDate" parameterClass="java.lang.String" resultClass="java.util.Date">
         select match_date from tournament_matches where tournament_id = #tournament_id:SMALLINT# and match_date > CURRENT_DATE LIMIT 1;
     </select>
+    
+    <select id="playerAnalysis" parameterClass="java.util.Map" resultClass="java.util.Map">
+
+        select player_data.match_date, DEFAULT_POINT as PLAY_POINT,
+        if(player_type = 1,RUN_POINTS,
+                if(player_type=2,WICKET_POINTS,
+                        if(player_type=3,RUN_POINTS+WICKET_POINTS,
+                                if(player_type=4,STUMP_POINTS+CATCH_POINTS+RUNOUT_POINTS,0)))) CORE_COMPETENCY,    
+        if(player_type = 1,CATCH_POINTS+RUNOUT_POINTS,
+                if(player_type=2,CATCH_POINTS+RUNOUT_POINTS,
+                        if(player_type=3,CATCH_POINTS+RUNOUT_POINTS,
+                                0))) FIELD_COMPETENCY,
+        if(player_type = 1,WICKET_POINTS,
+                if(player_type=2,RUN_POINTS,if(player_type=4,RUN_POINTS,0))) OTHER_COMPETENCY,
+        DEFAULT_POINT + RUN_POINTS+WICKET_POINTS+RUNOUT_POINTS+CATCH_POINTS+STUMP_POINTS AS TOTAL_POINTS
+        from playing_nations_team pnt_p ,(
+        select tm.match_date , rt.points_for_playing as DEFAULT_POINT,
+        ((pc.runs_scored*rt.points_runs_scored)+(if(pc.runs_scored>=25,rt.points_quater_century,0)+if(pc.runs_scored>=50,rt.points_half_century,0)+if(pc.runs_scored>=100,rt.points_century,0))) as RUN_POINTS, 
+        ((pc.wickets_taken*rt.points_for_wicket) + if(pc.wickets_taken>=3,rt.points_for_3wicket,0) + if(pc.wickets_taken>=5,rt.points_for_5wicket,0)) as WICKET_POINTS,
+        pc.catches * rt.points_for_catch as CATCH_POINTS,
+        pc.stumps * rt.points_for_stumping as STUMP_POINTS,
+        pc.runout * rt.points_for_runOut as RUNOUT_POINTS
+        from rules_table rt, player_contribution pc, tournament_matches tm where pc.match_id = tm.match_id
+        and tm.tournament_id = rt.tournament_id
+        and rt.tournament_id = #tournament_id#
+        and pc.player_id = #player_id#
+        and tm.match_date &lt; CURRENT_DATE
+        UNION
+        select  distinct tm.match_date, 0 as DEFAULT_POINT,
+        0 as RUN_POINTS,
+        0 as WICKET_POINTS,
+        0 as CATCH_POINTS,
+        0 as STUMP_POINTS,
+        0 as RUNOUT_POINTS
+        from rules_table rt, player_contribution pc, tournament_matches tm, playing_nations_team pnt 
+        where pnt.player_id = pc.player_id 
+        and (tm.country_id1 = pnt.country_id or tm.country_id2 = pnt.country_id)
+        and tm.tournament_id = rt.tournament_id
+        and rt.tournament_id = #tournament_id#
+        and pc.player_id = #player_id#
+        and tm.match_date &lt; CURRENT_DATE
+        and not exists (
+        select pc1.match_id from player_contribution pc1 where pc1.match_id = tm.match_id
+        and pc1.player_id = pc.player_id)
+        ORDER BY 1
+        ) player_data
+        where pnt_p.player_id = #player_id#
+
+        
+        
+    </select>
         
 </sqlMap>
