@@ -90,6 +90,8 @@
             <html:hidden property="objPlayerDetail.player_type" />
             <html:hidden property="objPlayerDetail.player_link" />
             <html:hidden property="objPlayerDetail.player_photolink" />
+            <html:hidden property="objPlayerDetail.player_id" />
+            <html:hidden property="objPlayerDetail.player_name" />
             
             <html:hidden property="objPlayerTournContribution.runs_scored" />
             <html:hidden property="objPlayerTournContribution.wickets_taken" />
@@ -171,6 +173,9 @@
                                 <tr>
                                     <td class="textlable">No. of stumpings done:</td>
                                     <td><label class="statvalue"><script>setValue("objPlayerTournContribution.stumps");</script></label></td>
+                                </tr>
+                                <tr>
+                                    <td class="textlable"><a href="javascript:window.open('/LuvCricket/analytics/competency.do?appEvent=competency&player_id='+getObj('objPlayerDetail.player_id').value+'&tournament_id=0&player_name='+escape(getObj('objPlayerDetail.player_name').value),'competencyanal','height=540, width=700');" >Competency Analysis</a></td>
                                 </tr>
                                 <tr>
                                     <td class="textlable"><a href=javascript:openMoreInfo(getObj('objPlayerDetail.player_link').value,"",""); >More Information</a></td>

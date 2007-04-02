@@ -93,4 +93,11 @@ public class GraphsAC extends LCCommonAc
         return mapping.findForward("success");
     }    
     
+    @IAppEventHandler(appEvent="competency")
+    public ActionForward showCompetency(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        return mapping.findForward("success");
+    }
+    
+    
 }

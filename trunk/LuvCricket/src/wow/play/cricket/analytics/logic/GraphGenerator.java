@@ -43,6 +43,34 @@ public class GraphGenerator
     }
     
     
+    public DefaultCategoryDataset giveCompetencyDataset(Map map) throws Exception
+    {
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset()
+        {
+            /**
+             * @see java.lang.Object#finalize()
+             */
+            protected void finalize() throws Throwable
+            {
+                super.finalize();
+            }
+        };
+        
+        SqlMapClient objSql = TransactionManager.getSQLInstance();
+        List<Map> lstData = (List<Map>)objSql.queryForList("playerAnalysis",map);
+        
+        for(Map data:lstData)
+        {
+            dataset.addValue((Integer)data.get("TOTAL_POINTS"),"TOTAL_POINTS",(String)data.get("MATCH_DATE"));
+            dataset.addValue((Integer)data.get("CORE_COMPETENCY"),"CORE_COMPETENCY",(String)data.get("MATCH_DATE"));
+            dataset.addValue((Integer)data.get("FIELD_COMPETENCY"),"FIELD_COMPETENCY",(String)data.get("MATCH_DATE"));
+            dataset.addValue((Integer)data.get("OTHER_COMPETENCY"),"OTHER_COMPETENCY",(String)data.get("MATCH_DATE"));
+        }
+        
+        return dataset;
+        
+    }
+    
     public DefaultCategoryDataset giveTopTeamDataset(Map map) throws Exception
     {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset()
