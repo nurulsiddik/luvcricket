@@ -279,7 +279,7 @@ function fnShowPlayerContribution(country_id,player_id)
     {
         url = url+"&&player_id="+player_id;
     }    
-    window.open(url,"playerdisplay",'height=520, width=700');
+    window.open(url,"playerdisplay",'height=540, width=700');
 }
 
 /**
