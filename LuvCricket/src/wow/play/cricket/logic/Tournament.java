@@ -310,4 +310,21 @@ public class Tournament
         return retDate;
     }
 
+    public List<RefxVO> fetchAllTournamentMatchesForDate(String tournament_id,String match_date) throws Exception
+    {
+        List retList = null;
+        try
+        {
+            objSql = TransactionManager.getSQLInstance();
+            Map paramMap = new HashMap();
+            paramMap.put("tournament_id",tournament_id);
+            paramMap.put("match_date",match_date);
+            retList = objSql.queryForList("fetchAllTournamentMatchesForDate",paramMap);
+        }
+        finally
+        {
+            objSql.endTransaction();
+        }
+        return retList;
+    }
 }

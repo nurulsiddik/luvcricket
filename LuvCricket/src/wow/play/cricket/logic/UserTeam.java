@@ -22,6 +22,7 @@ import wow.play.cricket.vo.RefxVO;
 import wow.play.cricket.vo.UserTeamDetailVO;
 import wow.play.cricket.vo.UserTeamDetail_1VO;
 import wow.play.cricket.vo.UserTeamVO;
+ 
 
 /**
  *
@@ -534,4 +535,38 @@ public class UserTeam
             objSql.endTransaction();
         }
     }
+    
+    public List<UserTeamVO> fetchAllUserTeam() throws Exception
+    {
+        SqlMapClient objSql = null;
+        List retList = null;
+        try
+        {
+            objSql = TransactionManager.getSQLInstance();
+            retList = objSql.queryForList("fetchAllUserTeam");
+            
+        }
+        finally
+        {
+            objSql.endTransaction();
+        }
+        return retList;
+    }
+
+    public List<RefxVO> fetchAllEffectiveDates(String tournament_id) throws Exception
+    {
+        SqlMapClient objSql = null;
+        List retList = null;
+        try
+        {
+            objSql = TransactionManager.getSQLInstance();
+            retList = objSql.queryForList("fetchEffectiveDates",tournament_id);
+        }
+        finally
+        {
+            objSql.endTransaction();
+        }
+        return retList;
+    }
+    
 }

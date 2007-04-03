@@ -74,6 +74,10 @@
             <menudetails title="Edit Team" onclick="javascript:fnOpenScreen(\'userteamplayers.do?appEvent=initModifyUserTeam&amp;&amp;screen_mode=modify\')"/>
         </menuitem>
         <menuitem>
+            <menudetails title="How points are earned" onclick="javascript:fnOpenScreen(\'userteamperformance.do?appEvent=initViewTeamPerformance\')"/>
+        </menuitem>
+
+        <menuitem>
             <menudetails title="Tournament Statistics"/>
             <menuitem>
                 <menudetails title="View Player Contribution" onclick="javascript:fnShowPlayerContribution()"/>
