@@ -404,6 +404,16 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
         where tournament_id = #tournament_id:SMALLINT#
         order by match_id;
     </select>
+
+    <select id="fetchAllTournamentMatchesForDate" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.RefxVO">
+        select  
+        concat(country_id1,' vs ',country_id2)  refx_label, 
+        match_id refx_value 
+        from tournament_matches 
+        where tournament_id = #tournament_id:SMALLINT#
+        and match_date = #match_date:DATETIME#
+        order by match_id;
+    </select>
     
     <!-- Fetch Match info -->
     <select id="selectMatchData" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.TournamentMatchesVO">
@@ -533,6 +543,13 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
         where match_id in 
         (select match_id from tournament_matches where match_date= #match_date:DATETIME# and tournament_id=#tournament_id:SMALLINT# );
     </select>
+    <select id="selectPlayerPerformanceForDay" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.PlayerContributionVO">
+        select * from player_contribution 
+        where player_id = #player_id:SMALLINT# 
+        and match_id in 
+        (select match_id from tournament_matches where tournament_id = #tournament_id:SMALLINT# and  match_date= #match_date:DATETIME# )
+    </select>
+    
     <select id="sumTotalPoints" parameterClass="java.util.Map" resultClass="java.lang.Integer">
         select sum(team_points) from user_team_details where user_team_id = #user_team_id:VARCHAR# and effective_date >= #effective_date:DATETIME#;
     </select>
@@ -703,9 +720,13 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
         ORDER BY 1
         ) player_data
         where pnt_p.player_id = #player_id#
-
-        
-        
     </select>
-        
+
+    <select id="fetchAllUserTeam" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.UserTeamVO">
+        select * from user_team where user_id ;
+    </select>
+    <select id="fetchEffectiveDates" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
+        select distinct effective_date refx_value, date_format(effective_date,'%D %b %y') refx_label from user_team_details 
+        where effective_date &lt;= (select last_points_updated_date from tournaments where tournament_id = #tournament_id# ) order by 1;
+    </select>
 </sqlMap>

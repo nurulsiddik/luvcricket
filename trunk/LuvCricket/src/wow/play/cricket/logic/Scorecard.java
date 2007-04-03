@@ -194,4 +194,25 @@ public class Scorecard
             objSql.endTransaction();
         }
     }
+    
+    public PlayerContributionVO selectPlayerPerformanceForDay(String tournament_id,String player_id,String match_date) throws Exception
+    {
+        SqlMapClient objSql = null;
+        PlayerContributionVO retVO = null;
+        try
+        {
+            objSql = TransactionManager.getSQLInstance();
+            Map paramMap = new HashMap();
+            paramMap.put("tournament_id",tournament_id);
+            paramMap.put("player_id",player_id);
+            paramMap.put("match_date",match_date);
+            retVO = (PlayerContributionVO)objSql.queryForObject("selectPlayerPerformanceForDay",paramMap);
+        }
+        finally
+        {
+            objSql.endTransaction();
+        }
+        return retVO;
+        
+    }
 }
