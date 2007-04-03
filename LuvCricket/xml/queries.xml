@@ -659,7 +659,7 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
     
     <select id="playerAnalysis" parameterClass="java.util.Map" resultClass="java.util.HashMap">
 
-        select date_format(player_data.match_date,'%D %b %y %a') MATCH_DATE, DEFAULT_POINT as PLAY_POINT,
+        select date_format(player_data.match_date,'%d/%m/%y') MATCH_DATE, DEFAULT_POINT as PLAY_POINT,
         if(player_type = 1,RUN_POINTS,
                 if(player_type=2,WICKET_POINTS,
                         if(player_type=3,RUN_POINTS+WICKET_POINTS,

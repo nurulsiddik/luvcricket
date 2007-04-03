@@ -25,7 +25,7 @@
 
         <cewolf:chart 
             id="CompetencyChart" 
-            title = "<%=request.getParameter("player_name")%> "
+            title = '<%=request.getParameter("player_name")%>'
             type="line"
             xaxislabel="Matches" 
             yaxislabel="Points Gained"     
@@ -47,6 +47,6 @@
         </cewolf:chart>
     
         <p>
-        <cewolf:img chartid="TopTeamChart" renderer="cewolf" width="700" height="500"/>
+        <cewolf:img chartid="CompetencyChart" renderer="cewolf" width="550" height="400"/>
         <P>
 </html>

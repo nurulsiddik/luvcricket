@@ -55,16 +55,14 @@ public class GraphGenerator
                 super.finalize();
             }
         };
-        
         SqlMapClient objSql = TransactionManager.getSQLInstance();
         List<Map> lstData = (List<Map>)objSql.queryForList("playerAnalysis",map);
-        
         for(Map data:lstData)
         {
-            dataset.addValue((Integer)data.get("TOTAL_POINTS"),"TOTAL_POINTS",(String)data.get("MATCH_DATE"));
-            dataset.addValue((Integer)data.get("CORE_COMPETENCY"),"CORE_COMPETENCY",(String)data.get("MATCH_DATE"));
-            dataset.addValue((Integer)data.get("FIELD_COMPETENCY"),"FIELD_COMPETENCY",(String)data.get("MATCH_DATE"));
-            dataset.addValue((Integer)data.get("OTHER_COMPETENCY"),"OTHER_COMPETENCY",(String)data.get("MATCH_DATE"));
+            dataset.addValue(((Long)data.get("TOTAL_POINTS")).longValue(),"TOTAL_POINTS",(String)data.get("MATCH_DATE"));
+            dataset.addValue(((Long)data.get("CORE_COMPETENCY")).longValue(),"CORE_COMPETENCY",(String)data.get("MATCH_DATE"));
+            dataset.addValue(((Long)data.get("FIELD_COMPETENCY")).longValue(),"FIELD_COMPETENCY",(String)data.get("MATCH_DATE"));
+            dataset.addValue(((Long)data.get("OTHER_COMPETENCY")).longValue(),"OTHER_COMPETENCY",(String)data.get("MATCH_DATE"));
         }
         
         return dataset;
