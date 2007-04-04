@@ -193,7 +193,7 @@ function fnShuffleLeaderBoard()
             headerPrevStage.style.display = "none";
 
             textLB.stagedisplay = "1";
-            textLB.innerText = "Previous Round Leader";
+            textLB.innerText = "Overall Round Leader";
         }   
    }     
 }    
