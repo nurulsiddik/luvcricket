@@ -134,7 +134,12 @@
             <forward name="success" path="/jsp/predicttournamentwinner.jsp"/>
             <forward name="error" path="/jsp/predicttournamentwinner.jsp"/>
         </action>
+        <action path="/predictlcwinner" name="UserTeamBean" scope="request" type="wow.play.cricket.ac.UserTeamAc">
+            <forward name="success" path="/jsp/predictlcgamewinner.jsp"/>
+            <forward name="error" path="/jsp/predictlcgamewinner.jsp"/>
+        </action>
 
+        
         <action path="/userteamperformance" name="UserTeamBean" scope="request" type="wow.play.cricket.ac.UserTeamPerformanceAc">
             <forward name="success" path="/jsp/userteamperformance.jsp"/>
             <forward name="error" path="jsp/userteamperformance.jsp"/>

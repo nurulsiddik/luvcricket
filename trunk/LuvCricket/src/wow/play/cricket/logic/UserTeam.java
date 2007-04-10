@@ -22,7 +22,7 @@ import wow.play.cricket.vo.RefxVO;
 import wow.play.cricket.vo.UserTeamDetailVO;
 import wow.play.cricket.vo.UserTeamDetail_1VO;
 import wow.play.cricket.vo.UserTeamVO;
- 
+
 
 /**
  *
@@ -177,7 +177,7 @@ public class UserTeam
         }
         return retList;
     }
-
+    
     public static List<PlayingNationsTeamVO> fetchAllActiveCountriesPlayerDetails(String tournament_id) throws Exception
     {
         SqlMapClient objSql = null;
@@ -209,7 +209,7 @@ public class UserTeam
             
             
             UserTeamVO userTeam = (UserTeamVO) objSql.queryForObject("selectUserTeam",user_team_id);
-
+            
             LCTournamentVO objTournamentVO = (LCTournamentVO) objSql.queryForObject("fetchTournamentAllDetails",userTeam.getTournament_id());
             
             //Delete the current effective date
@@ -227,7 +227,7 @@ public class UserTeam
                 //Find the number of players changed.
                 //Fetch latest team in the database.
                 UserTeamDetailVO latestTeam = (UserTeamDetailVO)allDaysTeam.get(0);
-
+                
                 totalPlayersChanged = computeChanges(objUserTeamDetailVO,latestTeam);
             }
             objUserTeamDetailVO.setNumber_of_changes(totalPlayersChanged+"");
@@ -338,7 +338,7 @@ public class UserTeam
             if(total_number_of_changes != null)
             {
                 retValue = total_number_of_changes.intValue();
-            }    
+            }
             
         }
         finally
@@ -386,7 +386,7 @@ public class UserTeam
             objSql.endTransaction();
         }
         return retList;
-    
+        
     }
     
     public UserTeamDetailVO fetchUserTeamForDate(String user_team_id,String effective_date) throws Exception
@@ -497,7 +497,7 @@ public class UserTeam
         }
         return retList;
     }
-
+    
     public List<UserTeamDetail_1VO> selectPredictedUserTeam(String user_team_id) throws Exception
     {
         SqlMapClient objSql = null;
@@ -552,7 +552,7 @@ public class UserTeam
         }
         return retList;
     }
-
+    
     public List<RefxVO> fetchAllEffectiveDates(String tournament_id) throws Exception
     {
         SqlMapClient objSql = null;
@@ -569,4 +569,46 @@ public class UserTeam
         return retList;
     }
     
+    public String fetchPredictUserTeamWinner(String user_team_id) throws Exception
+    {
+        SqlMapClient objSql = null;
+        Map resultMap = null;
+        String retStr = null;
+        try
+        {
+            objSql = TransactionManager.getSQLInstance();
+            resultMap = (HashMap) objSql.queryForObject("selectPredictWinnerTeam",user_team_id);
+            if(resultMap != null)
+            {
+                retStr = (String)resultMap.get("predicted_team_id");
+            }
+            
+        }
+        finally
+        {
+            objSql.endTransaction();
+        }
+        return retStr;
+    }
+    
+    public void insertPredictUserTeamWinner(String user_team_id, String predicted_team_id) throws Exception
+    {
+        SqlMapClient objSql = null;
+        try
+        {
+            objSql = TransactionManager.getSQLInstance();
+            objSql.startTransaction();
+            objSql.delete("deletePredictWinnerTeam",user_team_id);
+            
+            Map paramMap = new HashMap();
+            paramMap.put("user_team_id",user_team_id);
+            paramMap.put("predicted_team_id",predicted_team_id);
+            objSql.insert("insertPredictWinnerTeam",paramMap);
+            objSql.commitTransaction();
+        }
+        finally
+        {
+            objSql.endTransaction();
+        }
+    }
 }

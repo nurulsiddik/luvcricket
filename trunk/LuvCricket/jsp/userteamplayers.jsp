@@ -41,7 +41,7 @@
                                         <table border="0" width="98%">
                                             <tr>
                                                 <td class="labelonly" align="center"  colspan="2"><b>Team Id</b>
-                                                    <lc:dropdownbox name="objUserTeam.user_team_id"  emptyoption="false" refxlist="opt_user_team" onchange="onChangeUserTeam();" />&nbsp;&nbsp;<a href="javascript:fnOpenPredictTeam()">Predict Winner</a><img alt="New" src="/LuvCricket/images/new.gif"/>
+                                                    <lc:dropdownbox name="objUserTeam.user_team_id"  emptyoption="false" refxlist="opt_user_team" onchange="onChangeUserTeam();" />&nbsp;&nbsp;<a href="javascript:fnOpenPredictTeam()">Predict Winner</a> &nbsp;&nbsp;&nbsp;<a href="javascript:fnOpenPredictLCTeamWinner()">Win T-Shirt</a><img alt="New" src="/LuvCricket/images/new.gif"/>
                                                 </td>
                                             </tr>
                                             <tr>

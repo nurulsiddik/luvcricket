@@ -723,10 +723,26 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
     </select>
 
     <select id="fetchAllUserTeam" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.UserTeamVO">
-        select * from user_team where user_id ;
+        select * from user_team ;
     </select>
     <select id="fetchEffectiveDates" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
         select distinct effective_date refx_value, date_format(effective_date,'%D %b %y') refx_label from user_team_details 
         where effective_date &lt; (select last_points_updated_date from tournaments where tournament_id = #tournament_id# ) order by 1;
     </select>
+    
+    <!-- Predict winner team -->
+    <select id="selectPredictWinnerTeam" parameterClass="java.lang.String" resultClass="java.util.HashMap">
+        select * from user_team_predict_winner where user_team_id = #user_team_id:VARCHAR#;
+    </select>
+    <delete id="deletePredictWinnerTeam" parameterClass="java.lang.String">
+        delete from user_team_predict_winner where user_team_id = #user_team_id:VARCHAR#;
+    </delete>
+    <insert id="insertPredictWinnerTeam" parameterClass="java.util.Map">
+        insert into user_team_predict_winner (
+        user_team_id,
+        predicted_team_id)
+        values(
+        #user_team_id:VARCHAR#,
+        #predicted_team_id:VARCHAR#)
+    </insert>
 </sqlMap>
