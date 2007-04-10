@@ -605,4 +605,38 @@ public class UserTeamAc extends LCCommonAc
         request.setAttribute(LCConstants.STATUS_MESSAGE_CODE,"record.updated");
         return mapping.findForward("success");
     }
+    
+    @IAppEventHandler(appEvent="initPredictGameWinner")
+    public ActionForward  initPredictGameWinner(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        HttpSession session = request.getSession();
+        String user_team_id = request.getParameter("user_team_id");
+        
+        UserTeam logic = UserTeam.getInstance();
+        
+        UserTeamVO userTeam = logic.selectUserTeam(user_team_id);
+        List lstUserTeams = logic.fetchAllUserTeamsForTournament(userTeam.getTournament_id());
+        
+        String predicted_team_id = logic.fetchPredictUserTeamWinner(user_team_id);
+        if(predicted_team_id != null)
+        {
+            request.setAttribute("predicted_team_id",predicted_team_id);
+        }
+        
+        session.setAttribute("lst_user_teams",lstUserTeams);
+        return mapping.findForward("success");
+    }
+    
+    @IAppEventHandler(appEvent="savePredictedGameWinner")
+    public ActionForward  savePredictedGameWinner(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        String user_team_id = request.getParameter("user_team_id");
+        String predicted_team_id = request.getParameter("predicted_team_id");
+        
+        UserTeam logic = UserTeam.getInstance();
+        logic.insertPredictUserTeamWinner(user_team_id,predicted_team_id);
+        request.setAttribute("predicted_team_id",predicted_team_id);
+        request.setAttribute(LCConstants.STATUS_MESSAGE_CODE,"record.updated");
+        return mapping.findForward("success");
+    }
 }

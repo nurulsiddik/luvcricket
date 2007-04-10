@@ -628,6 +628,7 @@ function fnOpenPredictTeam()
     //alert("Predict your choice of teams for Semifinals,Finals and Winner.Opens from 28th March, 2006.");
 }    
 
+
 var old_val_sf1;
 var old_val_sf2;
 var old_val_sf3;
@@ -834,4 +835,13 @@ function hideSchedule()
     var divTournMatches = getObj("divTournMatches");
     divTournMatches.style.visibility = "hidden";
 
+}    
+
+function fnOpenPredictLCTeamWinner()
+{
+    var obj_user_team = getObj("objUserTeam.user_team_id");
+    var user_team_id = obj_user_team.options[obj_user_team.selectedIndex].value; 
+    var url ="/LuvCricket/predictlcwinner.do?appEvent=initPredictGameWinner&&user_team_id="+user_team_id;
+    window.open(url,"predictteam","height=400,width=600,status=yes,toolbar=no,menubar=no,location=no");
+    //alert("Predict your choice of teams for Semifinals,Finals and Winner.Opens from 28th March, 2006.");
 }    
