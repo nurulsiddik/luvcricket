@@ -624,7 +624,7 @@ function fnOpenPredictTeam()
     var obj_user_team = getObj("objUserTeam.user_team_id");
     var user_team_id = obj_user_team.options[obj_user_team.selectedIndex].value; 
     var url ="/LuvCricket/userteamcountries.do?appEvent=initPredictCountries&&user_team_id="+user_team_id;
-    window.open(url,"predictteam","height=520,width=800,status=yes,toolbar=no,menubar=no,location=no");
+    window.open(url,"predictteam","height=530,width=800,status=yes,toolbar=no,menubar=no,location=no");
     //alert("Predict your choice of teams for Semifinals,Finals and Winner.Opens from 28th March, 2006.");
 }    
 

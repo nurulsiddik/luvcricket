@@ -95,8 +95,11 @@
                                 <tr style="color:red;font-weight:bold;font-size:12;font-family:sans-serif;background-color:lightyellow">
                                     <td colspan="2">If there more than one team who predicted correctly then winner will be decided by lottery.</td>
                                 </tr>
+                                <tr style="color:blue;font-weight:bold;font-size:13;font-family:sans-serif;background-color:white">
+                                    <td colspan="2"><marquee BEHAVIOR=ALTERNATE >Winners responsibility to collect the T-shirt from Trigyn Office.</marquee></td>
+                                </tr>
                                 <tr style="color:red;font-weight:bold;font-size:16;font-family:sans-serif;background-color:lightyellow">
-                                    <td colspan="2">Prize sponsered by: Ashwin Utagikar.</td>
+                                    <td colspan="2">T-shirt sponsered by: Ashwin Utagikar.</td>
                                 </tr>
 
                             </table>

@@ -221,7 +221,6 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                 <table>
                                     <tr align="center">
                                         <td colspan="2" rowspan="8" style="font-style:Verdana" valign="top">
-                                            <h3>STILL TO COME</h3>
                                             <script type="text/javascript">
                                                 /***********************************************
                                                 * IFRAME Scroller script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
@@ -233,7 +232,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                                 var iframesrc="/LuvCricket/jsp/external.htm"
 
                                                 //You may change most attributes of iframe tag below, such as width and height:
-                                                document.write('<iframe id="datamain" src="'+iframesrc+'" width="280px" height="200px" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>')
+                                                document.write('<iframe id="datamain" src="'+iframesrc+'" width="280px" height="240px" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>')
                                             </script>                                        
                                         </td>
                                     </tr>
