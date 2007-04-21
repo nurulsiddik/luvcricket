@@ -482,7 +482,7 @@ public class UserTeam
     public List<LCCommonVO> fetchTopUserTeamsForTournamentStage(String tournament_id, String stage_effective_date) throws Exception
     {
         SqlMapClient objSql = null;
-        List retList = null;
+        List<LCCommonVO> retList = null;
         try
         {
             objSql = TransactionManager.getSQLInstance();
@@ -490,6 +490,18 @@ public class UserTeam
             param.put("tournament_id",tournament_id);
             param.put("effective_date",stage_effective_date);
             retList = objSql.queryForList("fetchTopUserTeamsForTournamentStage",param);
+            
+            for (LCCommonVO elem : retList)
+            {
+                String user_team_id = elem.getField1();
+                Integer team_points = (Integer) objSql.queryForObject("fetchTeamPointsForWinPrediction",user_team_id);
+                if(team_points == null)
+                {
+                    team_points = new Integer(0);
+                }
+                System.out.println("TEAM : "+user_team_id + " POINTS "+ team_points.intValue());
+                elem.setField3( ( Integer.parseInt(elem.getField3()) + team_points.intValue())   + "");
+            }
         }
         finally
         {
