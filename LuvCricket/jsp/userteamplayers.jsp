@@ -5,6 +5,8 @@
 <%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean" %>
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
 <%@ taglib uri="/WEB-INF/lc-tags.tld" prefix="lc" %>
+<%@ page import="java.util.Calendar" %>
+<%@ page import="java.util.Date" %>
 
 <!--
     --COMMENT ON THIS JSP
@@ -25,6 +27,21 @@
         String menu_name = (String)request.getSession().getAttribute("MENU_NAME");
         XMLMenuParser parser = new XMLMenuParser(menu_name);
         out.print(parser.parseScreenMenu());
+        
+        
+        int flgPredStage = 0; // if 0 then allow to change
+
+        Calendar cal_winner = Calendar.getInstance();
+        cal_winner.set(2007,3,24,18,29); //24th April, 06:29
+        long date_winner = cal_winner.getTimeInMillis();
+
+        long date_curr = new Date().getTime();
+
+        if(date_curr > date_winner)
+        {
+            flgPredStage = 1;   //Lock lc tournament winner
+        }            
+        
         %>
     </head>
     <body class="backgroundbase" onload="fnLoadUserTeamPlayer()">
@@ -54,7 +71,7 @@
                                                 <td colspan="2" class="rightlabel" align="left">
                                                     <font colspan="2" class="rightlabel" align="left" style="color: darkblue"><b>Players Associated with this team:</b></font>&nbsp;&nbsp;
                                                     <b>Next CutOff Date:&nbsp; 
-                                                        <label id="next_effective_date" style="color: red"><%=(String)request.getAttribute("next_effective_date") %></label>&nbsp;<label style="color: darkred">06:30 PM</label>
+                                                        <!--display:none;--><label id="next_effective_date" style="color: red"><%=(String)request.getAttribute("next_effective_date") %></label>&nbsp;<label style="color: darkred">06:30 PM</label>
                                                     </b>
                                                 </td>
                                             </tr>
@@ -97,20 +114,24 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="textlable">Tournament Value: <input type="text" name="tournament_value" readOnly="true" size="5" value="<%=(String) request.getAttribute("TOURNAMENT_VALUES")%>" class="textbox"/></td>
-                                                <td class="textlable">User Team Value: <input type="text" name="userteam_value" readOnly="true" size="5" class="textbox"/></td>
+                                                <td class="textlable">Tournament Value: <input type="hidden" name="tournament_value" readOnly="true" size="5" value="<%=(String) request.getAttribute("TOURNAMENT_VALUES")%>" class="textbox"/><b style="color:red"> UNLIMITED</b></td>
+                                                <td class="textlable"><!--User Team Value: -->&nbsp;<input type="hidden" name="userteam_value" readOnly="true" size="5" class="textbox"/></td>
                                             </tr>
                                             <tr>
-                                                <td class="textlable" align="left">Changes left:
+                                                <td class="textlable" align="left" style="display:none">Changes left:
                                                     <label id="number_of_changes_left" style="color:red"></label>&nbsp; out of&nbsp;
                                                     <label id="tournament_changes_allowed" style="color: blue"><%=(String)request.getAttribute("TOURNAMENT_CHANGES")%></label>
                                                 </td>
-                                                <td class="textlable">Difference in Value: <input type="text" name="difference_value" readOnly="true" size="5" class="textbox"/></td>
+                                                <td class="textlable"><!--Difference in Value: -->&nbsp;<input type="hidden" name="difference_value" readOnly="true" size="5" class="textbox"/></td>
                                             </tr>
                                             
                                             <tr>
                                                 <td colspan="2" align="center">
+                                                    <% if(flgPredStage == 0) {%>
                                                     <input type="button" value=" Save " name="butSave" onclick="fnSaveUserTeamPlayers();"/>
+                                                    <% } else {%>
+                                                    <font style="font-weight: bold; font-size: 12px; color: red">Team Selection Over. SAME TEAM WILL BE CARRIED OUT TILL TOURNAMENT FINAL.</font>
+                                                    <%}%>
                                                 </td>
                                             </tr>
                                             
