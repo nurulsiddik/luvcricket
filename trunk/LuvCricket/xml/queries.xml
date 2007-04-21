@@ -584,7 +584,10 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
         group by utd.user_team_id;
     </select>
     
-    
+    <select id ="fetchTeamPointsForWinPrediction" parameterClass="java.lang.String" resultClass="java.lang.Integer">
+        select sum(team_points) from user_team_details_1 where user_team_id = #user_team_id:VARCHAR#
+    </select>
+
     <select id="topPlayers" resultClass="wow.play.cricket.vo.LCCommonVO">
         select 
         pnt.country_id field1,
