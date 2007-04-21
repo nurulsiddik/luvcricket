@@ -126,7 +126,7 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
         from tournaments;
     </select>
     <select id="fetchTournamentCountries" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
-        select country_id refx_value, country_id refx_label from tournament_nation
+        select country_id refx_value, country_id refx_label, country_status_in_tournament refx_add_info from tournament_nation
         where tournament_id = #tournament_id:VARCHAR#
     </select>
 
@@ -551,7 +551,11 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
     </select>
     
     <select id="sumTotalPoints" parameterClass="java.util.Map" resultClass="java.lang.Integer">
-        select sum(team_points) from user_team_details where user_team_id = #user_team_id:VARCHAR# and effective_date >= #effective_date:DATETIME#;
+        select 
+        sum(UTD.team_points) + (select sum(UTD1.team_points) from user_team_details_1 UTD1 where UTD1.user_team_id = #user_team_id:VARCHAR#) 
+        from user_team_details UTD 
+        where user_team_id = #user_team_id:VARCHAR# 
+        and effective_date >= #effective_date:DATETIME#;
     </select>
     <select id="topUserTeams" resultClass="wow.play.cricket.vo.LCCommonVO">
         select 
