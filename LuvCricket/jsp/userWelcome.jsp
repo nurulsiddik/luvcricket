@@ -33,7 +33,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
         
     </head>
     
-    <body class="backgroundbase" onload="fnFilterTopPlayers('overall')">
+    <body class="backgroundbase" onload="fnFilterTopPlayers('overall');fnCalculateRank();">
         
         <TABLE border="0" ALIGN="center" WIDTH="100%">
             <tr>
@@ -132,8 +132,9 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                             <tbody>
                                                 <logic:iterate id="top_teams" indexId="i" scope="session" name="top_user_teams" type="wow.play.cricket.vo.LCCommonVO">
                                                     <tr class="firstPageGridArea" style="height: 12px; cursor: default" valign = "top" >
-                                                        <td width="40%" ><bean:write name="top_teams" property="field1"/>&nbsp;</td>
-                                                        <td width="40%"><bean:write name="top_teams" property="field2"/>&nbsp;</td>
+                                                        <td width="7%">&nbsp;</td>
+                                                        <td width="37%" ><bean:write name="top_teams" property="field1"/>&nbsp;</td>
+                                                        <td width="36%"><bean:write name="top_teams" property="field2"/>&nbsp;</td>
                                                         <td width="15%"><bean:write name="top_teams" property="field3"/>&nbsp;</td>
                                                     </tr>
                                                 </logic:iterate> 
