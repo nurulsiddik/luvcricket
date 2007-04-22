@@ -203,3 +203,40 @@ function fnOpenPredictTeam()
     var url ="/LuvCricket/userteamcountries.do?appEvent=initPredictCountries";
     window.open(url,"predictteam","height=520,width=800,status=yes,toolbar=no,menubar=no,location=no");
 }    
+
+function fnCalculateRank()
+{
+    var excludePlayer = "Nurul Siddik";
+    var table = getObj("curr_userteam_players");
+    var length = table.rows.length;
+    var currRank = 0;
+    var prevPoints = -1;
+    for(var i=0; i<length; i++)
+    {
+        var rowObj = table.rows[i];
+        var playerName = fnTrim(rowObj.cells[2].innerText);
+        
+        if(playerName == excludePlayer)
+        {
+            rowObj.cells[0].innerText = "**";
+            rowObj.style.textDecoration="line-through";
+            rowObj.style.color="blue";
+        }    
+        else
+        {    
+            var currPoints = parseInt(fnTrim(rowObj.cells[3].innerText));
+            
+            if(currPoints != prevPoints)
+            {    
+                currRank++;
+                prevPoints = currPoints;
+                rowObj.cells[0].innerText=currRank;
+            }
+            else
+            {
+                rowObj.cells[0].innerText=currRank;
+                currRank++;
+            }    
+        }
+    }    
+}    
