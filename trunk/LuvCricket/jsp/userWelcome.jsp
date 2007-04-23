@@ -49,7 +49,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
             </tr>
             <tr>
                 <td style="font-family: Tahoma; font-weight:bold; font-size:11px; color:blue"><%=session.getAttribute("tournament_name")%> </td>
-                <td style="font-family: Tahoma; font-weight:bold; font-size:11px;" >Current Stage:&nbsp; <font style="color:blue"><%=session.getAttribute("tournament_stage")%> </font> &nbsp; &nbsp; <a href="javascript:fnShuffleLeaderBoard();" ><font id="idTextShuffleLeaderBoard" stagedisplay="1">Previous Round Leader</font></a></td>
+                <td style="font-family: Tahoma; font-weight:bold; font-size:11px;" >Current Stage:&nbsp; <font style="color:blue"><%=session.getAttribute("tournament_stage")%> </font> &nbsp; &nbsp; <a href="javascript:fnShuffleLeaderBoard('0');" ><font style="background-color:yellow" id="idLabelOverall">Overall</font></a> &nbsp; &nbsp; <a href="javascript:fnShuffleLeaderBoard('1');" ><font id="idLabelCurrent">Current Stage</font></a>&nbsp; &nbsp; <a href="javascript:fnShuffleLeaderBoard('2');" ><font id="idLabelFinal">Final Lag Only</font></a></td>
                 <td>&nbsp;</td>
                 
             </tr>
@@ -114,8 +114,9 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                             <!-- Top teams -->
                             <td width="35%" valign="top">
                                 <div class="firstPageGridHeaderTab">
-                                    <label id="headerCurrLabel" style="font-weight: bold;font-style:Verdana; font-size: 11px; color:red">Leader Board: -Points updated till <%= session.getAttribute("last_updated_date")%></label>
-                                    <label id="headerPrevLabel" style="font-weight: bold;font-style:Verdana; font-size: 11px; color:red; display:none">Leader Board: - FINAL RESULT - FIRST ROUND</label>
+                                    <label id="headerCurrLabel" style="font-weight: bold;font-style:Verdana; font-size: 11px; color:red">Current Stage Leader Board: -Points updated till <%= session.getAttribute("last_updated_date")%></label>
+                                    <label id="headerOverallLabel" style="font-weight: bold;font-style:Verdana; font-size: 11px; color:red; display:none">Overall Leader Board</label>
+                                    <label id="headerFinal" style="font-weight: bold;font-style:Verdana; font-size: 11px; color:red; display:none">Final Lag Leader Board</label>
                                     <table class="firstPageGridHeaderTab" width="95%">
                                         <thead>
                                             <tr>
@@ -144,7 +145,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                 </logic:notEmpty>
                                 <!-- Previous round leader -->
                                 <logic:notEmpty name = "top_user_teams_prev" scope = "session">
-                                    <div id="idPreviousStageLeader" class="firstPageGridArea" style="height: 204px; display:none">
+                                    <div id="idOverallStageLeader" class="firstPageGridArea" style="height: 204px; display:none">
                                         <table border="1" width="95%" id="prev_userteam_players">
                                             <tbody>
                                                 <logic:iterate id="top_teams_prev" indexId="i" scope="session" name="top_user_teams_prev" type="wow.play.cricket.vo.LCCommonVO">
@@ -152,6 +153,24 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                                         <td width="40%" ><bean:write name="top_teams_prev" property="field1"/>&nbsp;</td>
                                                         <td width="40%"><bean:write name="top_teams_prev" property="field2"/>&nbsp;</td>
                                                         <td width="15%"><bean:write name="top_teams_prev" property="field3"/>&nbsp;</td>
+                                                    </tr>
+                                                </logic:iterate> 
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </logic:notEmpty>
+                                
+                                <!-- Final round leader -->
+                                <logic:notEmpty name = "top_user_teams_final" scope = "session">
+                                    <div id="idFinalStageLeader" class="firstPageGridArea" style="height: 204px; display:none">
+                                        <table border="1" width="95%" id="final_userteam_players">
+                                            <tbody>
+                                                <logic:iterate id="top_teams_final" indexId="i" scope="session" name="top_user_teams_final" type="wow.play.cricket.vo.LCCommonVO">
+                                                    <tr class="firstPageGridArea" style="height: 12px; cursor: default" valign = "top" >
+                                                        <td width="7%">&nbsp;</td>
+                                                        <td width="37%" ><bean:write name="top_teams_final" property="field1"/>&nbsp;</td>
+                                                        <td width="36%"><bean:write name="top_teams_final" property="field2"/>&nbsp;</td>
+                                                        <td width="15%"><bean:write name="top_teams_final" property="field3"/>&nbsp;</td>
                                                     </tr>
                                                 </logic:iterate> 
                                             </tbody>
