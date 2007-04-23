@@ -53,9 +53,7 @@ function fnFilterTopPlayers(tabclick) {
     
     
     // On load called
-    var textLB = getObj("idTextShuffleLeaderBoard");
-    textLB.stagedisplay = "0";
-    fnShuffleLeaderBoard();
+    fnShuffleLeaderBoard("1");
     
 }
 
@@ -162,40 +160,64 @@ function displayFullList()
     }    
 }    
 
-function fnShuffleLeaderBoard()
+function fnShuffleLeaderBoard(currTab)
 {
     var divCurrStage = getObj("idCurrStageLeader");
     var headerCurrStage = getObj("headerCurrLabel");
+    var labelCurr = getObj("idLabelCurrent");
     
-    var divPrevStage = getObj("idPreviousStageLeader");
-    var headerPrevStage= getObj("headerPrevLabel");
-    //alert(divPrevStage + " "+ divCurrStage)
-    var textLB = getObj("idTextShuffleLeaderBoard");
-    if(divPrevStage != undefined && divPrevStage != null && divPrevStage != "null" && divCurrStage != undefined && divCurrStage != null && divCurrStage != "null" )
+    var divOverallStage = getObj("idOverallStageLeader");
+    var headerOverallStage= getObj("headerOverallLabel");
+    var labelOverall = getObj("idLabelOverall");
+    
+    var divFinalStage = getObj("idFinalStageLeader");
+    var headerFinalStage= getObj("headerFinal");
+    var labelFinal = getObj("idLabelFinal");
+    
+    if (currTab == "0") 
     {
-        if (textLB.stagedisplay == "1") 
-        {
-            divCurrStage.style.display = "none";
-            headerCurrStage.style.display = "none";
+        divOverallStage.style.display =  "inline-block";
+        headerOverallStage.style.display = "inline-block";
+        labelOverall.style.backgroundColor = "yellow";
+        
+        divCurrStage.style.display = "none";
+        headerCurrStage.style.display = "none";
+        labelCurr.style.backgroundColor = "";
+        
+        divFinalStage.style.display =  "none";
+        headerFinalStage.style.display = "none";
+        labelFinal.style.backgroundColor = "";
+        
+    }    
+    else if (currTab == "1") 
+    {
+        divCurrStage.style.display = "inline-block";
+        headerCurrStage.style.display = "inline-block";
+        labelCurr.style.backgroundColor = "yellow";
+        
+        divOverallStage.style.display =  "none";
+        headerOverallStage.style.display = "none";
+        labelOverall.style.backgroundColor = "";
+        
+        divFinalStage.style.display =  "none";
+        headerFinalStage.style.display = "none";
+        labelFinal.style.backgroundColor = "";
+    }   
+    else if (currTab == "2") 
+    {
+        divCurrStage.style.display = "none";
+        headerCurrStage.style.display = "none";
+        labelCurr.style.backgroundColor = "";
+        
+        divOverallStage.style.display =  "none";
+        headerOverallStage.style.display = "none";
+        labelOverall.style.backgroundColor = "";
 
-            divPrevStage.style.display =  "inline-block";
-            headerPrevStage.style.display = "inline-block";
+        divFinalStage.style.display =  "inline-block";
+        headerFinalStage.style.display = "inline-block";
+        labelFinal.style.backgroundColor = "yellow";
+    }   
 
-            textLB.stagedisplay = "0";
-            textLB.innerText = "Current Stage Leader";
-        }    
-        else if (textLB.stagedisplay == "0") 
-        {
-            divCurrStage.style.display = "inline-block";
-            headerCurrStage.style.display = "inline-block";
-
-            divPrevStage.style.display =  "none";
-            headerPrevStage.style.display = "none";
-
-            textLB.stagedisplay = "1";
-            textLB.innerText = "Overall Round Leader";
-        }   
-   }     
 }    
 
 function fnOpenPredictTeam()
@@ -206,8 +228,15 @@ function fnOpenPredictTeam()
 
 function fnCalculateRank()
 {
-    var excludePlayer = "Nurul Siddik";
     var table = getObj("curr_userteam_players");
+    fnCalculateRankForTable(table);
+    //table = getObj("final_userteam_players");
+    //fnCalculateRankForTable(table);
+}
+
+function fnCalculateRankForTable(table)
+{
+    var excludePlayer = "Nurul Siddik";
     var length = table.rows.length;
     var currRank = 0;
     var prevPoints = -1;
