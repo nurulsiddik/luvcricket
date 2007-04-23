@@ -121,7 +121,7 @@ public class UserWelcomeAc extends LCCommonAc
                 }
             }
         }
-        List topUserTeams = logicUserTeam.fetchTopUserTeamsForTournamentStage(tournament_id,objTournFullVO.getStage_effective_date());
+        List topUserTeams = logicUserTeam.fetchTopUserTeamsForTournamentStage(tournament_id,objTournFullVO.getStage_effective_date(),true);
         Collections.sort(topUserTeams, new TopTeamsSort());
         session.setAttribute("top_user_teams",topUserTeams);
         
@@ -129,10 +129,16 @@ public class UserWelcomeAc extends LCCommonAc
         LCTournamentVO prevStageDesc = logicTourn.fetchPrevStageDetails(tournament_id,objTournFullVO.getStage_effective_date());
         if(prevStageDesc != null)
         {
-            List prevTopUserTeams = logicUserTeam.fetchTopUserTeamsForTournamentStage(tournament_id,prevStageDesc.getStage_effective_date());
+            List prevTopUserTeams = logicUserTeam.fetchTopUserTeamsForTournamentStage(tournament_id,prevStageDesc.getStage_effective_date(),true);
             Collections.sort(prevTopUserTeams, new TopTeamsSort());
             session.setAttribute("top_user_teams_prev",prevTopUserTeams);
         }
+        
+        //Final Lag tournament
+        List topUserTeamsFinal = logicUserTeam.fetchTopUserTeamsForTournamentStage(tournament_id,"2007-04-24",false);
+        Collections.sort(topUserTeamsFinal, new TopTeamsSort());
+        session.setAttribute("top_user_teams_final",topUserTeamsFinal);
+        
         
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String strLastPointUpdatedDate = objTournFullVO.getLast_points_updated_date();
