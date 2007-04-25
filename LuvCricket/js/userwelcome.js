@@ -229,14 +229,13 @@ function fnOpenPredictTeam()
 function fnCalculateRank()
 {
     var table = getObj("curr_userteam_players");
+    fnCalculateRankForTable(table,"Nurul Siddik");
+    table = getObj("final_userteam_players","NONE");
     fnCalculateRankForTable(table);
-    //table = getObj("final_userteam_players");
-    //fnCalculateRankForTable(table);
 }
 
-function fnCalculateRankForTable(table)
+function fnCalculateRankForTable(table,excludePlayer)
 {
-    var excludePlayer = "Nurul Siddik";
     var length = table.rows.length;
     var currRank = 0;
     var prevPoints = -1;

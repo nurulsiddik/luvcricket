@@ -258,7 +258,7 @@ function fnFilterPlayer()
 
 function fnSelectThisPlayer(chkBox)
 {
-    
+    return false;
     var batsmanCount = document.forms[0].elements['batsmanCount'];
     var bowlerCount = document.forms[0].elements['bowlerCount'];
     var wkCount = document.forms[0].elements['wkCount'];
