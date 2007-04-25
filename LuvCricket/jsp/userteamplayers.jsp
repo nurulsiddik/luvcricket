@@ -70,7 +70,7 @@
                                             <tr>
                                                 <td colspan="2" class="rightlabel" align="left">
                                                     <font colspan="2" class="rightlabel" align="left" style="color: darkblue"><b>Players Associated with this team:</b></font>&nbsp;&nbsp;
-                                                    <b>Next CutOff Date:&nbsp; 
+                                                    <b style="display:none">Next CutOff Date:&nbsp; 
                                                         <!--display:none;--><label id="next_effective_date" style="color: red"><%=(String)request.getAttribute("next_effective_date") %></label>&nbsp;<label style="color: darkred">06:30 PM</label>
                                                     </b>
                                                 </td>
