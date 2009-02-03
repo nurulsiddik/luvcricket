@@ -1,0 +1,50 @@
+BODY {	margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; }
+		
+.leftMenu {	text-align: left; }
+		
+.centerMenu { text-align: center;}
+		
+.rightMenu { text-align: right;	}
+		
+a.MenuLabelLink	{ COLOR: #e0e0e0;	FONT-SIZE: 12px;
+FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None;
+margin: 0px; padding: 0px; font-weight: bold; }
+a.MenuLabelLink:link { COLOR: #e0e0e0;	FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None; }
+a.MenuLabelLink:visited	{ COLOR: #e0e0e0; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None;	}
+a.MenuLabelLink:hover{ COLOR: #e0e0e0; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None; }
+		
+a.MenuLabelLinkOn {	COLOR: #ffffff; FONT-SIZE: 12px;
+FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None;
+margin: 0px; padding: 0px; font-weight: bold; }
+a.MenuLabelLinkOn:link { COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None; }
+a.MenuLabelLinkOn:visited { COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None; }
+a.MenuLabelLinkOn:hover { COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None; }
+		
+a.MenuItemLink { COLOR: #e0e0e0; FONT-SIZE: 12px;
+FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None;
+margin: 0px; padding: 0px; font-weight: bold; }
+a.MenuItemLink:link { COLOR: #e0e0e0; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None; }
+a.MenuItemLink:visited { COLOR: #e0e0e0; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None; }
+a.MenuItemLink:hover { COLOR: #e0e0e0; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None; }
+		
+a.MenuItemLinkOn { COLOR: #ffffff; FONT-SIZE: 12px;
+FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None;
+margin: 0px; padding: 0px; font-weight: bold; }
+a.MenuItemLinkOn:link { COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None; }
+a.MenuItemLinkOn:visited { COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None; }
+a.MenuItemLinkOn:hover { COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: None; }
+		
+.myMenu { position: absolute; visibility: hidden; z-index: 5; }		
+		
+.myMenuLabelleft { padding: 0px 0px 0px 0px; text-align: left; }		
+.myMenuLabelcenter { padding: 0px 0px 0px 0px; text-align: center; }		
+.myMenuLabelright { padding: 0px 0px 0px 0px; text-align: right; }		
+.myMenuItemleft { padding: 0px 0px 0px 0px; text-align: left; }		
+.myMenuItemcenter { padding: 0px 0px 0px 0px; text-align: center; }		
+.myMenuItemright { padding: 0px 0px 0px 0px; text-align: right; }		
+		
+#screenMenu { 
+width: 480px;
+padding: 0px 0px 0px 0px;
+z-index: 1;
+}

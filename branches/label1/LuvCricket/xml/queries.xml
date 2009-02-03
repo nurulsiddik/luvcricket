@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap      
+PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Account">
+    
+    <!-- Use type aliases to avoid typing the full classname every time. -->
+    <!-- <typeAlias alias="Account" type="com.mydomain.domain.Account"/>-->
+
+    <select id="selectRefxVal" resultClass="wow.play.cricket.vo.RefxVO" parameterClass="wow.play.cricket.vo.RefxVO">
+        select refx_value, refx_label from refx where refx_code = #refx_code#
+        order by $sort_by$
+    </select>
+    
+    <!-- Select with no parameters using the result map for Account class. -->
+    <select id="selectAllAccounts" resultClass="java.lang.Integer">
+        select UserId from USER_AUTHENTICATION;
+    </select>
+    <select id="selectRegUserFromId" parameterClass="wow.play.cricket.vo.RegNewUserVO" resultClass="wow.play.cricket.vo.RegNewUserVO">
+        select * from user_authentication where user_id = #user_id# or login_name = #user_id#;
+    </select>
+    
+    <select id="selectAllRegUser" resultClass="wow.play.cricket.vo.RegNewUserVO">
+        select * from user_authentication;
+    </select>
+    
+    <update id="updateUserData" parameterClass="wow.play.cricket.vo.RegNewUserVO">
+        update user_authentication set
+        user_name = #user_name:SMALLINT#,
+        password = #password:VARCHAR#,
+        description = #description:VARCHAR#,
+        default_user_team = #default_user_team:VARCHAR#,
+        email = #email:VARCHAR#
+        where
+        user_id=#user_id:SMALLINT#
+    </update>
+    
+    <!-- New User Registration -->
+    <insert id="insertNewRegistration" parameterClass="wow.play.cricket.vo.RegNewUserVO">
+        insert into user_authentication (
+        user_id,
+        login_name,
+        user_name,
+        password,
+        user_type,
+        description,
+        email)
+        values (
+        #user_id#,
+        #login_name#,
+        #user_name#,
+        #password#,
+        #user_type#,
+        #description#,
+        #email#
+        )
+    </insert>
+    
+    <!-- Tournament -->
+    <select id="maxTournamentId" resultClass="java.lang.Integer">
+        SELECT max(tournament_id) maxId from tournaments;
+    </select>
+    
+    <insert id="insertTournament" parameterClass="wow.play.cricket.vo.TournamentVO">
+        insert into tournaments (
+        tournament_id,
+        tournament_name,
+        tournament_description,
+        tournament_status,
+        current_stage)
+        values (
+        #tournament_id:INTEGER#,
+        #tournament_name:VARCHAR#,
+        #tournament_description:VARCHAR#,
+        #tournament_status:VARCHAR#,
+        #current_stage:TINYINT#)
+    </insert>
+    
+    <insert id="insertTournamentChanges" parameterClass="wow.play.cricket.vo.TournamentChangesVO">
+        insert into tournament_changes (
+        tournament_id,
+        tournament_stage,
+        changes_permitted,
+        stage_description)
+        values (
+        #tournament_id:INTEGER#,
+        #tournament_stage:INTEGER#,
+        #changes_permitted:INTEGER#,
+        #stage_description:VARCHAR#)
+    </insert>
+    
+    <!-- Playing Team Nations -->
+    <select id="fetchAllNations" resultClass="wow.play.cricket.vo.RefxVO">
+        select country_id refx_value,country_id refx_label, country_name refx_add_info
+        from playing_nations;
+    </select>
+    
+    <select id="fetchAllNationsPlayer" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
+        select player_id refx_value,player_name refx_label, player_type refx_add_info
+        from playing_nations_team
+        where country_id=#country_id#;
+    </select>
+    <select id="fetchPlayer" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.PlayingNationsTeamVO">
+        select  
+        player_id,
+        country_id,
+        player_name,
+        player_welknown_name,
+        player_type,
+        player_role,
+        player_link,
+        player_photolink,
+        player_status
+        from playing_nations_team
+        where player_id=#player_id#;
+    </select>
+    
+    <select id="maxPlayerId" resultClass="java.lang.Integer">
+        SELECT max(player_id) maxId from playing_nations_team;
+    </select>
+    
+    <select id="fetchAllTournaments" resultClass="wow.play.cricket.vo.RefxVO">
+        select tournament_id refx_value, tournament_name refx_label, tournament_description refx_add_info
+        from tournaments;
+    </select>
+    <select id="fetchTournamentCountries" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
+        select country_id refx_value, country_id refx_label, country_status_in_tournament refx_add_info from tournament_nation
+        where tournament_id = #tournament_id:VARCHAR#
+    </select>
+
+    <select id="fetchActiveCountriesForTournament" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
+        select country_id refx_value, country_id refx_label from tournament_nation
+        where tournament_id = #tournament_id:VARCHAR# and country_status_in_tournament = 1;
+    </select>
+    
+    <select id="fetchAssociatedPlayers" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.TournamentPlayerVO">
+        select 
+        trnpl.tournament_id,
+        trnpl.player_id,
+        trnpl.player_value,
+        pl.player_name,
+        pl.country_id 
+        from tournament_players trnpl, playing_nations_team pl
+        where 
+        trnpl.tournament_id = #tournament_id# and 
+        trnpl.player_id = pl.player_id
+    </select>
+    <insert id="insertPlayer" parameterClass="wow.play.cricket.vo.PlayingNationsTeamVO">
+        insert into playing_nations_team (
+        player_id,
+        country_id,
+        player_name,
+        player_welknown_name,
+        player_type,
+        player_role,
+        player_link,
+        player_photolink,
+        player_status )
+        values (
+        #player_id:SMALLINT#,
+        #country_id:VARCHAR#,
+        #player_name:VARCHAR#,
+        #player_welknown_name:VARCHAR#,
+        #player_type:SMALLINT#,
+        #player_role:VARCHAR#,
+        #player_link:VARCHAR#,
+        #player_photolink:VARCHAR#,
+        #player_status:SMALLINT#)        
+        
+    </insert>
+    <insert id="insertTournamentPlayers" parameterClass="wow.play.cricket.vo.TournamentPlayerVO">
+        insert into tournament_players (
+        tournament_id,
+        player_id,
+        player_value)
+        values (
+        #tournament_id:SMALLINT#,
+        #player_id:SMALLINT#,
+        #player_value:SMALLINT#)
+        
+    </insert>
+    <update id="updatePlayer" parameterClass="wow.play.cricket.vo.PlayingNationsTeamVO">
+        update playing_nations_team
+        set
+        player_name = #player_name:VARCHAR#,
+        player_welknown_name = #player_welknown_name:VARCHAR#,
+        player_type = #player_type:SMALLINT#,
+        player_role = #player_role:VARCHAR#,
+        player_link = #player_link:VARCHAR#,
+        player_photolink = #player_photolink:VARCHAR#,
+        player_status = #player_status:SMALLINT#
+        where
+        player_id = #player_id:SMALLINT#;
+    </update>
+    
+    <delete id="deletePlayer" parameterClass="java.lang.String">
+        delete from playing_nations_team where player_id = #player_id:SMALLINT#
+    </delete>
+    <delete id="deletePlayerAssociation" parameterClass="java.lang.String">
+        delete from tournament_players where tournament_id=#tournament_id:SMALLINT#
+    </delete>
+    
+    <!-- User Team -->
+    <select id="fetchUserTeam" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
+        select user_team_id refx_value, user_team_id refx_label from user_team where user_id = #user_id:SMALLINT#
+    </select>
+    
+    <select id="selectUserTeam" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.UserTeamVO">
+        select 
+        user_team_id,
+        user_team_points,
+        user_team_descr,
+        tournament_id,
+        user_id,
+        number_of_changes
+        from user_team        
+        where 
+        user_team_id = #user_team_id:VARCHAR#
+    </select>
+    
+    <insert id="createUserTeam" parameterClass="wow.play.cricket.vo.UserTeamVO">
+        insert into user_team(
+        user_team_id,
+        user_id,
+        tournament_id,
+        user_team_points,
+        user_team_descr,
+        number_of_changes
+        )
+        values(
+        #user_team_id:VARCHAR#,
+        #user_id:SMALLINT#,
+        #tournament_id:SMALLINT#,
+        #user_team_points:SMALLINT#,
+        #user_team_descr:VARCHAR#,
+        #number_of_changes:INTEGER#
+        )
+    </insert>
+    <update id="updateUserTeam" parameterClass="wow.play.cricket.vo.UserTeamVO">
+        update user_team set
+        user_team_descr = #user_team_descr:VARCHAR#,
+        number_of_changes = #number_of_changes:INTEGER#
+        where user_team_id = #user_team_id:VARCHAR#
+    </update>
+    
+    <select id="fetchAllTheUserTeams" parameterClass="java.lang.String" resultClass="java.util.HashMap">
+        select * from user_team_details 
+        where user_team_id=#user_team_id:VARCHAR# order by effective_date desc
+    </select> 
+    
+    <select id="fetchAllTheUserTeamsInVO" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.UserTeamDetailVO">
+        select * from user_team_details 
+        where user_team_id=#user_team_id:VARCHAR# order by effective_date desc
+    </select> 
+    
+    <select id="fetchLatestUserTeam" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.UserTeamDetailVO">
+        select * from user_team_details 
+        where user_team_id=#user_team_id:VARCHAR# 
+        and effective_date = (select max(effective_date) from user_team_details where user_team_id=#user_team_id:VARCHAR#)
+    </select> 
+    <select id="fetchUserTeamForDate" parameterClass="java.util.HashMap" resultClass="wow.play.cricket.vo.UserTeamDetailVO">
+        select * from user_team_details 
+        where user_team_id=#user_team_id:VARCHAR#
+        and effective_date = #effective_date:DATETIME#
+    </select>
+    <update id="updateTeamPoints" parameterClass="wow.play.cricket.vo.UserTeamDetailVO">
+        update user_team_details
+        set team_points = #team_points:INTEGER#
+        where user_team_id=#user_team_id:VARCHAR#
+        and effective_date = #effective_date:DATETIME#
+    </update>
+    <select id="userTeamPlayerDetails" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.PlayingNationsTeamVO">
+        select 
+        pnt.player_id, 
+        pnt.country_id,
+        refx.refx_label player_type, 
+        pnt.player_name, 
+        tp.player_value
+        from 
+        playing_nations_team pnt, tournament_players tp ,refx refx 
+        where
+        pnt.player_id in ($inclause$) 
+        and tp.player_id = pnt.player_id 
+        and tp.tournament_id = (select tournament_id from user_team where user_team_id = #user_team_id:VARCHAR#)
+        and refx.refx_code='PLAYER_TYPE' 
+        and refx.refx_value = pnt.player_type
+    </select>
+    <select id="allPlayerDetails" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.PlayingNationsTeamVO">
+        select
+        pnt.player_id, 
+        pnt.country_id,
+        refx.refx_label player_type,
+        pnt.player_name, 
+        tp.player_value
+        from
+        playing_nations_team pnt, tournament_players tp ,refx refx 
+        where
+        tp.player_id = pnt.player_id 
+        and tp.tournament_id = #tournament_id:VARCHAR#
+        and refx.refx_code='PLAYER_TYPE' 
+        and refx.refx_value = pnt.player_type
+    </select>
+    
+    <select id="allActiveCountriesPlayerDetails" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.PlayingNationsTeamVO">
+        select
+        pnt.player_id, 
+        pnt.country_id,
+        refx.refx_label player_type,
+        pnt.player_name, 
+        tp.player_value
+        from
+        playing_nations_team pnt, tournament_players tp ,tournament_nation tn, refx refx 
+        where
+        tp.player_id = pnt.player_id 
+        and tp.tournament_id = #tournament_id:VARCHAR#
+        and refx.refx_code='PLAYER_TYPE' 
+        and refx.refx_value = pnt.player_type
+	and tn.tournament_id = tp.tournament_id
+	and tn.country_id = pnt.country_id
+	and tn.country_status_in_tournament = 1
+    </select>
+
+    <select id="fetchTournamentAllDetails" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.LCTournamentVO">
+        select 
+        t.tournament_id, 
+        t.tournament_name, 
+        t.tournament_description, 
+        t.tournament_status, 
+        t.current_stage, 
+        t.tournament_value,
+        t.next_effective_date,
+        t.last_points_updated_date,
+        tc.changes_permitted,
+        tc.stage_description,
+        tc.stage_effective_date
+        from 
+        tournaments t, tournament_changes tc 
+        where t.tournament_id=#tournament_id:SMALLINT#
+        and t.tournament_id=tc.tournament_id 
+        and t.current_stage=tc.tournament_stage 
+    </select>
+    
+    <select id="tournamentPrevStageDetails" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.LCTournamentVO">
+        select * from tournament_changes where tournament_id=#tournament_id:SMALLINT# and stage_effective_date &lt; #stage_effective_date:DATETIME# LIMIT 1
+    </select>
+    <update id="updateLastPointsUpdated" parameterClass="java.util.Map">
+        update tournaments set last_points_updated_date = #last_points_updated_date:DATETIME# where tournament_id = #tournament_id:VARCHAR#
+    </update>
+    
+    <delete id="deleteUserTeamDetails" parameterClass="wow.play.cricket.vo.UserTeamDetailVO">
+        delete from user_team_details where user_team_id=#user_team_id:VARCHAR# and effective_date=#effective_date:DATETIME#
+    </delete>
+    <insert id="insertUserTeamPlayers" parameterClass="wow.play.cricket.vo.UserTeamDetailVO">
+        insert into user_team_details(
+        user_team_id,
+        player1,
+        player2,
+        player3,
+        player4,
+        player5,
+        player6,
+        player7,
+        player8,
+        player9,
+        player10,
+        player11,
+        effective_date,
+        number_of_changes)
+        values(
+        #user_team_id:VARCHAR#,
+        #player1:INTEGER#,
+        #player2:INTEGER#,
+        #player3:INTEGER#,
+        #player4:INTEGER#,
+        #player5:INTEGER#,
+        #player6:INTEGER#,
+        #player7:INTEGER#,
+        #player8:INTEGER#,
+        #player9:INTEGER#,
+        #player10:INTEGER#,
+        #player11:INTEGER#,
+        #effective_date:DATETIME#,
+        #number_of_changes:INTEGER#)
+    </insert>
+    <select id="totalNumberOfChanges" parameterClass="java.util.Map" resultClass="int">
+        select sum(number_of_changes) from user_team_details where user_team_id = #user_team_id:VARCHAR# and effective_date >= #effective_date:DATETIME#
+    </select>
+    
+    <select id="selectUserTeamForTournament" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.UserTeamVO">
+        select * from user_team where tournament_id=#tournament_id:SMALLINT#
+    </select>
+    <update id="setNextEffDate" parameterClass="java.util.Map" >
+        update tournaments set next_effective_date=#next_effective_date:DATETIME# where tournament_id=#tournament_id:SMALLINT#
+    </update>   
+    
+    <!-- fetch tournaments -->
+    <select id="fetchAllTournamentMatches" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
+        select  
+        concat(date_format(match_date,'%D %b %y'),' - ', country_id1,' vs ',country_id2)  refx_label, 
+        match_id refx_value 
+        from tournament_matches 
+        where tournament_id = #tournament_id:SMALLINT#
+        order by match_id;
+    </select>
+
+    <select id="fetchAllTournamentMatchesForDate" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.RefxVO">
+        select  
+        concat(country_id1,' vs ',country_id2)  refx_label, 
+        match_id refx_value 
+        from tournament_matches 
+        where tournament_id = #tournament_id:SMALLINT#
+        and match_date = #match_date:DATETIME#
+        order by match_id;
+    </select>
+    
+    <!-- Fetch Match info -->
+    <select id="selectMatchData" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.TournamentMatchesVO">
+        select * from  tournament_matches where match_id = #match_id:SMALLINT#
+    </select>
+    
+    <select id="fetchScoreCard" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.ScorecardVO">
+        select * from scorecard where match_id = #match_id:SMALLINT# and innings = #innings:SMALLINT# order by playing_position;
+    </select>
+    
+    <select id="fetchPlayersForMatch" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
+        select tp.player_id refx_value, pnt.player_name refx_label
+        from tournament_players tp, playing_nations_team pnt 
+        where 
+        tp.player_id = pnt.player_id 
+        and pnt.country_id= #country_id:VARCHAR#;
+    </select>
+    
+    <update id="updateTournamentScorecard" parameterClass="wow.play.cricket.vo.TournamentMatchesVO">
+        update tournament_matches 
+        set 
+        match_result = #match_result:INTEGER#,
+        first_batting_team = #first_batting_team:VARCHAR#,
+        match_winner = #match_winner:VARCHAR#
+        where match_id = #match_id:SMALLINT#
+    </update>
+    
+    <delete id="deleteScorecard" parameterClass="java.lang.String">
+        delete from scorecard where match_id = #match_id:SMALLINT#
+    </delete>
+    
+    <insert id="insertScorecard" parameterClass="wow.play.cricket.vo.ScorecardVO">
+        insert into scorecard (
+        match_id,
+        innings,
+        playing_position,
+        batsman_id,
+        howout,
+        helper_id,
+        bowler_id,
+        runs_scored)
+        values (
+        #match_id:SMALLINT#,
+        #innings:SMALLINT#,
+        #playing_position:SMALLINT#,
+        #batsman_id:SMALLINT#,
+        #howout:SMALLINT#,
+        #helper_id:SMALLINT#,
+        #bowler_id:SMALLINT#,
+        #runs_scored:SMALLINT#        
+        )
+    </insert>
+    
+    <select id="calculatePlayerContribution" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.PlayerContributionVO">
+        select sc.match_id, sc.batsman_id player_id,
+        pnt.player_name,pnt.country_id,
+        sc.runs_scored,
+        (select count(*) from scorecard sc1 where player_id = sc1.bowler_id and sc1.match_id = #match_id#) wickets_taken,
+        (select count(*) from scorecard sc2 where player_id = sc2.helper_id and sc2.howout = 5 and sc2.match_id = #match_id#) catches,
+        (select count(*) from scorecard sc3 where player_id = sc3.helper_id and sc3.howout = 6 and sc3.match_id = #match_id#) stumps,
+        (select count(*) from scorecard sc4 where player_id = sc4.helper_id and sc4.howout = 7 and sc4.match_id = #match_id#) runout 
+        from scorecard sc, playing_nations_team pnt 
+        where sc.batsman_id = pnt.player_id and sc.match_id = #match_id#
+        union
+        select sch.match_id, sch.helper_id player_id, 
+        pnt.player_name,pnt.country_id,
+        0,
+        0,
+        (select count(*) from scorecard sc5 where player_id = sc5.helper_id and sc5.howout = 5 and sc5.match_id = #match_id#) catches,
+        0,
+        (select count(*) from scorecard sc6 where player_id = sc6.helper_id and sc6.howout = 7 and sc6.match_id = #match_id#) runout 
+        from scorecard sch, playing_nations_team pnt where helper_id not in (select batsman_id from scorecard sc8 where sc8.match_id = #match_id#) 
+        and sch.helper_id = pnt.player_id and sch.match_id = #match_id#
+    </select>
+    
+    <delete id="deletePlayerContribution" parameterClass="java.lang.String">
+        delete from player_contribution where match_id=#match_id#
+    </delete>
+    <insert id="insertPlayerContribution" parameterClass="wow.play.cricket.vo.PlayerContributionVO">
+        insert into player_contribution (
+        match_id,
+        player_id,
+        runs_scored,
+        wickets_taken,
+        catches,
+        stumps,
+        runout,
+        player_points)
+        values(
+        #match_id#,
+        #player_id#,
+        #runs_scored#,
+        #wickets_taken#,
+        #catches#,
+        #stumps#,
+        #runout#,
+        #player_points#
+        )
+    </insert>
+    
+    <select id="fetchRules" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RulesVO">
+        select * from rules_table where tournament_id = #tournament_id:SMALLINT#
+    </select>
+    <update id="updateUserDefaultTeam" parameterClass="java.util.Map">
+        update user_authentication 
+        set default_user_team = #default_user_team:VARCHAR#
+        where user_id = #user_id:SMALLINT#
+    </update>   
+    <select id="fetchTournMatchDates" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
+        select distinct match_date refx_value, date_format(match_date,'%D %b %y') refx_label  from tournament_matches order by match_date;
+    </select>
+    <select id="fetchTournMatchByDates" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
+        select match_date refx_value , 
+        concat(country_id1,' vs ',country_id2) refx_label 
+        from 
+        tournament_matches 
+        where 
+        tournament_id=#tournament_id:SMALLINT#
+        order by match_id;        
+    </select>
+    
+    <select id="fetchUserTeamsForTournament" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
+        select user_team_id refx_label, user_team_id refx_value from user_team where tournament_id = #tournament_id:SMALLINT#
+    </select>
+    <select id="fetchPlayerPointsForMatchDate" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.PlayerContributionVO">
+        select * from player_contribution 
+        where match_id in 
+        (select match_id from tournament_matches where match_date= #match_date:DATETIME# and tournament_id=#tournament_id:SMALLINT# );
+    </select>
+    <select id="selectPlayerPerformanceForDay" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.PlayerContributionVO">
+        select * from player_contribution 
+        where player_id = #player_id:SMALLINT# 
+        and match_id in 
+        (select match_id from tournament_matches where tournament_id = #tournament_id:SMALLINT# and  match_date= #match_date:DATETIME# )
+    </select>
+    
+    <select id="sumTotalPoints" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+        select 
+        sum(UTD.team_points) + (select sum(UTD1.team_points) from user_team_details_1 UTD1 where UTD1.user_team_id = #user_team_id:VARCHAR#) 
+        from user_team_details UTD 
+        where user_team_id = #user_team_id:VARCHAR# 
+        and effective_date >= #effective_date:DATETIME#;
+    </select>
+    <select id="topUserTeams" resultClass="wow.play.cricket.vo.LCCommonVO">
+        select 
+        utd.user_team_id field1,
+        ua.user_name field2,
+        sum(utd.team_points) field3 
+        from 
+        user_team_details utd,user_team ut,user_authentication ua  
+        where utd.user_team_id=ut.user_team_id 
+        and   ut.user_id=ua.user_id 
+        group by utd.user_team_id 
+        order by team_points desc ;
+    </select>
+
+    <select id="fetchTopUserTeamsForTournamentStage" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.LCCommonVO">
+        select 
+        utd.user_team_id field1,
+        ua.user_name field2,
+        sum(utd.team_points) field3 
+        from 
+        user_team_details utd,user_team ut,user_authentication ua  
+        where utd.user_team_id=ut.user_team_id 
+        and   ut.user_id=ua.user_id 
+	and   utd.effective_date >= #effective_date:DATETIME#
+	and   ut.tournament_id = #tournament_id:SMALLINT#
+        group by utd.user_team_id;
+    </select>
+    
+    <select id ="fetchTeamPointsForWinPrediction" parameterClass="java.lang.String" resultClass="java.lang.Integer">
+        select sum(team_points) from user_team_details_1 where user_team_id = #user_team_id:VARCHAR#
+    </select>
+
+    <select id="topPlayers" resultClass="wow.play.cricket.vo.LCCommonVO">
+        select 
+        pnt.country_id field1,
+        pnt.player_name field2, 
+        sum(pc.player_points) field3,
+        pnt.player_type field4,
+        pnt.player_id field5
+        from 
+        player_contribution pc, playing_nations_team pnt 
+        where 
+        pnt.player_id=pc.player_id 
+        group by pnt.player_id 
+        order by 3 desc;
+    </select>
+    
+    <select id="fetchPlayerContribInTournament" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.PlayerContributionVO">
+        select 
+        count(*) no_of_games,
+        sum(runs_scored) runs_scored, 
+        sum(wickets_taken) wickets_taken, 
+        sum(catches) catches, 
+        sum(stumps) stumps, 
+        sum(runout) runout, 
+        sum(player_points) player_points,
+        (select count(*) from player_contribution where player_id = #player_id# and runs_scored &gt;= 50 and runs_scored &lt; 100) half_centuries,
+        (select count(*) from player_contribution where player_id = #player_id# and runs_scored &gt;= 100 ) centuries,
+        (select count(*) from player_contribution where player_id = #player_id# and wickets_taken &gt;= 3 and wickets_taken &lt; 5 ) three_wickets,
+        (select count(*) from player_contribution where player_id = #player_id# and wickets_taken &gt;= 5 ) five_wickets
+        from 
+        player_contribution 
+        where player_id=#player_id#;
+        
+    </select>
+    <select id="selectPredictWinner" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.UserTeamDetail_1VO">
+        select * from user_team_details_1 where user_team_id = #user_team_id:VARCHAR#
+    </select>
+    <delete id="deletePredictWinner" parameterClass="java.lang.String">
+        delete from user_team_details_1 where user_team_id=#user_team_id:VARCHAR#
+    </delete>
+    <insert id="insertPredictWinner" parameterClass="wow.play.cricket.vo.UserTeamDetail_1VO">
+        insert into user_team_details_1 (
+        user_team_id,
+        country_id,
+        country_status,
+        team_points)
+        values (
+        #user_team_id:VARCHAR#,
+        #country_id:INTEGER#,
+        #country_status:INTEGER#,
+        #team_points:INTEGER#)
+    </insert>
+
+    
+    <select id="topTeamGraph" resultClass="wow.play.cricket.analytics.vo.TopTeamDataVO" >
+        <!-- select user_team_id,  date_format(effective_date,'%d/%m/%y') as date, team_points from user_team_details where user_team_id in ($teams_to_show$) and effective_date >= '20070327' order by effective_date,user_team_id -->
+        SELECT  ut.user_team_id,  date_format(ut.effective_date,'%d/%m/%y') as date, ut.team_points FROM tournament_changes tc,user_team_details ut where tc.tournament_id = #tournament_id# and tc.tournament_stage = #tournament_stage#
+        and ut.user_team_id in ($teams_to_show$)
+        and ut.effective_date &gt;= tc.stage_effective_date
+        and (
+                (tc.tournament_stage = (select max(tc2.tournament_stage) from tournament_changes tc2 where tc2.tournament_id = #tournament_id#)) 
+                OR
+                (ut.effective_date &lt; (select tc1.stage_effective_date from tournament_changes tc1 where tc1.tournament_id = #tournament_id# and tc1.tournament_stage = (tc.tournament_stage+1)))
+            )
+        order by effective_date,user_team_id 
+    </select>
+    <select id="fetchTournamentStages" resultClass="wow.play.cricket.vo.RefxVO" parameterClass="java.lang.Integer">
+        select tournament_stage refx_value, stage_description refx_label, tournament_id refx_add_info
+        from tournament_changes where tournament_id = #value#;
+    </select>
+    
+    <select id="fetchTournamentMatchesFromDate" parameterClass="java.util.Map" resultClass="wow.play.cricket.vo.TournamentMatchesVO">
+        select 
+        match_id,
+        tournament_id,
+        date_format(match_date,'%D %b %y %a') match_date,
+        match_venue,
+        country_id1,
+        country_id2,
+        match_type,
+        match_result,
+        match_winner,
+        match_tournament_status,
+        comments,
+        first_batting_team
+        from tournament_matches 
+        where tournament_id=#tournament_id:SMALLINT# 
+        and match_date &gt;= #match_date:DATETIME#  
+    </select>
+    
+    <select id="fetchNextMatchDate" parameterClass="java.lang.String" resultClass="java.util.Date">
+        select match_date from tournament_matches where tournament_id = #tournament_id:SMALLINT# and match_date > CURRENT_DATE LIMIT 1;
+    </select>
+    
+    <select id="playerAnalysis" parameterClass="java.util.Map" resultClass="java.util.HashMap">
+
+        select date_format(player_data.match_date,'%d/%m/%y') MATCH_DATE, DEFAULT_POINT as PLAY_POINT,
+        if(player_type = 1,RUN_POINTS,
+                if(player_type=2,WICKET_POINTS,
+                        if(player_type=3,RUN_POINTS+WICKET_POINTS,
+                                if(player_type=4,STUMP_POINTS+CATCH_POINTS+RUNOUT_POINTS,0)))) CORE_COMPETENCY,    
+        if(player_type = 1,CATCH_POINTS+RUNOUT_POINTS,
+                if(player_type=2,CATCH_POINTS+RUNOUT_POINTS,
+                        if(player_type=3,CATCH_POINTS+RUNOUT_POINTS,
+                                0))) FIELD_COMPETENCY,
+        if(player_type = 1,WICKET_POINTS,
+                if(player_type=2,RUN_POINTS,if(player_type=4,RUN_POINTS,0))) OTHER_COMPETENCY,
+        DEFAULT_POINT + RUN_POINTS+WICKET_POINTS+RUNOUT_POINTS+CATCH_POINTS+STUMP_POINTS AS TOTAL_POINTS
+        from playing_nations_team pnt_p ,(
+        select tm.match_date , rt.points_for_playing as DEFAULT_POINT,
+        ((pc.runs_scored*rt.points_runs_scored)+(if(pc.runs_scored>=25,rt.points_quater_century,0)+if(pc.runs_scored>=50,rt.points_half_century,0)+if(pc.runs_scored>=100,rt.points_century,0))) as RUN_POINTS, 
+        ((pc.wickets_taken*rt.points_for_wicket) + if(pc.wickets_taken>=3,rt.points_for_3wicket,0) + if(pc.wickets_taken>=5,rt.points_for_5wicket,0)) as WICKET_POINTS,
+        pc.catches * rt.points_for_catch as CATCH_POINTS,
+        pc.stumps * rt.points_for_stumping as STUMP_POINTS,
+        pc.runout * rt.points_for_runOut as RUNOUT_POINTS
+        from rules_table rt, player_contribution pc, tournament_matches tm where pc.match_id = tm.match_id
+        and tm.tournament_id = rt.tournament_id
+        and rt.tournament_id = #tournament_id#
+        and pc.player_id = #player_id#
+        and tm.match_date &lt; CURRENT_DATE
+        UNION
+        select  distinct tm.match_date, 0 as DEFAULT_POINT,
+        0 as RUN_POINTS,
+        0 as WICKET_POINTS,
+        0 as CATCH_POINTS,
+        0 as STUMP_POINTS,
+        0 as RUNOUT_POINTS
+        from rules_table rt, player_contribution pc, tournament_matches tm, playing_nations_team pnt 
+        where pnt.player_id = pc.player_id 
+        and (tm.country_id1 = pnt.country_id or tm.country_id2 = pnt.country_id)
+        and tm.tournament_id = rt.tournament_id
+        and rt.tournament_id = #tournament_id#
+        and pc.player_id = #player_id#
+        and tm.match_date &lt; CURRENT_DATE
+        and not exists (
+        select pc1.match_id from player_contribution pc1 where pc1.match_id = tm.match_id
+        and pc1.player_id = pc.player_id)
+        ORDER BY 1
+        ) player_data
+        where pnt_p.player_id = #player_id#
+    </select>
+
+    <select id="fetchAllUserTeam" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.UserTeamVO">
+        select * from user_team ;
+    </select>
+    <select id="fetchEffectiveDates" parameterClass="java.lang.String" resultClass="wow.play.cricket.vo.RefxVO">
+        select distinct effective_date refx_value, date_format(effective_date,'%D %b %y') refx_label from user_team_details 
+        where effective_date &lt;= (select last_points_updated_date from tournaments where tournament_id = #tournament_id# ) order by 1;
+    </select>
+    
+    <!-- Predict winner team -->
+    <select id="selectPredictWinnerTeam" parameterClass="java.lang.String" resultClass="java.util.HashMap">
+        select * from user_team_predict_winner where user_team_id = #user_team_id:VARCHAR#;
+    </select>
+    <delete id="deletePredictWinnerTeam" parameterClass="java.lang.String">
+        delete from user_team_predict_winner where user_team_id = #user_team_id:VARCHAR#;
+    </delete>
+    <insert id="insertPredictWinnerTeam" parameterClass="java.util.Map">
+        insert into user_team_predict_winner (
+        user_team_id,
+        predicted_team_id)
+        values(
+        #user_team_id:VARCHAR#,
+        #predicted_team_id:VARCHAR#)
+    </insert>
+</sqlMap>

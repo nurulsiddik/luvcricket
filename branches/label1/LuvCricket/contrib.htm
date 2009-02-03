@@ -1,0 +1,194 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/LuvCricket/css/stylesheet.css">
+        <style type="text/css">
+            .headerlabel
+            {
+            color: red;
+            font-weight:bold; 
+            font-style: Verdana; 
+            font-size: 20px
+            }
+            .textlabel
+            {
+            color: lightgreen;
+            font-weight:bold; 
+            font-style: Courier; 
+            font-size: 35px
+            }
+            
+        </style>
+    </head>
+    <body style="background-color:black" >
+        <div id="datacontainer" style="position:absolute;left:1px;top:15px;width:100%" ><!--onMouseover="scrollspeed=0" onMouseout="scrollspeed=cache"-->
+            <br>
+            <!-- ADD YOUR SCROLLER CONTENT INSIDE HERE -->
+            <table border="0" align="center">
+                <tr class="headerlabel">
+                    <td colspan="2"><u>Luv Cricket Promoters</u></td>
+                </tr>
+                <tr class="textlabel">
+                    <td colspan="2">Gaurang Vyas</td>
+                </tr>
+                <tr class="textlabel">
+                    <td colspan="2">Shaunak Dave</td>
+                </tr>
+                <tr class="textlabel">
+                    <td colspan="2">Narendra Gaware</td>
+                </tr>
+                <tr class="textlabel">
+                    <td colspan="2">Hiranand Kanal</td>
+                </tr>
+                
+                <tr class="textlabel">
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                
+                <tr class="headerlabel">
+                    <td colspan="2">Project Management & Suggestions by</td>
+                </tr>
+                <tr class="textlabel" align="left">
+                    <td>Gaurang Vyas</td><td><img alt="New" src="/LuvCricket/images/credits/gaurang.jpg"/></td>
+                </tr>
+                
+                <tr class="textlabel" align="right">
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                
+                <tr class="headerlabel">
+                    <td colspan="2">Concept Designer, Technical Archietect, Database Designer, Developer, Website Administrator</td>
+                </tr>
+                
+                <tr class="textlabel">
+                    <td><img alt="New" src="/LuvCricket/images/credits/siddik.jpg"/></td><td>Nurul Siddik Sheikh</td>
+                </tr>
+                
+                <tr class="textlabel">
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                
+                <tr class="headerlabel">
+                    <td colspan="2">Technical Help and contributer of Graphs and Charts</td>
+                </tr>
+                
+                <tr class="textlabel">
+                    <td>Jatan Porecha</td><td><img alt="New" src="/LuvCricket/images/credits/jatan.jpg"/></td>
+                </tr>
+                
+                <tr class="textlabel">
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                
+                <tr class="headerlabel">
+                    <td colspan="2">Special Admirer</td>
+                </tr>
+                
+                <tr class="textlabel">
+                    <td><img alt="New" src="/LuvCricket/images/credits/shaunak.jpg"/></td><td>Shaunak Dave</td>
+                </tr>
+                
+                
+                <tr class="textlabel">
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                
+                <tr class="headerlabel">
+                    <td colspan="2">Site hosting server managed by</td>
+                </tr>
+                
+                <tr class="textlabel">
+                    <td>Narendra Gaware</td><td><img alt="New" src="/LuvCricket/images/credits/narendra.jpg"/></td>
+                </tr>
+                <tr class="textlabel">
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                
+                <tr class="headerlabel">
+                    <td colspan="2">Prizes Sponsered by</td>
+                </tr>
+                <tr class="textlabel">
+                    <td colspan="2">Gaurang Vyas</td>
+                </tr>
+                <tr class="textlabel">
+                    <td colspan="2">Mrs. Firdausi Sheikh</td>
+                </tr>
+                <tr class="textlabel">
+                    <td colspan="2">?????????</td>
+                </tr>
+                <tr class="textlabel">
+                    <td>Ashwin Utagikar</td><td><img alt="New" src="/LuvCricket/images/credits/ashwin.jpg"/></td>
+                </tr>                
+
+                <tr class="textlabel">
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                
+                <tr class="headerlabel">
+                    <td colspan="2" style="color:lightblue; font-style:Verdana">Special thanks to all the participants....</td>
+                </tr>
+
+                <tr class="textlabel">
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                
+                <tr class="headerlabel">
+                    <td colspan="2" style="color:lightblue; font-style:Verdana; font-size:10">Its an NSCL Presentation   ......</td>
+                </tr>
+                
+            </table>
+            
+        </div>
+        <div align="right" style="position:relative;">
+            <table border="0" width="200" height="100%" cellspacing="0" cellpadding="0">
+                <td width="100%" valign="bottom" align="right">
+                    [ <a href="/LuvCricket/dummy.jsp"><font size=+2 color="#FFFFFF" face="Comic Sans MS">Skip Credits</font></a> ]
+                </td>
+            </table>
+        </div>
+        
+        <script type="text/javascript">
+
+/***********************************************
+* IFRAME Scroller script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+//Specify speed of scroll. Larger=faster (ie: 5)
+var scrollspeed=cache=3
+
+//Specify intial delay before scroller starts scrolling (in miliseconds):
+var initialdelay=1000
+
+function initializeScroller(){
+dataobj=document.all? document.all.datacontainer : document.getElementById("datacontainer")
+dataobj.style.top="15px"
+setTimeout("getdataheight()", initialdelay)
+}
+
+function getdataheight(){
+thelength=dataobj.offsetHeight
+if (thelength==0)
+setTimeout("getdataheight()",10)
+else
+scrollDiv()
+}
+
+function scrollDiv(){
+dataobj.style.top=parseInt(dataobj.style.top)-scrollspeed+"px"
+if (parseInt(dataobj.style.top)<thelength*(-1))
+dataobj.style.top="420px"
+setTimeout("scrollDiv()",80)
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initializeScroller, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initializeScroller)
+else
+window.onload=initializeScroller
+
+                                                 </script>
+        
+    </body>
+</html>

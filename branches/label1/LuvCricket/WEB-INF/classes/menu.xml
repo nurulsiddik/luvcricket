@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : menu.xml
+    Created on : January 19, 2007, 12:50 AM
+    Author     : NURUL SIDDIK
+    Description:
+        Purpose of the document follows.
+-->
+
+<screenmenu>
+    <headmenunode>
+        <menudetails title="My Game"/>
+        <menuitem>
+            <menudetails title="Create Team" onclick="javascript:fnOpenScreen(\'userteam.do?appEvent=initUserTeam&amp;&amp;screen_mode=create\')"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Edit Team" onclick="javascript:fnOpenScreen(\'userteamplayers.do?appEvent=initModifyUserTeam&amp;&amp;screen_mode=modify\')"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="How points are earned" onclick="javascript:fnOpenScreen(\'userteamperformance.do?appEvent=initViewTeamPerformance\')"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Tournament Statistics"/>
+            <menuitem>
+                <menudetails title="View Player Contribution" onclick="javascript:fnShowPlayerContribution()"/>
+            </menuitem>
+           <menuitem>
+                <menudetails title="Performance Analysis" onclick="javascript:fnOpenScreen(\'analytics/topteams.do?appEvent=topTeams\')"/>
+            </menuitem>            
+        </menuitem>
+        
+    </headmenunode>
+    <headmenunode>
+        <menudetails title="My Preferences "/>
+        <menuitem>
+            <menudetails title="Edit my details" onclick="javascript:fnOpenScreen(\'editmydetails.do?appEvent=initEditUser\')"/>
+        </menuitem>
+    </headmenunode>
+    <headmenunode>
+        <menudetails title="Luv Cricket"/>
+        <menuitem>
+            <menudetails title="Home" onclick="javascript:fnOpenScreen(\'userwelcome.do?appEvent=displayHomePage\')"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Rules" onclick="javascript:fnOpenModelScreen(\'/LuvCricket/jsp/rules.jsp\')"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="About LuvCricket"/>
+        </menuitem>
+        <menuitem>
+            <menudetails title="Report Error" onclick="javascript:fnReportError();"/>
+        </menuitem>
+    </headmenunode>
+</screenmenu>
